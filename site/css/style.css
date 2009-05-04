@@ -29,6 +29,35 @@ h1, h2, h3 {
 
 }
 
+.supported-api table{
+    font-size:70%;
+    width: 100%;
+}
+.supported-api table th{
+    background-color: #aaa;
+}
+.supported-api table td{
+    background-color: #ddd;
+}
+.supported-api .pagination{
+    text-align: center;
+    color: #3c3;
+}
+.supported-api .method-path{
+  width: 250px;
+}
+.supported-api .t4jmethod{
+  width: 200px;
+}
+.supported-api .paging-support{
+  width: 150px;
+}
+
+.faq h2{
+    font-size:100%;
+    color: #314;
+}
+
 .center {
     width: 800px;
     margin: 10px auto 30px auto;
