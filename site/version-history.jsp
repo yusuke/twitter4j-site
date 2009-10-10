@@ -1,4 +1,4 @@
-<%@page pageEncoding="UTF-8" %>
+<%@page pageEncoding="UTF-8" session="false"%>
 <%@taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <tag:skelton title="Twitter4J - $[ja:変更履歴]$[en:Vesion History]">
 <div class="history">
@@ -8,7 +8,167 @@
 <li>2.0.</li>
 $[ja:]$[en:]
 -->
-<li>Release Notes - Twitter4J - Version 2.0.0 <font color="red">new! 4/19/2009</font></li>
+
+
+<li>Release Notes - Twitter4J - Version 2.0.6 <font color="red">new! 28/May/09</font></li>
+    
+<h2>        Bug
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-157'>TFJ-157</a>] -         getUserTimeline should be invocable from unauthenticated Twitter instances
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-158'>TFJ-158</a>] -         Query.setGeoCode() is missing radius parameter
+</li>
+</ul>
+            
+<h2>        Task
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-155'>TFJ-155</a>] -         several async methods need to be marked as deprecated
+</li>
+</ul>
+    
+    
+<li>Release Notes - Twitter4J - Version 2.0.5 24/May/09</li>
+    
+<h2>        Bug
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-150'>TFJ-150</a>] -         REGRESSION : enableNotification() fails with TwitterException: 404:The URI requested is invalid or the resource requested, such as a user, does not exists.
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-151'>TFJ-151</a>] -         several test cases fail on JDK1.4.2 with java.lang.NoSuchMethodError
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-153'>TFJ-153</a>] -         OAuth rarely fails with &quot;Invalid / used nonce&quot;
+</li>
+</ul>
+    
+<h2>        Improvement
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-154'>TFJ-154</a>] -         search() with old since_id throws TwitterException
+</li>
+</ul>
+            
+            
+<li>Release Notes - Twitter4J - Version 2.0.4 19/May/09</li>
+    
+<h2>        Bug
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-142'>TFJ-142</a>] -         DocumentBuilder.parse is not thread safe : NullPointerException at AbstractDOMParser.startElement
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-145'>TFJ-145</a>] -         twitter4j.http.Response shouldn't be Serializable
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-146'>TFJ-146</a>] -         getUserDetail should be invocable from unauthenticated Twitter instances
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-149'>TFJ-149</a>] -         OAuth fails with &quot;Invalid / expired Token&quot; after May 13, 2009
+</li>
+</ul>
+    
+<h2>        Improvement
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-147'>TFJ-147</a>] -         retire ExtendedUser and UserWithStatus
+</li>
+</ul>
+    
+<h2>        New Feature
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-139'>TFJ-139</a>] -         streaming API support beta
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-144'>TFJ-144</a>] -         Add methods to retrieve blocking information 
+</li>
+</ul>
+    
+<h2>        Task
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-143'>TFJ-143</a>] -         Deprecation of following and notification elements
+</li>
+</ul>
+
+<li>Release Notes - Twitter4J - Version 2.0.3 10/May/09</li>
+    
+<h2>        Bug
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-135'>TFJ-135</a>] -         search() causes : java.lang.IllegalArgumentException: URLDecoder: Illegal hex characters in escape (%) pattern - For input string: &quot;..&quot;
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-136'>TFJ-136</a>] -         running Twitter4J on JDK1.4.x fails with java.lang.NoSuchMethodError: org.w3c.dom.Node.getTextContent()Ljava/lang/String;
+</li>
+</ul>
+            
+<h2>        Task
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-137'>TFJ-137</a>] -         deprecate getDowntimeSchedule() since it's not supported by the Twitter API anymore
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-138'>TFJ-138</a>] -         add @deprecated annotation to deprecated methods in TwitterAdapter
+</li>
+</ul>
+    
+    
+<li>Release Notes - Twitter4J - Version 2.0.2 08/May/09</li>
+        
+<h2>        Improvement
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-131'>TFJ-131</a>] -         Use gzip encoding to improve performance and network bandwidth utilization
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-132'>TFJ-132</a>] -         handle http response codes correctly to reduce unnecessary retries
+</li>
+</ul>
+    
+<h2>        New Feature
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-120'>TFJ-120</a>] -         include rate limit status in TwitterResponse
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-123'>TFJ-123</a>] -         support trends methods
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-124'>TFJ-124</a>] -         support update_profile method
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-133'>TFJ-133</a>] -         need a way to shutdown async thread gracefully
+</li>
+</ul>
+
+<li>Release Notes - Twitter4J - Version 2.0.1 04/May/09</li>
+        
+<h2>        Improvement
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-110'>TFJ-110</a>] -         remove unnecessary synchronized modifier for better multi-thread performance
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-111'>TFJ-111</a>] -         support page and max_id parameters with getUserTimeline()
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-112'>TFJ-112</a>] -         introduce pagenation control class which replaces page, count, and since_id parameters
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-121'>TFJ-121</a>] -         support follow parameter with create() method
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-122'>TFJ-122</a>] -         need a way to get AccessToken in a stateless context where RequestToken instance is not available
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-126'>TFJ-126</a>] -         dispatcher thread should be held statically
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-130'>TFJ-130</a>] -         fix method name inconsistencies
+</li>
+</ul>
+    
+<h2>        New Feature
+</h2>
+<ul>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-117'>TFJ-117</a>] -         support statuses/mentions
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-125'>TFJ-125</a>] -         introduce a System property that specifies number of dispatcher thread
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-128'>TFJ-128</a>] -         support pagination on social graph methods
+</li>
+<li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-129'>TFJ-129</a>] -         introduce async search method
+</li>
+</ul>
+    
+    
+<li>Release Notes - Twitter4J - Version 2.0.0 19/Apr/09</li>
 
 <h2>        Bug
 </h2>
@@ -46,7 +206,7 @@ $[ja:]$[en:]
 <li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-97'>TFJ-97</a>] -         support since_id with getDirectMessages and getSentDirectMessages
 </li>
 
-        <li>Release Notes - Twitter4J - Version 1.1.8</li>
+        <li>Release Notes - Twitter4J - Version 1.1.8 07/Apr/09</li>
     
 <h2>        Bug
 </h2>
@@ -88,14 +248,14 @@ $[ja:]$[en:]
 </li>
 </ul>
 
-        <li>Release Notes - Twitter4J - Version 1.1.7</li>
+        <li>Release Notes - Twitter4J - Version 1.1.7 09/Mar/09</li>
             
 <h2>        New Feature
 </h2>
 <ul>
 <li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-40'>TFJ-40</a>] -         Search API support
 </li>
-        <li>Release Notes - Twitter4J - Version 1.1.6</li>
+        <li>Release Notes - Twitter4J - Version 1.1.6 07/Mar/09</li>
     
 <h2>        Bug
 </h2>
@@ -116,7 +276,7 @@ $[ja:]$[en:]
 </ul>
 
 
-        <li>Release Notes - Twitter4J - Version 1.1.5</li>
+        <li>Release Notes - Twitter4J - Version 1.1.5 25/Feb/09</li>
     
 <h2>        Bug
 </h2>
@@ -132,7 +292,7 @@ $[ja:]$[en:]
 </li>
 </ul>
     
-        <li>Release Notes - Twitter4J - Version 1.1.4</li>
+        <li>Release Notes - Twitter4J - Version 1.1.4 12/Jan/09</li>
     
 <h2>        Bug
 </h2>
@@ -164,7 +324,7 @@ $[ja:]$[en:]
 <li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-53'>TFJ-53</a>] -         support rate_limit_status method
 </li>
 
-        <li>Release Notes - Twitter4J - Version 1.1.3</li>
+        <li>Release Notes - Twitter4J - Version 1.1.3 13/Dec/08</li>
     
 <h2>        Bug
 </h2>
@@ -188,7 +348,7 @@ $[ja:]$[en:]
 </ul>
 
 
-        <li>Release Notes - Twitter4J - Version 1.1.2</li>
+        <li>Release Notes - Twitter4J - Version 1.1.2 02/Dec/08</li>
     
 <h2>        Bug
 </h2>
@@ -206,7 +366,7 @@ $[ja:]$[en:]
 </li>
 </ul>
 
-       <li>Release Notes - Twitter4J - Version 1.1.1 </li>
+       <li>Release Notes - Twitter4J - Version 1.1.1 22/Nov/08</li>
     
 <h2>        Bug
 </h2>
@@ -230,7 +390,7 @@ $[ja:]$[en:]
 </li>
 </ul>
         
-        <li>$[ja:バージョン ]$[en:Version ]1.1.0</li>
+        <li>$[ja:バージョン ]$[en:Version ]1.1.0 02/Nov/08</li>
     
 <h2>        $[ja:修正されたバグ]$[en:Resolved Bugs]
 </h2>
@@ -260,7 +420,7 @@ $[ja:]$[en:]
 </ul>
     
 
-        <li>$[ja:バージョン ]$[en:Version ]1.0.6</li>
+        <li>$[ja:バージョン ]$[en:Version ]1.0.6 29/Oct/08</li>
 
 
 <h2>        $[ja:修正されたバグ]$[en:Resolved Bugs]
@@ -281,7 +441,7 @@ $[ja:]$[en:]
 
 
 
-        <li>$[ja:バージョン ]$[en:Version ]1.0.5
+        <li>$[ja:バージョン ]$[en:Version ]1.0.5 16/Sep/08</li>
 
 <h2>        $[ja:修正されたバグ]$[en:Resolved Bugs]
 </h2>
@@ -302,7 +462,7 @@ $[ja:]$[en:]
 
 
 
-        <li>$[ja:バージョン ]$[en:Version ]1.0.4</li>
+        <li>$[ja:バージョン ]$[en:Version ]1.0.4 01/Jun/08</li>
 
 <h2>       $[ja:改善]$[en:Improvement]
 </h2>
@@ -326,7 +486,7 @@ $[ja:]$[en:]
 </li>
 </ul>
 
-        <li>$[ja:バージョン ]$[en:Version ]1.0.3</li>
+        <li>$[ja:バージョン ]$[en:Version ]1.0.3 19/Jan/08</li>
 
 <h2>        $[ja:新機能]$[en:New Feature]
 </h2>
@@ -342,7 +502,7 @@ $[ja:]$[en:]
 </ul>
 
 
-        <li>$[ja:バージョン ]$[en:Version ]1.0.2</li>
+        <li>$[ja:バージョン ]$[en:Version ]1.0.2 16/Jul/07</li>
    <h2>        $[ja:修正されたバグ]$[en:Resolved Bugs]
    </h2>
 <ul>
@@ -373,7 +533,7 @@ $[ja:]$[en:]
 <li>[<a href='http://yusuke.homeip.net/jira/browse/TFJ-15'>TFJ-15</a>] - $[ja:getDirectMessages() に sinse_id を渡せるように]$[en:ability to pass since_id to getDirectMessges()]
 </li>
 </ul>
- <li>$[ja:バージョン ]$[en:Version ]1.0.1 </li>
+ <li>$[ja:バージョン ]$[en:Version ]1.0.1 25/Jun/07</li>
     <h2>        $[ja:修正されたバグ]$[en:Resolved Bugs]
     </h2>
     <ul>
@@ -396,7 +556,7 @@ $[ja:]$[en:]
     </li>
     </ul>
 
-<li>$[ja:バージョン ]$[en:Version ]1.0.0</li>
+<li>$[ja:バージョン ]$[en:Version ]1.0.0 09/Jun/07</li>
 $[ja:初期バージョンリリース]$[en:Released Initial Version]
     <!--a name="todo"><h2>$[ja:Todo]$[en:Todo]</h2></a>
  <ul>

@@ -1,0 +1,13 @@
+MISSING @SINCE TAG: twitter4j.http.HttpResponseEvent Class
+MISSING @SINCE TAG: twitter4j.http.HttpResponseListener Interface
+MISSING @SINCE TAG: twitter4j.RateLimitStatusListener Interface
+NO DOC BLOCK: twitter4j.RateLimitStatus Constructor (int, int, long)
+NO DOC BLOCK: twitter4j.http.HttpClient Method addHttpResponseListener(twitter4j.http.HttpResponseListener)
+MISSING @SINCE TAG: twitter4j.Twitter Method get(java.lang.String, boolean)
+NO DOC BLOCK: twitter4j.TwitterAdapter Method gotFollowersStatuses(java.util.List<twitter4j.User>)
+NO DOC BLOCK: twitter4j.TwitterListener Method gotFollowersStatuses(java.util.List<twitter4j.User>)
+NO DOC BLOCK: twitter4j.TwitterAdapter Method gotFriendsStatuses(java.util.List<twitter4j.User>)
+NO DOC BLOCK: twitter4j.TwitterListener Method gotFriendsStatuses(java.util.List<twitter4j.User>)
+NO DOC BLOCK: twitter4j.AsyncTwitter Field FOLLOWERS_STATUSES
+NO DOC BLOCK: twitter4j.AsyncTwitter Field FRIENDS_STATUSES
+NO DOC BLOCK: twitter4j.AsyncTwitter Field SHOW_USER

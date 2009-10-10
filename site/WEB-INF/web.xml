@@ -42,6 +42,14 @@
       <param-value>jika.controllers</param-value>
     </init-param>
   </servlet>
+  <servlet>
+    <servlet-name>html2jsp</servlet-name>
+    <jsp-file>/html2jsp.jsp</jsp-file>
+  </servlet>
+  <!--servlet-mapping>
+    <servlet-name>html2jsp</servlet-name>
+    <url-pattern>*.html</url-pattern>
+  </servlet-mapping-->
   <servlet-mapping>
     <servlet-name>JikaController</servlet-name>
     <url-pattern>*.action</url-pattern>

@@ -1,0 +1,10 @@
+OK: twitter4j.SavedSearch Class
+MISSING @SINCE TAG: twitter4j.http.Response Method asJSONArray()
+OK: twitter4j.Twitter Method createSavedSearch(java.lang.String)
+OK: twitter4j.Twitter Method destroySavedSearch(int)
+OK: twitter4j.Twitter Method getOAuthAccessToken(java.lang.String, java.lang.String, java.lang.String)
+OK: twitter4j.Twitter Method getOAuthAccessToken(twitter4j.http.RequestToken, java.lang.String)
+OK: twitter4j.http.HttpClient Method getOAuthAccessToken(java.lang.String, java.lang.String, java.lang.String)
+OK: twitter4j.http.HttpClient Method getOAuthAccessToken(twitter4j.http.RequestToken, java.lang.String)
+OK: twitter4j.Twitter Method getSavedSearches()
+OK: twitter4j.Twitter Method showSavedSearch(int)

@@ -29,27 +29,40 @@ h1, h2, h3 {
 
 }
 
-.supported-api table{
+.api-support table{
     font-size:70%;
     width: 100%;
 }
-.supported-api table th{
+.api-support table th{
     background-color: #aaa;
 }
-.supported-api table td{
+.api-support table td{
     background-color: #ddd;
 }
-.supported-api .pagination{
+.api-support .pagination{
     text-align: center;
-    color: #3c3;
+    color: #1c1;
 }
-.supported-api .method-path{
+.api-support .pagination a {
+    color: #1c1;
+}
+
+.api-support .pagination a:visited {
+    color: #1c1;
+}
+
+.api-support .pagination a:hover {
+    color: #1c1;
+}
+
+
+.api-support .method-path{
   width: 250px;
 }
-.supported-api .t4jmethod{
+.api-support .t4jmethod{
   width: 200px;
 }
-.supported-api .paging-support{
+.api-support .paging-support{
   width: 150px;
 }
 
@@ -121,7 +134,7 @@ h1, h2, h3 {
 ul {
     list-style: disc;
     margin: 10px 0;
-    padding: 0 0 5px;
+    padding: 0 0 12px;
 }
 
 li {
