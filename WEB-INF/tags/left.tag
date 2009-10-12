@@ -32,7 +32,7 @@ function setVisibility(id,page){
   <li><a href="code-examples.html#pagination" onclick="return scrollGracefully(this.href)">$[ja:ページ処理]$[en:Pagination control]</a></li>
   <li><a href="code-examples.html#oauth" onclick="return scrollGracefully(this.href)">$[ja:OAuth認可]$[en:OAuth support]</a></li>
  </ol>
-<li><a href="./javadoc/index.html">JavaDoc</a></li>
+<li><a href="./javadoc.html">JavaDoc</a></li>
 <li><a href="api-support.html"">$[ja:サポートしているAPI]$[en:API Support matrix]</a></li>
  <ol style="display:none" id="api-support">
   <li><a href="api-support.html#Search API Methods" onclick="return scrollGracefully(this.href)">Search API Methods</a></li>

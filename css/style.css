@@ -29,10 +29,23 @@ h1, h2, h3 {
 
 }
 
+.javadoc table{
+    font-size:70%;
+    width: 100%;
+}
+.javadoc table th{
+    background-color: #aaa;
+}
+.javadoc table td{
+    text-align: center;
+    background-color: #ddd;
+}
+
 .api-support table{
     font-size:70%;
     width: 100%;
 }
+
 .api-support table th{
     background-color: #aaa;
 }
