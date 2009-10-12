@@ -50,7 +50,7 @@ function setVisibility(id,page){
   <li><a href="api-support.html#Streaming API Methods" onclick="return scrollGracefully(this.href)">Streaming API Methods</a></li>
  </ol>
 <li><a href="faq.html"">$[ja:よくある質問]$[en:FAQ]</a></li>
-<li><a href="http://yusuke.homeip.net/jira/browse/TFJ?report=com.atlassian.jira.plugin.system.project:changelog-panel">$[ja:変更履歴]$[en:Change Log]</a></li>
+<li><a href="/jira/browse/TFJ#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel">$[ja:変更履歴]$[en:Change Log]</a></li>
 <li><a href="index.html#pricing" onclick="return scrollGracefully(this.href)">$[ja:寄付する]$[en:Donate]</a></li>
 </ul>
 <script>
