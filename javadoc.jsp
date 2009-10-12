@@ -7,8 +7,8 @@
 <p><a href="./javadoc/index.html">$[ja:バージョン]$[en:Version] <include>latest-version.fragment</include></a></p>
 
 <h2><a name="latst">$[ja:最新スナップショット]$[en:Latest snapshot version]</a></h2>
-<p><a href="./javadoc/2.1.0-SNAPSHOT/index.html">$[ja:バージョン]$[en:Version] 2.1.0-SNAPSHOT</a><br>
-<a href="./javadoc/2.1.0-SNAPSHOT/2.0.10-2.1.0-SNAPSHOT/changes.html">diff from $[ja:バージョン]$[en:Version] 2.0.10</a>
+<p><a href="./oldjavadocs/2.1.0-SNAPSHOT/index.html">$[ja:バージョン]$[en:Version] 2.1.0-SNAPSHOT</a><br>
+<a href="./oldjavadocs/2.0.10-2.1.0-SNAPSHOT/changes.html">diff from $[ja:バージョン]$[en:Version] 2.0.10</a>
 </p>
 
 <h2><a name="oldVersions">$[ja:古いバージョン]$[en:Old Versions]</a></h2>
