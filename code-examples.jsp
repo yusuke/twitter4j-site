@@ -81,25 +81,16 @@ See also <a href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/sr
     AsyncTwitter twitter = new AsyncTwitter(senderId,senderPassword);
     twitter.updateStatusAsync(args[2], new TwitterAdapter() {
         @Override public void updatedStatus(Status status) {
-        System.out.println("Successfully updated the status to [" +
+          System.out.println("Successfully updated the status to [" +
                    status.getText() + "].");
-        synchronized (lock) {
-            lock.notify();
-        }
         }
 
         @Override public void onException(TwitterException e, int method) {
-        if (method == AsyncTwitter.UPDATE_STATUS) {
+          if (method == AsyncTwitter.UPDATE_STATUS) {
             e.printStackTrace();
-            synchronized (lock) {
-            lock.notify();
-            }
-        } else {
-            synchronized (lock) {
-            lock.notify();
-            }
+          } else {
             throw new AssertionError("Should not happen");
-        }
+          }
         }
     }
     );
