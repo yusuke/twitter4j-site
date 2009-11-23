@@ -7,6 +7,10 @@ function downloadSearch(){
 mkdir -p $1
 wget --user=twit4j --password=twitter4j http://search.twitter.com/$1$2 -O $1$2
 }
+function downloadSearchAs(){
+mkdir -p $1
+wget --user=twit4j --password=twitter4j http://search.twitter.com/$1$2 -O $1$3
+}
 
 download "" search.json?q=twitter
 download "" trends.json
@@ -20,4 +24,4 @@ download users/show/ twit4j.json
 download statuses/followers/ T4J_hudson.json
 download statuses/friends/ T4J_hudson.json
 download statuses/user_timeline/ testiverse.json 
-downloadSearch trends/ daily.json?date=2004-03-19
+downloadSearchAs trends/ daily.json?date=2004-03-19 daily-empty.json
