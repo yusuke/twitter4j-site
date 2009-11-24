@@ -24,8 +24,9 @@ wget --user=twit4j --password=twitter4j http://search.twitter.com/$1$2 -O $1$3
 #download statuses/ public_timeline.json
 #download statuses/ home_timeline.json
 #download statuses/ show/123.xml
-postdownload statuses/retweet/ 6010814202.json ""
-#download users/show/ twit4j.json
+#postdownload statuses/retweet/ 6010814202.json ""
+download users/show/ twit4j.json
+download users/show/ twit4j2.json
 #download statuses/followers/ T4J_hudson.json
 #download statuses/friends/ T4J_hudson.json
 #download statuses/user_timeline/ testiverse.json 
