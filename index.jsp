@@ -53,6 +53,31 @@ JVM: Java 1.4.2 or later]</p>
 <p>$[ja:Maven を使っている場合、pom.xml に以下のように記載すればご自身のプロジェクトに twitter4j を簡単に統合できます。]
 $[en:You can integrate Twitter4j easily by including following lines into your pom.xml.]
 <pre class="codeSample">   &lt;dependencies&gt;<br/>       &lt;dependency&gt;<br/>           &lt;groupId&gt;net.homeip.yusuke&lt;/groupId&gt;<br/>           &lt;artifactId&gt;twitter4j&lt;/artifactId&gt;<br/>           &lt;version&gt;[2.0,)&lt;/version&gt;<br/>       &lt;/dependency&gt;<br/>       ...<br/>   &lt;/dependencies&gt;<br/></pre>
+
+$[ja:SNAPSHOTビルドを使う場合は以下のように記載します。SNAPSHOTビルドは次期バージョンの安定ビルドです。テストケースは通っており運用に耐える安定性がありますが、将来のアップデートにおいて微妙なAPIの差異が生じる可能性があります。最新の機能を利用する必要がある場合はお使いください。]
+$[en:If you would like to use the latest SNAPSHOT build, add following lines into your pom.xml. A SNAPSHOT build is the latest build passed all existing unit tests. Technically it should be stable enough for production systems. But you need to be ready for possible future API changes.]
+<pre class="codeSample">   &lt;repositories&gt;
+      &lt;repository&gt;
+         &lt;id&gt;yusuke.homeip.net&lt;/id&gt;
+         &lt;name&gt;yusuke.homeip.net Repository&lt;/name&gt;
+         &lt;url&gt;http://yusuke.homeip.net/maven2&lt;/url&gt;
+         &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+         &lt;/releases&gt;
+         &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+         &lt;/snapshots&gt;
+      &lt;/repository&gt;
+   &lt;/repositories&gt;
+   &lt;dependencies&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;net.homeip.yusuke&lt;/groupId&gt;
+         &lt;artifactId&gt;twitter4j&lt;/artifactId&gt;
+         &lt;version&gt;[2.1,)&lt;/version&gt;
+         &lt;scope&gt;compile&lt;/scope&gt;
+      &lt;/dependency&gt;
+   &lt;/dependencies&gt;</pre>
+
 </p>
 
 
