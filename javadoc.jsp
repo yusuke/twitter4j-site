@@ -52,6 +52,13 @@ $[ja:- TwitterResponse はクラスではなくなりました<br>
 多くの場合、関係ありませんが、<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponse.html">TwitterResponse</a> は rate limit status のアクセサを意味するインターフェースになりました。もうレスポンスオブジェクトの親クラスではありません。より正確に、内部の話をするとバージョン2.1.0からほとんどのレスポンスクラスは<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponseImpl.html">TwitterResponseImpl</a> を継承するようになりました。]
 $[en:- TwitterResponse is not a class anymore.<br>
 Shouldn't matter in most cases. <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponse.html">TwitterResponse</a> is now an interface representing just rate limit status accessors. It's not a super class of every response objects anymore. More specifically and internally, most of response classes are extending <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponseImpl.html">TwitterResponseImpl</a> from Version 2.1.0.]
+$[ja:- バージョン識別API URL の利用<br>
+Twitter4J はhttp(s)://twitter.com のかわりに http(s)://api.twitter.com/ にアクセスするようになりました。<br>
+コードの変更は必要ありません。<br>
+・<a href="http://groups.google.com/group/twitter-api-announce/browse_thread/thread/2b70bd6ea4aec175?hl=en">Laying the foundation for API versioning</a><br>]
+$[en:- use of Versioned API UR><br>
+Twitter4J now accesses http(s)://api.twitter.com/ instead of http(s)://twitter.com.<br>
+-&gt; <a href="http://groups.google.com/group/twitter-api-announce/browse_thread/thread/2b70bd6ea4aec175?hl=en">Laying the foundation for API versioning</a><br>]
 </pre>
 </p>
 
