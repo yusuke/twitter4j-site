@@ -10,7 +10,7 @@
 <p><a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">･$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include> JavaDoc</a><br>
 <a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">･JavaDoc diff from $[ja:バージョン]$[en:Version] <include>latest-version.fragment</include></a>
 <h2><a name="migration">$[ja:バージョン2.0.xから2.1.xへの移行]$[en:Migrating from 2.0.x to 2.1.x]</a></h2>
-<p>$[ja:- 非推奨メソッドの廃止
+<p>$[ja:- 非推奨メソッドの廃止<br>
 バージョン2.0.10で非推奨となっていたメソッドは全て廃止(削除)されました。<br>
 <br>]
 $[en:- Retirement of deprecated methods<br>
@@ -37,16 +37,16 @@ Now those methods returns <a href="http://yusuke.homeip.net/twitter4j/en/oldjava
 $[ja:- XML 利用の廃止<br>
 これは内部のリファクタリングで、コード変更は必要ありません。<br>
 全ての Twitter4J のメソッドは JSON ベースのメソッドを使うようになりました。<br>
-これは Android 上で飛躍的にパフォーマンスを改善し、また Dalvik の XML パーサのひどいバグを回避します。<br>
--> <a href="http://code.google.com/p/android/issues/detail?id=2607">Issue 2607: org.apache.harmony.xml.parsers.DocumentBuilderImpl does not resolve unicode entity refs</a><br>
--> <a href="http://code.google.com/p/android/issues/detail?id=4666">Issue 4666: DocumentBuilder (XML DOM) doesn't support external entities</a><br>
+これは JIT コンパイラを持たない Android 上で飛躍的にパフォーマンスを改善し、また Dalvik の XML パーサのひどいバグを回避します。<br>
+・ <a href="http://code.google.com/p/android/issues/detail?id=2607">Issue 2607: org.apache.harmony.xml.parsers.DocumentBuilderImpl does not resolve unicode entity refs</a><br>
+・ <a href="http://code.google.com/p/android/issues/detail?id=4666">Issue 4666: DocumentBuilder (XML DOM) doesn't support external entities</a><br>
 <br>]
 $[en:- No more XML, not any more<br>
 This is just an internal rework and no code change is required.<br>
 All over Twitter4J methods are now using JSON based methods.<br>
-This will significantly boost performance on Android platforms and workaround the Dalvik's horrible XML parser bugs of the Dalvik JVM.<br>
--> <a href="http://code.google.com/p/android/issues/detail?id=2607">Issue 2607: org.apache.harmony.xml.parsers.DocumentBuilderImpl does not resolve unicode entity refs</a><br>
--> <a href="http://code.google.com/p/android/issues/detail?id=4666">Issue 4666: DocumentBuilder (XML DOM) doesn't support external entities</a><br>
+This will significantly boost performance on Android platforms (which doesn't implement JIT compiler :( ) and workaround the Dalvik's horrible XML parser bugs of the Dalvik JVM.<br>
+-&gt; <a href="http://code.google.com/p/android/issues/detail?id=2607">Issue 2607: org.apache.harmony.xml.parsers.DocumentBuilderImpl does not resolve unicode entity refs</a><br>
+-&gt; <a href="http://code.google.com/p/android/issues/detail?id=4666">Issue 4666: DocumentBuilder (XML DOM) doesn't support external entities</a><br>
 <br>]
 $[ja:- TwitterResponse はクラスではなくなりました<br>
 多くの場合、関係ありませんが、<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponse.html">TwitterResponse</a> は rate limit status のアクセサを意味するインターフェースになりました。もうレスポンスオブジェクトの親クラスではありません。より正確に、内部の話をするとバージョン2.1.0からほとんどのレスポンスクラスは<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponseImpl.html">TwitterResponseImpl</a> を継承するようになりました。]
