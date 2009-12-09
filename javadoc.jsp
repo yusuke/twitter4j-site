@@ -4,12 +4,12 @@
 <div class="javadoc">
     <a name="javaDoc"><h1>JavaDoc</h1></a>
 <h2><a name="latst">$[ja:最新バージョン]$[en:Latest version]</a></h2>
-<p><a href="./javadoc/index.html">$[ja:バージョン]$[en:Version] <include>latest-version.fragment</include> JavaDoc</a></p>
+<p><a href="./javadoc/index.html">･$[ja:バージョン]$[en:Version] <include>latest-version.fragment</include> JavaDoc</a></p>
 
 <h2><a name="latst">$[ja:最新スナップショット]$[en:Latest snapshot version]</a></h2>
-<p><a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include> JavaDoc</a><br>
-<a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">diff from $[ja:バージョン]$[en:Version] <include>latest-version.fragment</include></a>
-<h2><a name="latst">$[ja:バージョン2.0.xから2.1.xへの移行]$[en:Migration from 2.0.x to 2.1.x]</a></h2>
+<p><a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">･$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include> JavaDoc</a><br>
+<a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">･JavaDoc diff from $[ja:バージョン]$[en:Version] <include>latest-version.fragment</include></a>
+<h2><a name="migration">$[ja:バージョン2.0.xから2.1.xへの移行]$[en:Migrating from 2.0.x to 2.1.x]</a></h2>
 <p>- Retirement of deprecated methods<br>
 All methods marked as deprecated at version 2.0.10 have been retired (removed).<br>
 <br>
