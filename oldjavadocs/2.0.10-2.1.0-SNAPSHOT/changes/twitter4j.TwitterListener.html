@@ -171,15 +171,153 @@ Interface twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.TwitterListener.gotFollowersStatuses_added(java.util.List<twitter4j.User>)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotFollowersStatuses(java.util.List<twitter4j.User>)" target="_top"><tt>gotFollowersStatuses</tt></A>(<code>List&lt;User&gt;</code>)</nobr>
+  <A NAME="twitter4j.TwitterListener.gotFollowersStatuses_added(twitter4j.PagableResponseList<twitter4j.User>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotFollowersStatuses(twitter4j.PagableResponseList<twitter4j.User>)" target="_top"><tt>gotFollowersStatuses</tt></A>(<code>PagableResponseList&lt;User&gt;</code>)</nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.TwitterListener.gotFriendsStatuses_added(java.util.List<twitter4j.User>)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotFriendsStatuses(java.util.List<twitter4j.User>)" target="_top"><tt>gotFriendsStatuses</tt></A>(<code>List&lt;User&gt;</code>)</nobr>
+  <A NAME="twitter4j.TwitterListener.gotFriendsStatuses_added(twitter4j.PagableResponseList<twitter4j.User>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotFriendsStatuses(twitter4j.PagableResponseList<twitter4j.User>)" target="_top"><tt>gotFriendsStatuses</tt></A>(<code>PagableResponseList&lt;User&gt;</code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<p>
+<a NAME="Changed"></a>
+<TABLE summary="Changed Methods" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+  <TD VALIGN="TOP" COLSPAN=3><FONT SIZE="+1"><B>Changed Methods</B></FONT></TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotBlockingUsers_changed(twitter4j.ResponseList<twitter4j.User>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotBlockingUsers(twitter4j.ResponseList<twitter4j.User>)" target="_top"><tt>gotBlockingUsers</tt></A>(<code>ResponseList&lt;User&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;User&gt;</code> to <code>ResponseList&lt;User&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">@since Twitter4J 2.0.4</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotDirectMessages_changed(twitter4j.ResponseList<twitter4j.DirectMessage>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotDirectMessages(twitter4j.ResponseList<twitter4j.DirectMessage>)" target="_top"><tt>gotDirectMessages</tt></A>(<code>ResponseList&lt;DirectMessage&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;DirectMessage&gt;</code> to <code>ResponseList&lt;DirectMessage&gt;</code>.<br>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotFavorites_changed(twitter4j.ResponseList<twitter4j.Status>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotFavorites(twitter4j.ResponseList<twitter4j.Status>)" target="_top"><tt>gotFavorites</tt></A>(<code>ResponseList&lt;Status&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotFeatured_changed(twitter4j.ResponseList<twitter4j.User>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotFeatured(twitter4j.ResponseList<twitter4j.User>)" target="_top"><tt>gotFeatured</tt></A>(<code>ResponseList&lt;User&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;User&gt;</code> to <code>ResponseList&lt;User&gt;</code>.<br>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotFriendsTimeline_changed(twitter4j.ResponseList<twitter4j.Status>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotFriendsTimeline(twitter4j.ResponseList<twitter4j.Status>)" target="_top"><tt>gotFriendsTimeline</tt></A>(<code>ResponseList&lt;Status&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotHomeTimeline_changed(twitter4j.ResponseList<twitter4j.Status>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotHomeTimeline(twitter4j.ResponseList<twitter4j.Status>)" target="_top"><tt>gotHomeTimeline</tt></A>(<code>ResponseList&lt;Status&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">@since Twitter4J 2.0.10</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotMentions_changed(twitter4j.ResponseList<twitter4j.Status>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotMentions(twitter4j.ResponseList<twitter4j.Status>)" target="_top"><tt>gotMentions</tt></A>(<code>ResponseList&lt;Status&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">@since Twitter4J 2.0.1</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotPublicTimeline_changed(twitter4j.ResponseList<twitter4j.Status>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotPublicTimeline(twitter4j.ResponseList<twitter4j.Status>)" target="_top"><tt>gotPublicTimeline</tt></A>(<code>ResponseList&lt;Status&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotRetweetedByMe_changed(twitter4j.ResponseList<twitter4j.Status>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotRetweetedByMe(twitter4j.ResponseList<twitter4j.Status>)" target="_top"><tt>gotRetweetedByMe</tt></A>(<code>ResponseList&lt;Status&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">@since Twitter4J 2.0.10</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotRetweetedToMe_changed(twitter4j.ResponseList<twitter4j.Status>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotRetweetedToMe(twitter4j.ResponseList<twitter4j.Status>)" target="_top"><tt>gotRetweetedToMe</tt></A>(<code>ResponseList&lt;Status&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">@since Twitter4J 2.0.10</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotRetweetsOfMe_changed(twitter4j.ResponseList<twitter4j.Status>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotRetweetsOfMe(twitter4j.ResponseList<twitter4j.Status>)" target="_top"><tt>gotRetweetsOfMe</tt></A>(<code>ResponseList&lt;Status&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">@since Twitter4J 2.0.10</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotSentDirectMessages_changed(twitter4j.ResponseList<twitter4j.DirectMessage>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotSentDirectMessages(twitter4j.ResponseList<twitter4j.DirectMessage>)" target="_top"><tt>gotSentDirectMessages</tt></A>(<code>ResponseList&lt;DirectMessage&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;DirectMessage&gt;</code> to <code>ResponseList&lt;DirectMessage&gt;</code>.<br>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotUserTimeline_changed(twitter4j.ResponseList<twitter4j.Status>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotUserTimeline(twitter4j.ResponseList<twitter4j.Status>)" target="_top"><tt>gotUserTimeline</tt></A>(<code>ResponseList&lt;Status&gt;</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
   </TD>
   <TD>&nbsp;</TD>
 </TR>

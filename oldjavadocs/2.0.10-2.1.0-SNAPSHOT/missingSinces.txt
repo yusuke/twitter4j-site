@@ -1,16 +1,46 @@
+MISSING @SINCE TAG: twitter4j.CursorSupport Interface
 MISSING @SINCE TAG: twitter4j.http.HttpResponseEvent Class
 MISSING @SINCE TAG: twitter4j.http.HttpResponseListener Interface
+MISSING @SINCE TAG: twitter4j.List Class
+MISSING @SINCE TAG: twitter4j.PagableResponseList Class
 MISSING @SINCE TAG: twitter4j.RateLimitStatusListener Interface
+MISSING @SINCE TAG: twitter4j.ResponseList Class
+MISSING @SINCE TAG: twitter4j.TwitterResponseImpl Class
 NO DOC BLOCK: twitter4j.RateLimitStatus Constructor (int, int, long)
 NO DOC BLOCK: twitter4j.http.HttpClient Method addHttpResponseListener(twitter4j.http.HttpResponseListener)
+MISSING @SINCE TAG: twitter4j.Twitter Method createUserList(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+NO DOC BLOCK: twitter4j.http.HttpClient Method delete(java.lang.String)
+NO DOC BLOCK: twitter4j.http.HttpClient Method delete(java.lang.String, boolean)
+MISSING @SINCE TAG: twitter4j.Twitter Method deleteUserList(java.lang.String, int)
+NO DOC BLOCK: twitter4j.Paging Method equals(java.lang.Object)
 MISSING @SINCE TAG: twitter4j.Twitter Method get(java.lang.String, boolean)
-NO DOC BLOCK: twitter4j.TwitterResponse Method getChildDate(java.lang.String, twitter4j.org.json.JSONObject)
-NO DOC BLOCK: twitter4j.TwitterResponse Method getChildDate(java.lang.String, twitter4j.org.json.JSONObject, java.lang.String)
+MISSING @SINCE TAG: twitter4j.Twitter Method get(java.lang.String, twitter4j.http.PostParameter[], java.util.List<twitter4j.http.PostParameter>, boolean)
+MISSING @SINCE TAG: twitter4j.Twitter Method getApiBaseURL()
+OK: twitter4j.Twitter Method getFollowersStatuses(java.lang.String, long)
+OK: twitter4j.Twitter Method getFollowersStatuses(long)
+OK: twitter4j.AsyncTwitter Method getFollowersStatusesAsync(java.lang.String, long, twitter4j.TwitterListener)
+OK: twitter4j.AsyncTwitter Method getFollowersStatusesAsync(long, twitter4j.TwitterListener)
+OK: twitter4j.Twitter Method getFriendsStatuses(java.lang.String, long)
+OK: twitter4j.Twitter Method getFriendsStatuses(long)
+OK: twitter4j.AsyncTwitter Method getFriendsStatusesAsync(java.lang.String, long, twitter4j.TwitterListener)
+OK: twitter4j.AsyncTwitter Method getFriendsStatusesAsync(long, twitter4j.TwitterListener)
 OK: twitter4j.Status Method getRetweetedStatus()
-NO DOC BLOCK: twitter4j.TwitterAdapter Method gotFollowersStatuses(java.util.List<twitter4j.User>)
-NO DOC BLOCK: twitter4j.TwitterListener Method gotFollowersStatuses(java.util.List<twitter4j.User>)
-NO DOC BLOCK: twitter4j.TwitterAdapter Method gotFriendsStatuses(java.util.List<twitter4j.User>)
-NO DOC BLOCK: twitter4j.TwitterListener Method gotFriendsStatuses(java.util.List<twitter4j.User>)
+MISSING @SINCE TAG: twitter4j.Twitter Method getUserListMemberships(java.lang.String, long)
+MISSING @SINCE TAG: twitter4j.Twitter Method getUserLists(java.lang.String, long)
+MISSING @SINCE TAG: twitter4j.Twitter Method getUserListStatuses(java.lang.String, int, twitter4j.Paging)
+MISSING @SINCE TAG: twitter4j.Twitter Method getUserListSubscriptions(java.lang.String, long)
+MISSING @SINCE TAG: twitter4j.Twitter Method getUserTimeline(java.lang.String)
+OK: twitter4j.Twitter Method getUserTimeline(java.lang.String, twitter4j.Paging)
+OK: twitter4j.Twitter Method getUserTimeline(twitter4j.Paging)
+NO DOC BLOCK: twitter4j.TwitterAdapter Method gotFollowersStatuses(twitter4j.PagableResponseList<twitter4j.User>)
+NO DOC BLOCK: twitter4j.TwitterListener Method gotFollowersStatuses(twitter4j.PagableResponseList<twitter4j.User>)
+NO DOC BLOCK: twitter4j.TwitterAdapter Method gotFriendsStatuses(twitter4j.PagableResponseList<twitter4j.User>)
+NO DOC BLOCK: twitter4j.TwitterListener Method gotFriendsStatuses(twitter4j.PagableResponseList<twitter4j.User>)
+NO DOC BLOCK: twitter4j.Paging Method hashCode()
+MISSING @SINCE TAG: twitter4j.Twitter Method showUserList(java.lang.String, int)
+NO DOC BLOCK: twitter4j.Paging Method toString()
+MISSING @SINCE TAG: twitter4j.Twitter Method updateUserList(java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)
 NO DOC BLOCK: twitter4j.AsyncTwitter Field FOLLOWERS_STATUSES
 NO DOC BLOCK: twitter4j.AsyncTwitter Field FRIENDS_STATUSES
 NO DOC BLOCK: twitter4j.AsyncTwitter Field SHOW_USER
+NO DOC BLOCK: twitter4j.Twitter Field V1

@@ -32,7 +32,7 @@ twitter4j.AsyncTwitter
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<B>PREV CLASS</B>&nbsp;
-&nbsp;<A HREF="twitter4j.QueryResult.html"><B>NEXT CLASS</B></A>
+&nbsp;<A HREF="twitter4j.DirectMessage.html"><B>NEXT CLASS</B></A>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
   &nbsp;<A HREF="twitter4j.AsyncTwitter.html" TARGET="_top"><B>NO FRAMES</B></A></FONT></TD>
@@ -313,6 +313,20 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.getFollowersStatusesAsync_removed(java.lang.String, twitter4j.Paging, twitter4j.TwitterListener)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#getFollowersStatusesAsync(java.lang.String, twitter4j.Paging, twitter4j.TwitterListener)" target="_top"><tt>getFollowersStatusesAsync</tt></A>(<code>String,</nobr> Paging<nobr>,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.getFollowersStatusesAsync_removed(twitter4j.Paging, twitter4j.TwitterListener)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#getFollowersStatusesAsync(twitter4j.Paging, twitter4j.TwitterListener)" target="_top"><tt>getFollowersStatusesAsync</tt></A>(<code>Paging,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.AsyncTwitter.getFriendsAsync_removed(int, twitter4j.TwitterListener)"></A>
   <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#getFriendsAsync(int, twitter4j.TwitterListener)" target="_top"><tt>getFriendsAsync</tt></A>(<code>int,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
   </TD>
@@ -373,6 +387,20 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
   <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#getFriendsIDsAsync(java.lang.String, twitter4j.Paging, twitter4j.TwitterListener)" target="_top"><tt>getFriendsIDsAsync</tt></A>(<code>String,</nobr> Paging<nobr>,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Returns an array of numeric IDs for every user the specified user is following.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.getFriendsStatusesAsync_removed(java.lang.String, twitter4j.Paging, twitter4j.TwitterListener)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#getFriendsStatusesAsync(java.lang.String, twitter4j.Paging, twitter4j.TwitterListener)" target="_top"><tt>getFriendsStatusesAsync</tt></A>(<code>String,</nobr> Paging<nobr>,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the user's friends, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.getFriendsStatusesAsync_removed(twitter4j.Paging, twitter4j.TwitterListener)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#getFriendsStatusesAsync(twitter4j.Paging, twitter4j.TwitterListener)" target="_top"><tt>getFriendsStatusesAsync</tt></A>(<code>Paging,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -670,6 +698,42 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
 </TR>
 </TABLE>
 &nbsp;
+<p>
+<a NAME="Added"></a>
+<TABLE summary="Added Methods" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Added Methods</B></FONT></TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.getFollowersStatusesAsync_added(java.lang.String, long, twitter4j.TwitterListener)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#getFollowersStatusesAsync(java.lang.String, long, twitter4j.TwitterListener)" target="_top"><tt>getFollowersStatusesAsync</tt></A>(<code>String,</nobr> long<nobr>,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.getFollowersStatusesAsync_added(long, twitter4j.TwitterListener)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#getFollowersStatusesAsync(long, twitter4j.TwitterListener)" target="_top"><tt>getFollowersStatusesAsync</tt></A>(<code>long,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.getFriendsStatusesAsync_added(java.lang.String, long, twitter4j.TwitterListener)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#getFriendsStatusesAsync(java.lang.String, long, twitter4j.TwitterListener)" target="_top"><tt>getFriendsStatusesAsync</tt></A>(<code>String,</nobr> long<nobr>,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the user's friends, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.getFriendsStatusesAsync_added(long, twitter4j.TwitterListener)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#getFriendsStatusesAsync(long, twitter4j.TwitterListener)" target="_top"><tt>getFriendsStatusesAsync</tt></A>(<code>long,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
+</TR>
+</TABLE>
+&nbsp;
 <a NAME="fields"></a>
 <p>
 <a NAME="Removed"></a>
@@ -834,7 +898,7 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<B>PREV CLASS</B>&nbsp;
-&nbsp;<A HREF="twitter4j.QueryResult.html"><B>NEXT CLASS</B></A>
+&nbsp;<A HREF="twitter4j.DirectMessage.html"><B>NEXT CLASS</B></A>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
   &nbsp;<A HREF="twitter4j.AsyncTwitter.html" TARGET="_top"><B>NO FRAMES</B></A></FONT></TD>

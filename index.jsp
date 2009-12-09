@@ -21,10 +21,10 @@ JVM: Java 1.4.2 またはそれ以降]
 $[en:OS: Windows or any flavor of Unix that supports Java.<br>
 JVM: Java 1.4.2 or later]</p>
     <a name="howToUse"><h2>$[ja:使い方]$[en:How To Use]</h2></a>
-    <p>$[ja:twitter4j-2.0.10.jar をクラスパスに通して、好きなメソッドを呼び出してください。<br>
+    <p>$[ja:twitter4j-<include>latest-version.fragment</include>.jar をクラスパスに通して、好きなメソッドを呼び出してください。<br>
     Java が分かっていれば <a href="./javadoc/index.html">JavaDoc</a> を見るのが早いです。<br>
     twitter4j.<a href="javadoc/twitter4j/Twitter.html">Twitter</a> クラスが最初に見るべきクラスです。]
-    $[en:Just add twitter4j-2.0.10.jar to your application classpath.<br>
+    $[en:Just add twitter4j-<include>latest-version.fragment</include>.jar to your application classpath.<br>
     If you are familiar with Java language, the <a href="./javadoc/index.html">JavaDoc</a> should be the shortest way for you to get started.<br>
     <a href="javadoc/twitter4j/Twitter.html">twitter4j.Twitter</a> class is the one you may want to look first.]</p>
 
@@ -33,9 +33,12 @@ JVM: Java 1.4.2 or later]</p>
 </ol>
 
 <a name="download"><h2>$[ja:ダウンロード]$[en:Download]</h2></a>
-<a href="http://yusuke.homeip.net/twitter4j/$[ja:ja]$[en:en]/twitter4j-2.0.10.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
-    <a href="http://yusuke.homeip.net/twitter4j/$[ja:ja]$[en:en]/twitter4j-2.0.10.zip">twitter4j-2.0.10.zip</a>
+<p><a href="http://yusuke.homeip.net/twitter4j/en/twitter4j-<include>latest-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
+    <a href="http://yusuke.homeip.net/twitter4j/en/twitter4j-<include>latest-version.fragment</include>.zip">twitter4j-<include>latest-version.fragment</include>.zip</a><br>
 
+<a href="http://yusuke.homeip.net/maven2/net/homeip/yusuke/twitter4j/<include>latest-SNAPSHOT-version.fragment</include>/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.jar"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
+    <a href="http://yusuke.homeip.net/maven2/net/homeip/yusuke/twitter4j/<include>latest-SNAPSHOT-version.fragment</include>/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.jar">twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.jar</a><br>
+</p>
 
     <a name="sourceCode"><h2>$[ja:ソースコード]$[en:Source Code]</h2></a>
     <p>$[ja:アーカイブにはソースコードが含まれています。<br>

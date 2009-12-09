@@ -65,9 +65,31 @@ Package <A HREF="../../2.1.0-SNAPSHOT/twitter4j/package-summary.html" target="_t
 &nbsp;
 <p>
 <a NAME="Added"></a>
-<TABLE summary="Added Interfaces" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TABLE summary="Added Classes and Interfaces" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Added Interfaces</B></FONT></TD>
+  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Added Classes and Interfaces</B></FONT></TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="CursorSupport"></A>
+  <nobr><A HREF="../../2.1.0-SNAPSHOT/twitter4j/CursorSupport.html" target="_top"><tt><I>CursorSupport</I></tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">@author Yusuke Yamamoto - yusuke at mac.com</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="List"></A>
+  <nobr><A HREF="../../2.1.0-SNAPSHOT/twitter4j/List.html" target="_top"><tt>List</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">A data class representing Basic list information element
+ </TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="PagableResponseList"></A>
+  <nobr><A HREF="../../2.1.0-SNAPSHOT/twitter4j/PagableResponseList.html" target="_top"><tt>PagableResponseList</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">CursorSupport'ed ResponseList implementation.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -75,6 +97,20 @@ Package <A HREF="../../2.1.0-SNAPSHOT/twitter4j/package-summary.html" target="_t
   <nobr><A HREF="../../2.1.0-SNAPSHOT/twitter4j/RateLimitStatusListener.html" target="_top"><tt><I>RateLimitStatusListener</I></tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">@author Andrew Hedges - andrew.hedges at gmail.com</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="ResponseList"></A>
+  <nobr><A HREF="../../2.1.0-SNAPSHOT/twitter4j/ResponseList.html" target="_top"><tt>ResponseList</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">List of TwitterResponse.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="TwitterResponseImpl"></A>
+  <nobr><A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterResponseImpl.html" target="_top"><tt>TwitterResponseImpl</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Generic TwitterResponse implementation.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -95,6 +131,30 @@ Package <A HREF="../../2.1.0-SNAPSHOT/twitter4j/package-summary.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="DirectMessage"></A>
+  <nobr><A HREF="twitter4j.DirectMessage.html">DirectMessage</A></nobr>
+  </TD>
+  <TD VALIGN="TOP">A data class representing sent/received direct message.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="IDs"></A>
+  <nobr><A HREF="twitter4j.IDs.html">IDs</A></nobr>
+  </TD>
+  <TD VALIGN="TOP">A data class representing array of numeric IDs.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="Paging"></A>
+  <nobr><A HREF="twitter4j.Paging.html">Paging</A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Controls pagination.<br>
+ It is possible to use the same Paging instance in a multi-threaded
+ context only if the instance is treated immutably.<br>
+ But basically instance of this class is NOT thread safe.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="QueryResult"></A>
   <nobr><A HREF="twitter4j.QueryResult.html">QueryResult</A></nobr>
   </TD>
@@ -111,10 +171,34 @@ Package <A HREF="../../2.1.0-SNAPSHOT/twitter4j/package-summary.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="SavedSearch"></A>
+  <nobr><A HREF="twitter4j.SavedSearch.html">SavedSearch</A></nobr>
+  </TD>
+  <TD VALIGN="TOP">A data class representing a Saved Search
+
+ </TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="Status"></A>
   <nobr><A HREF="twitter4j.Status.html">Status</A></nobr>
   </TD>
   <TD VALIGN="TOP">A data class representing one single status of a user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="Trends"></A>
+  <nobr><A HREF="twitter4j.Trends.html">Trends</A></nobr>
+  </TD>
+  <TD VALIGN="TOP">A data class representing Treands.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="Tweet"></A>
+  <nobr><A HREF="twitter4j.Tweet.html">Tweet</A></nobr>
+  </TD>
+  <TD VALIGN="TOP">A data class representing a Tweet in the search response
+ </TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -141,7 +225,7 @@ Package <A HREF="../../2.1.0-SNAPSHOT/twitter4j/package-summary.html" target="_t
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="TwitterResponse"></A>
-  <nobr><A HREF="twitter4j.TwitterResponse.html">TwitterResponse</A></nobr>
+  <nobr><A HREF="twitter4j.TwitterResponse.html"><I>TwitterResponse</I></A></nobr>
   </TD>
   <TD VALIGN="TOP">Super class of Twitter Response objects.</TD>
 </TR>

@@ -53,7 +53,7 @@ Where <code>added</code> is the number of packages added, <code>removed</code> i
 This definition is applied recursively for the classes and their program elements, so the value for a changed package will be less than 1, unless every class in that package has changed.
 The definition ensures that if all packages are removed and all new packages are
 added, the change will be 100%. Values are rounded here, so a value of 0% indicates a percentage difference of less than 0.5%.
-<p>The overall difference between the two APIs is approximately 7%.
+<p>The overall difference between the two APIs is approximately 12%.
 </BLOCKQUOTE>
 <h3>Sections</h3>
 <a href="#packages">Packages</a> sorted by percentage difference<br>
@@ -68,12 +68,12 @@ added, the change will be 100%. Values are rounded here, so a value of 0% indica
   <TD ALIGN="center" bgcolor="#EEEEFF"><FONT size="+1"><b>Package</b></FONT></TD>
 </TR>
 <TR>
-  <TD ALIGN="center">11</TD>
-  <TD><A HREF="pkg_twitter4j.http.html">twitter4j.http</A></TD>
+  <TD ALIGN="center">25</TD>
+  <TD><A HREF="pkg_twitter4j.html">twitter4j</A></TD>
 </TR>
 <TR>
-  <TD ALIGN="center">11</TD>
-  <TD><A HREF="pkg_twitter4j.html">twitter4j</A></TD>
+  <TD ALIGN="center">12</TD>
+  <TD><A HREF="pkg_twitter4j.http.html">twitter4j.http</A></TD>
 </TR>
 </TABLE>
 <hr>
@@ -85,12 +85,18 @@ added, the change will be 100%. Values are rounded here, so a value of 0% indica
   <TD width="300" ALIGN="center" bgcolor="#EEEEFF"><FONT size="+1"><b>Percentage Frequency</b></FONT></TD>
 </TR>
 <TR>
-  <TD ALIGN="center">11</TD>
-  <TD>1.0</TD>
-  <TD><img alt="|" src="../black.gif" height=20 width=300.0></TD>
+  <TD ALIGN="center">12</TD>
+  <TD>0.5</TD>
+  <TD><img alt="|" src="../black.gif" height=20 width=150.0></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">25</TD>
+  <TD>0.5</TD>
+  <TD><img alt="|" src="../black.gif" height=20 width=150.0></TD>
 </TR>
 <!-- START_PACKAGE_HISTOGRAM
-11,1.0
+12,0.5
+25,0.5
 END_PACKAGE_HISTOGRAM -->
 </TABLE>
 <hr>
@@ -102,24 +108,34 @@ END_PACKAGE_HISTOGRAM -->
   <TD ALIGN="center" bgcolor="#EEEEFF"><FONT size="+1"><b>Class or <i>Interface</i></b></FONT></TD>
 </TR>
 <TR>
+  <TD ALIGN="center">75</TD>
+  <TD><A HREF="twitter4j.TwitterResponse.html">
+<i>twitter4j.TwitterResponse</i></A></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">52</TD>
+  <TD><A HREF="twitter4j.Twitter.html">
+twitter4j.Twitter</A></TD>
+</TR>
+<TR>
   <TD ALIGN="center">30</TD>
   <TD><A HREF="twitter4j.TwitterStream.html">
 twitter4j.TwitterStream</A></TD>
 </TR>
 <TR>
-  <TD ALIGN="center">27</TD>
-  <TD><A HREF="twitter4j.TwitterResponse.html">
-twitter4j.TwitterResponse</A></TD>
-</TR>
-<TR>
-  <TD ALIGN="center">26</TD>
+  <TD ALIGN="center">28</TD>
   <TD><A HREF="twitter4j.AsyncTwitter.html">
 twitter4j.AsyncTwitter</A></TD>
 </TR>
 <TR>
-  <TD ALIGN="center">26</TD>
-  <TD><A HREF="twitter4j.Twitter.html">
-twitter4j.Twitter</A></TD>
+  <TD ALIGN="center">28</TD>
+  <TD><A HREF="twitter4j.TwitterListener.html">
+<i>twitter4j.TwitterListener</i></A></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">28</TD>
+  <TD><A HREF="twitter4j.TwitterAdapter.html">
+twitter4j.TwitterAdapter</A></TD>
 </TR>
 <TR>
   <TD ALIGN="center">20</TD>
@@ -127,19 +143,29 @@ twitter4j.Twitter</A></TD>
 twitter4j.RateLimitStatus</A></TD>
 </TR>
 <TR>
-  <TD ALIGN="center">16</TD>
-  <TD><A HREF="twitter4j.TwitterListener.html">
-<i>twitter4j.TwitterListener</i></A></TD>
+  <TD ALIGN="center">12</TD>
+  <TD><A HREF="twitter4j.Paging.html">
+twitter4j.Paging</A></TD>
 </TR>
 <TR>
-  <TD ALIGN="center">15</TD>
-  <TD><A HREF="twitter4j.TwitterAdapter.html">
-twitter4j.TwitterAdapter</A></TD>
+  <TD ALIGN="center">7</TD>
+  <TD><A HREF="twitter4j.Trends.html">
+twitter4j.Trends</A></TD>
 </TR>
 <TR>
   <TD ALIGN="center">6</TD>
   <TD><A HREF="twitter4j.User.html">
 twitter4j.User</A></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">6</TD>
+  <TD><A HREF="twitter4j.IDs.html">
+twitter4j.IDs</A></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">6</TD>
+  <TD><A HREF="twitter4j.SavedSearch.html">
+twitter4j.SavedSearch</A></TD>
 </TR>
 <TR>
   <TD ALIGN="center">5</TD>
@@ -153,13 +179,23 @@ twitter4j.http.Response</A></TD>
 </TR>
 <TR>
   <TD ALIGN="center">4</TD>
+  <TD><A HREF="twitter4j.DirectMessage.html">
+twitter4j.DirectMessage</A></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">4</TD>
   <TD><A HREF="twitter4j.QueryResult.html">
 twitter4j.QueryResult</A></TD>
 </TR>
 <TR>
-  <TD ALIGN="center">&lt;1</TD>
+  <TD ALIGN="center">3</TD>
   <TD><A HREF="twitter4j.http.HttpClient.html">
 twitter4j.http.HttpClient</A></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">3</TD>
+  <TD><A HREF="twitter4j.Tweet.html">
+twitter4j.Tweet</A></TD>
 </TR>
 </TABLE>
 <hr>
@@ -171,9 +207,9 @@ twitter4j.http.HttpClient</A></TD>
   <TD width="300" ALIGN="center" bgcolor="#EEEEFF"><FONT size="+1"><b>Percentage Frequency</b></FONT></TD>
 </TR>
 <TR>
-  <TD ALIGN="center">0</TD>
-  <TD>0.08333333333333333</TD>
-  <TD><img alt="|" src="../black.gif" height=20 width=25.0></TD>
+  <TD ALIGN="center">3</TD>
+  <TD>0.1111111111111111</TD>
+  <TD><img alt="|" src="../black.gif" height=20 width=33.333333333333336></TD>
 </TR>
 <TR>
   <TD ALIGN="center">4</TD>
@@ -182,55 +218,61 @@ twitter4j.http.HttpClient</A></TD>
 </TR>
 <TR>
   <TD ALIGN="center">5</TD>
-  <TD>0.08333333333333333</TD>
-  <TD><img alt="|" src="../black.gif" height=20 width=25.0></TD>
+  <TD>0.05555555555555555</TD>
+  <TD><img alt="|" src="../black.gif" height=20 width=16.666666666666668></TD>
 </TR>
 <TR>
   <TD ALIGN="center">6</TD>
-  <TD>0.08333333333333333</TD>
-  <TD><img alt="|" src="../black.gif" height=20 width=25.0></TD>
-</TR>
-<TR>
-  <TD ALIGN="center">15</TD>
-  <TD>0.08333333333333333</TD>
-  <TD><img alt="|" src="../black.gif" height=20 width=25.0></TD>
-</TR>
-<TR>
-  <TD ALIGN="center">16</TD>
-  <TD>0.08333333333333333</TD>
-  <TD><img alt="|" src="../black.gif" height=20 width=25.0></TD>
-</TR>
-<TR>
-  <TD ALIGN="center">20</TD>
-  <TD>0.08333333333333333</TD>
-  <TD><img alt="|" src="../black.gif" height=20 width=25.0></TD>
-</TR>
-<TR>
-  <TD ALIGN="center">26</TD>
   <TD>0.16666666666666666</TD>
   <TD><img alt="|" src="../black.gif" height=20 width=50.0></TD>
 </TR>
 <TR>
-  <TD ALIGN="center">27</TD>
-  <TD>0.08333333333333333</TD>
-  <TD><img alt="|" src="../black.gif" height=20 width=25.0></TD>
+  <TD ALIGN="center">7</TD>
+  <TD>0.05555555555555555</TD>
+  <TD><img alt="|" src="../black.gif" height=20 width=16.666666666666668></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">12</TD>
+  <TD>0.05555555555555555</TD>
+  <TD><img alt="|" src="../black.gif" height=20 width=16.666666666666668></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">20</TD>
+  <TD>0.05555555555555555</TD>
+  <TD><img alt="|" src="../black.gif" height=20 width=16.666666666666668></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">28</TD>
+  <TD>0.16666666666666666</TD>
+  <TD><img alt="|" src="../black.gif" height=20 width=50.0></TD>
 </TR>
 <TR>
   <TD ALIGN="center">30</TD>
-  <TD>0.08333333333333333</TD>
-  <TD><img alt="|" src="../black.gif" height=20 width=25.0></TD>
+  <TD>0.05555555555555555</TD>
+  <TD><img alt="|" src="../black.gif" height=20 width=16.666666666666668></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">52</TD>
+  <TD>0.05555555555555555</TD>
+  <TD><img alt="|" src="../black.gif" height=20 width=16.666666666666668></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">75</TD>
+  <TD>0.05555555555555555</TD>
+  <TD><img alt="|" src="../black.gif" height=20 width=16.666666666666668></TD>
 </TR>
 <!-- START_CLASS_HISTOGRAM
-0,0.08333333333333333
+3,0.1111111111111111
 4,0.16666666666666666
-5,0.08333333333333333
-6,0.08333333333333333
-15,0.08333333333333333
-16,0.08333333333333333
-20,0.08333333333333333
-26,0.16666666666666666
-27,0.08333333333333333
-30,0.08333333333333333
+5,0.05555555555555555
+6,0.16666666666666666
+7,0.05555555555555555
+12,0.05555555555555555
+20,0.05555555555555555
+28,0.16666666666666666
+30,0.05555555555555555
+52,0.05555555555555555
+75,0.05555555555555555
 END_CLASS_HISTOGRAM -->
 </TABLE>
 <hr>
@@ -261,37 +303,37 @@ The numbers of program elements (packages, classes. constructors, methods and fi
 <TR>
   <TD>Classes and <i>Interfaces</i></TD>
   <TD ALIGN="right">1</TD>
-  <TD ALIGN="right">3</TD>
-  <TD ALIGN="right">12</TD>
-  <TD ALIGN="right">16</TD>
+  <TD ALIGN="right">8</TD>
+  <TD ALIGN="right">18</TD>
+  <TD ALIGN="right">27</TD>
 </TR>
 <TR>
   <TD>Constructors</TD>
-  <TD ALIGN="right">3</TD>
+  <TD ALIGN="right">5</TD>
   <TD ALIGN="right">1</TD>
   <TD ALIGN="right">0</TD>
-  <TD ALIGN="right">4</TD>
+  <TD ALIGN="right">6</TD>
 </TR>
 <TR>
   <TD>Methods</TD>
-  <TD ALIGN="right">211</TD>
-  <TD ALIGN="right">9</TD>
-  <TD ALIGN="right">8</TD>
-  <TD ALIGN="right">228</TD>
+  <TD ALIGN="right">237</TD>
+  <TD ALIGN="right">33</TD>
+  <TD ALIGN="right">60</TD>
+  <TD ALIGN="right">330</TD>
 </TR>
 <TR>
   <TD>Fields</TD>
   <TD ALIGN="right">15</TD>
-  <TD ALIGN="right">3</TD>
+  <TD ALIGN="right">4</TD>
   <TD ALIGN="right">0</TD>
-  <TD ALIGN="right">18</TD>
+  <TD ALIGN="right">19</TD>
 </TR>
 <TR>
   <TD><b>Total</b></TD>
-  <TD ALIGN="right">230</TD>
-  <TD ALIGN="right">16</TD>
-  <TD ALIGN="right">22</TD>
-  <TD ALIGN="right">268</TD>
+  <TD ALIGN="right">258</TD>
+  <TD ALIGN="right">46</TD>
+  <TD ALIGN="right">80</TD>
+  <TD ALIGN="right">384</TD>
 </TR>
 </TABLE>
 </HTML>

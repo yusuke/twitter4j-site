@@ -31,7 +31,7 @@ twitter4j.Twitter
 </TR>
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="twitter4j.Status.html"><B>PREV CLASS</B></A>
+&nbsp;<A HREF="twitter4j.Tweet.html"><B>PREV CLASS</B></A>
 &nbsp;<A HREF="twitter4j.TwitterAdapter.html"><B>NEXT CLASS</B></A>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
@@ -39,7 +39,7 @@ twitter4j.Twitter
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell3"><FONT SIZE="-2"> DETAIL: &nbsp;
 <a href="#constructors">CONSTRUCTORS</a>&nbsp;|&nbsp;
 <a href="#methods">METHODS</a>&nbsp;|&nbsp;
-FIELDS
+<a href="#fields">FIELDS</a>
   </FONT></TD>
 </TR>
 </TABLE>
@@ -150,6 +150,13 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.get_removed(java.lang.String, twitter4j.http.PostParameter[], twitter4j.Paging, boolean)"></A>
+  <nobr><code>Response</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#get(java.lang.String, twitter4j.http.PostParameter[], twitter4j.Paging, boolean)" target="_top"><tt>get</tt></A>(<code>String,</nobr> PostParameter[]<nobr>,</nobr> Paging<nobr>,</nobr> boolean<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Issues an HTTP GET request.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getAuthenticatedUser_removed()"></A>
   <nobr><code>User</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getAuthenticatedUser()" target="_top"><tt>getAuthenticatedUser</tt></A>()</nobr>
   </TD>
@@ -255,6 +262,20 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFollowersStatuses_removed(java.lang.String, twitter4j.Paging)"></A>
+  <nobr><code>List&lt;User&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String, twitter4j.Paging)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>String,</nobr> Paging<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFollowersStatuses_removed(twitter4j.Paging)"></A>
+  <nobr><code>List&lt;User&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getFollowersStatuses(twitter4j.Paging)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>Paging</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getFriends_removed()"></A>
   <nobr><code>List&lt;User&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getFriends()" target="_top"><tt>getFriends</tt></A>()</nobr>
   </TD>
@@ -315,6 +336,20 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
   <nobr><code>IDs</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getFriendsIDs(java.lang.String, twitter4j.Paging)" target="_top"><tt>getFriendsIDs</tt></A>(<code>String,</nobr> Paging<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Returns an array of numeric IDs for every user the specified user is following.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsStatuses_removed(java.lang.String, twitter4j.Paging)"></A>
+  <nobr><code>List&lt;User&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getFriendsStatuses(java.lang.String, twitter4j.Paging)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>String,</nobr> Paging<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the user's friends, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsStatuses_removed(twitter4j.Paging)"></A>
+  <nobr><code>List&lt;User&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getFriendsStatuses(twitter4j.Paging)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>Paging</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -493,6 +528,20 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserTimeline_removed(java.lang.String)"></A>
+  <nobr><code>List&lt;Status&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getUserTimeline(java.lang.String)" target="_top"><tt>getUserTimeline</tt></A>(<code>String</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the specified userid.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserTimeline_removed(java.lang.String, twitter4j.Paging)"></A>
+  <nobr><code>List&lt;Status&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getUserTimeline(java.lang.String, twitter4j.Paging)" target="_top"><tt>getUserTimeline</tt></A>(<code>String,</nobr> Paging<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the specified userid.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getUserTimeline_removed(int, java.util.Date)"></A>
   <nobr><code>List&lt;Status&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getUserTimeline(int, java.util.Date)" target="_top"><tt>getUserTimeline</tt></A>(<code>int,</nobr> Date<nobr><nobr></code>)</nobr>
   </TD>
@@ -518,6 +567,13 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
   <nobr><code>List&lt;Status&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getUserTimeline(java.lang.String, long)" target="_top"><tt>getUserTimeline</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the specified userid.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserTimeline_removed(twitter4j.Paging)"></A>
+  <nobr><code>List&lt;Status&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getUserTimeline(twitter4j.Paging)" target="_top"><tt>getUserTimeline</tt></A>(<code>Paging</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the authenticating user.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -605,10 +661,129 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.createUserList_added(java.lang.String, java.lang.String, java.lang.String, java.lang.String)"></A>
+  <nobr><code>List</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#createUserList(java.lang.String, java.lang.String, java.lang.String, java.lang.String)" target="_top"><tt>createUserList</tt></A>(<code>String,</nobr> String<nobr>,</nobr> String<nobr>,</nobr> String<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Creates a new list for the authenticated user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.deleteUserList_added(java.lang.String, int)"></A>
+  <nobr><code>List</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#deleteUserList(java.lang.String, int)" target="_top"><tt>deleteUserList</tt></A>(<code>String,</nobr> int<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Deletes the specified list.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.get_added(java.lang.String, boolean)"></A>
   <nobr><code>Response</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#get(java.lang.String, boolean)" target="_top"><tt>get</tt></A>(<code>String,</nobr> boolean<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Issues an HTTP GET request.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.get_added(java.lang.String, twitter4j.http.PostParameter[], java.util.List<twitter4j.http.PostParameter>, boolean)"></A>
+  <nobr><code>Response</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#get(java.lang.String, twitter4j.http.PostParameter[], java.util.List<twitter4j.http.PostParameter>, boolean)" target="_top"><tt>get</tt></A>(<code>String,</nobr> PostParameter[]<nobr>,</nobr> List&lt;PostParameter&gt;<nobr>,</nobr> boolean<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Issues an HTTP GET request.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getApiBaseURL_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getApiBaseURL()" target="_top"><tt>getApiBaseURL</tt></A>()</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the API base url (i.e.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFollowersStatuses_added(java.lang.String, long)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String, long)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFollowersStatuses_added(long)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(long)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>long</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsStatuses_added(java.lang.String, long)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(java.lang.String, long)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the user's friends, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsStatuses_added(long)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(long)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>long</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserListMemberships_added(java.lang.String, long)"></A>
+  <nobr><code>PagableResponseList&lt;List&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserListMemberships(java.lang.String, long)" target="_top"><tt>getUserListMemberships</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">List the lists the specified user has been added to.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserListStatuses_added(java.lang.String, int, twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserListStatuses(java.lang.String, int, twitter4j.Paging)" target="_top"><tt>getUserListStatuses</tt></A>(<code>String,</nobr> int<nobr>,</nobr> Paging<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Show tweet timeline for members of the specified list.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserListSubscriptions_added(java.lang.String, long)"></A>
+  <nobr><code>PagableResponseList&lt;List&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserListSubscriptions(java.lang.String, long)" target="_top"><tt>getUserListSubscriptions</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">List the lists the specified user follows.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserLists_added(java.lang.String, long)"></A>
+  <nobr><code>PagableResponseList&lt;List&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserLists(java.lang.String, long)" target="_top"><tt>getUserLists</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">List the lists of the specified user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserTimeline_added(java.lang.String)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserTimeline(java.lang.String)" target="_top"><tt>getUserTimeline</tt></A>(<code>String</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the specified userid.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserTimeline_added(java.lang.String, twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserTimeline(java.lang.String, twitter4j.Paging)" target="_top"><tt>getUserTimeline</tt></A>(<code>String,</nobr> Paging<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the specified userid.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserTimeline_added(twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserTimeline(twitter4j.Paging)" target="_top"><tt>getUserTimeline</tt></A>(<code>Paging</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.showUserList_added(java.lang.String, int)"></A>
+  <nobr><code>List</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#showUserList(java.lang.String, int)" target="_top"><tt>showUserList</tt></A>(<code>String,</nobr> int<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Show the specified list.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.updateUserList_added(java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)"></A>
+  <nobr><code>List</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateUserList(java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)" target="_top"><tt>updateUserList</tt></A>(<code>String,</nobr> int<nobr>,</nobr> String<nobr>,</nobr> String<nobr>,</nobr> String<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Updates the specified list.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -632,11 +807,21 @@ Change of visibility from public to protected.<br>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.Twitter.getRetweets_changed(long)"></A>
-  <nobr><code>List&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getRetweets(long)" target="_top"><tt>getRetweets</tt></A>(<code>long</code>)  </nobr>
+  <A NAME="twitter4j.Twitter.getFeatured_changed()"></A>
+  <nobr><code>ResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFeatured()" target="_top"><tt>getFeatured</tt></A>()  </nobr>
   </TD>
   <TD VALIGN="TOP" WIDTH="30%">
-Change in return type from <code>List&lt;RetweetDetails&gt;</code> to <code>List&lt;Status&gt;</code>.<br>
+Change in return type from <code>List&lt;User&gt;</code> to <code>ResponseList&lt;User&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns a list of the users currently featured on the site with their current statuses inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getRetweets_changed(long)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getRetweets(long)" target="_top"><tt>getRetweets</tt></A>(<code>long</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;RetweetDetails&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
   </TD>
   <TD VALIGN="TOP">Returns up to 100 of the first retweets of a given tweet.</TD>
 </TR>
@@ -651,9 +836,315 @@ Change of visibility from public to protected.<br>
   <TD VALIGN="TOP">Returns the search base url
  </TD>
 </TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getBlockingUsers_changed()"></A>
+  <nobr><code>ResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getBlockingUsers()" target="_top"><tt>getBlockingUsers</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;User&gt;</code> to <code>ResponseList&lt;User&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns a list of user objects that the authenticating user is blocking.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getBlockingUsers_changed(int)"></A>
+  <nobr><code>ResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getBlockingUsers(int)" target="_top"><tt>getBlockingUsers</tt></A>(<code>int</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;User&gt;</code> to <code>ResponseList&lt;User&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns a list of user objects that the authenticating user is blocking.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getDirectMessages_changed()"></A>
+  <nobr><code>ResponseList&lt;DirectMessage&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getDirectMessages()" target="_top"><tt>getDirectMessages</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;DirectMessage&gt;</code> to <code>ResponseList&lt;DirectMessage&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns a list of the direct messages sent to the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getDirectMessages_changed(twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;DirectMessage&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getDirectMessages(twitter4j.Paging)" target="_top"><tt>getDirectMessages</tt></A>(<code>Paging</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;DirectMessage&gt;</code> to <code>ResponseList&lt;DirectMessage&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns a list of the direct messages sent to the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFavorites_changed()"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFavorites()" target="_top"><tt>getFavorites</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent favorite statuses for the authenticating user or user specified by the ID parameter in the requested format.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFavorites_changed(int)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFavorites(int)" target="_top"><tt>getFavorites</tt></A>(<code>int</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent favorite statuses for the authenticating user or user specified by the ID parameter in the requested format.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFavorites_changed(java.lang.String)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFavorites(java.lang.String)" target="_top"><tt>getFavorites</tt></A>(<code>String</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent favorite statuses for the authenticating user or user specified by the ID parameter in the requested format.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFavorites_changed(java.lang.String, int)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFavorites(java.lang.String, int)" target="_top"><tt>getFavorites</tt></A>(<code>String,</nobr> int<nobr><nobr></code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent favorite statuses for the authenticating user or user specified by the ID parameter in the requested format.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFollowersStatuses_changed()"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses()" target="_top"><tt>getFollowersStatuses</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;User&gt;</code> to <code>PagableResponseList&lt;User&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFollowersStatuses_changed(java.lang.String)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>String</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;User&gt;</code> to <code>PagableResponseList&lt;User&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsStatuses_changed()"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses()" target="_top"><tt>getFriendsStatuses</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;User&gt;</code> to <code>PagableResponseList&lt;User&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsStatuses_changed(java.lang.String)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(java.lang.String)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>String</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;User&gt;</code> to <code>PagableResponseList&lt;User&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the user's friends, each with current status inline.<br>
+ This method automatically provides a value of cursor=-1 to begin paging.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsTimeline_changed()"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsTimeline()" target="_top"><tt>getFriendsTimeline</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent statuses posted in the last 24 hours from the authenticating1 user and that user's friends.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsTimeline_changed(twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsTimeline(twitter4j.Paging)" target="_top"><tt>getFriendsTimeline</tt></A>(<code>Paging</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent statuses posted in the last 24 hours from the specified userid.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getHomeTimeline_changed()"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getHomeTimeline()" target="_top"><tt>getHomeTimeline</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent statuses, including retweets, posted by the authenticating user and that user's friends.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getHomeTimeline_changed(twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getHomeTimeline(twitter4j.Paging)" target="_top"><tt>getHomeTimeline</tt></A>(<code>Paging</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent statuses, including retweets, posted by the authenticating user and that user's friends.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getMentions_changed()"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getMentions()" target="_top"><tt>getMentions</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent mentions (status containing @username) for the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getMentions_changed(twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getMentions(twitter4j.Paging)" target="_top"><tt>getMentions</tt></A>(<code>Paging</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent mentions (status containing @username) for the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getPublicTimeline_changed()"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getPublicTimeline()" target="_top"><tt>getPublicTimeline</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent statuses from non-protected users who have set a custom user icon.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getPublicTimeline_changed(long)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getPublicTimeline(long)" target="_top"><tt>getPublicTimeline</tt></A>(<code>long</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns only public statuses with an ID greater than (that is, more recent than) the specified ID.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getRetweetedByMe_changed()"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getRetweetedByMe()" target="_top"><tt>getRetweetedByMe</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent retweets posted by the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getRetweetedByMe_changed(twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getRetweetedByMe(twitter4j.Paging)" target="_top"><tt>getRetweetedByMe</tt></A>(<code>Paging</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent retweets posted by the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getRetweetedToMe_changed()"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getRetweetedToMe()" target="_top"><tt>getRetweetedToMe</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent retweets posted by the authenticating user's friends.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getRetweetedToMe_changed(twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getRetweetedToMe(twitter4j.Paging)" target="_top"><tt>getRetweetedToMe</tt></A>(<code>Paging</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent retweets posted by the authenticating user's friends.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getRetweetsOfMe_changed()"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getRetweetsOfMe()" target="_top"><tt>getRetweetsOfMe</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent tweets of the authenticated user that have been retweeted by others.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getRetweetsOfMe_changed(twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getRetweetsOfMe(twitter4j.Paging)" target="_top"><tt>getRetweetsOfMe</tt></A>(<code>Paging</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the 20 most recent tweets of the authenticated user that have been retweeted by others.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getSentDirectMessages_changed()"></A>
+  <nobr><code>ResponseList&lt;DirectMessage&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getSentDirectMessages()" target="_top"><tt>getSentDirectMessages</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;DirectMessage&gt;</code> to <code>ResponseList&lt;DirectMessage&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns a list of the direct messages sent by the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getSentDirectMessages_changed(twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;DirectMessage&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getSentDirectMessages(twitter4j.Paging)" target="_top"><tt>getSentDirectMessages</tt></A>(<code>Paging</code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;DirectMessage&gt;</code> to <code>ResponseList&lt;DirectMessage&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns a list of the direct messages sent by the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserTimeline_changed()"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserTimeline()" target="_top"><tt>getUserTimeline</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
+  </TD>
+  <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the authenticating user.</TD>
+</TR>
 </TABLE>
 &nbsp;
 <a NAME="fields"></a>
+<p>
+<a NAME="Added"></a>
+<TABLE summary="Added Fields" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Added Fields</B></FONT></TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.V1"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#V1" target="_top"><tt>V1</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
 <HR>
 <!-- Start of nav bar -->
 <TABLE summary="Navigation bar" BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
@@ -674,7 +1165,7 @@ Change of visibility from public to protected.<br>
 </TR>
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="twitter4j.Status.html"><B>PREV CLASS</B></A>
+&nbsp;<A HREF="twitter4j.Tweet.html"><B>PREV CLASS</B></A>
 &nbsp;<A HREF="twitter4j.TwitterAdapter.html"><B>NEXT CLASS</B></A>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
