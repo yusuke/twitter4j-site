@@ -16,7 +16,7 @@
 $[en:- Retirement of deprecated methods<br>
 All methods marked as deprecated at version 2.0.10 have been retired (removed).<br>
 <br>]
-$[en:- getFriendsStatuses() と getFollowersStatuses() のカーソルベースのぺージング<br>
+$[ja:- getFriendsStatuses() と getFollowersStatuses() のカーソルベースのぺージング<br>
 getFriendsStatuses(Paging) と getFollowersStatuses(Paging) は廃止されました。<br>
 代わりに<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(long)">getFriendsStatuses(long)</a> と <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String,%20long)">getFollowersStatuses(long)</a>でカーソルベースのページングを行えます。<br>
 これらのメソッドは<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/CursorSupport.html">CursorSupport</a>を実装する<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/PagableResponseList.html">PagableResponseList</a>&lt;twitter4j.List&gt; を返します。<br>
