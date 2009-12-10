@@ -1,6 +1,4 @@
-@charset
-"UTF-8"
-;
+@charset "UTF-8";
 body {
     text-align: center;
     font-family: Verdana, Arial, sans-serif;
@@ -54,7 +52,6 @@ h1, h2, h3 {
 }
 .api-support .pagination{
     text-align: center;
-    color: #1c1;
 }
 .api-support .pagination a {
     color: #1c1;
