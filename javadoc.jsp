@@ -21,12 +21,14 @@ getFriendsStatuses(Paging) と getFollowersStatuses(Paging) は廃止されま�
 代わりに<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(long)">getFriendsStatuses(long)</a> と <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String,%20long)">getFollowersStatuses(long)</a>でカーソルベースのページングを行えます。<br>
 これらのメソッドは<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/CursorSupport.html">CursorSupport</a>を実装する<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/PagableResponseList.html">PagableResponseList</a>&lt;twitter4j.List&gt; を返します。<br>
 パラメータなしの getFriendsStatuses() と getFollowersStatuses() は getFriendsStatuses(-1l) または getFollowersStatuses(-1l) を呼び出すのと同じで、最初のページを返します。<br>
+getFriendsStatuses(前回のレスポンス.getNextCursor()) を呼ぶことで次のぺージを取得できます。<br>
 <br>]
 $[en:- Cursor based pagenation with getFriendsStatuses() and getFollowersStatuses()<br>
 getFriendsStatuses(Paging) and getFollowersStatuses(Paging) have been retired.<br>
 Instead, you can use cursor based pagenation with <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(long)">getFriendsStatuses(long)</a> and <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String,%20long)">getFollowersStatuses(long)</a>.<br>
 They return <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/PagableResponseList.html">PagableResponseList</a>&lt;twitter4j.List&gt; which implements <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/CursorSupport.html">CursorSupport</a>.<br>
 getFriendsStatuses() and getFollowersStatuses() (with no parameter) are handy methods which are equivalent calls to getFriendsStatuses(-1l) and getFollowersStatuses(-1l) which retrieve the first page.<br>
+Call getFriendsStatuses(previousResponse.getNextCursor()) to retrieve the next page.<br>
 <br>]
 $[ja:- java.util.List に替わる twitter4j.ResponseList<br>
 これまでクライアントコードはTwitterResponse のリストを返すメソッドを利用する場合、rate limit status を確認するのにリスト中の要素を見なければなりませんでした。<br>
