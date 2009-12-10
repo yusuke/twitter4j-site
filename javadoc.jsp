@@ -16,14 +16,14 @@
 $[en:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-113</a>,<a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-240</a>:Retirement of deprecated methods<br>
 All methods marked as deprecated at version 2.0.10, and getFeatured() have been retired (removed).<br>
 <br>]
-$[ja:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-234">TFJ-234</a>:getFriendsStatuses() と getFollowersStatuses() のカーソルベースのぺージング<br>
+$[ja:- getFriendsStatuses() と getFollowersStatuses()(<a href="http://yusuke.homeip.net/jira/browse/TFJ-234">TFJ-234</a>) のカーソルベースのぺージング<br>
 getFriendsStatuses(Paging) と getFollowersStatuses(Paging) は廃止されました。<br>
 代わりに<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(long)">getFriendsStatuses(long)</a> と <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String,%20long)">getFollowersStatuses(long)</a>でカーソルベースのページングを行えます。<br>
 これらのメソッドは<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/CursorSupport.html">CursorSupport</a>を実装する<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/PagableResponseList.html">PagableResponseList</a>&lt;twitter4j.List&gt; を返します。<br>
 パラメータなしの getFriendsStatuses() と getFollowersStatuses() は getFriendsStatuses(-1l) または getFollowersStatuses(-1l) を呼び出すのと同じで、最初のページを返します。<br>
 getFriendsStatuses(前回のレスポンス.getNextCursor()) を呼ぶことで次のぺージを取得できます。<br>
 <br>]
-$[en:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-234">TFJ-234</a>:Cursor based pagenation with getFriendsStatuses() and getFollowersStatuses()<br>
+$[en:- Cursor based pagenation with getFriendsStatuses() and getFollowersStatuses()(<a href="http://yusuke.homeip.net/jira/browse/TFJ-234">TFJ-234</a>)<br>
 getFriendsStatuses(Paging) and getFollowersStatuses(Paging) have been retired.<br>
 Instead, you can use cursor based pagenation with <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(long)">getFriendsStatuses(long)</a> and <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String,%20long)">getFollowersStatuses(long)</a>.<br>
 They return <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/PagableResponseList.html">PagableResponseList</a>&lt;twitter4j.List&gt; which implements <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/CursorSupport.html">CursorSupport</a>.<br>
@@ -38,14 +38,20 @@ $[en:- twitter4j.ResponseList instead of java.util.List<br>
 Previously, client codes using methods that returns List of TwitterResponse need to pick one element inside the list to check the rate limit status.<br>
 Now those methods returns <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/ResponseList.html">twitter4j.ResponseList</a> instead of java.util.List, and rate limit status is available directly through the ResponseList.<br>
 <br>]
-$[ja:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-245">TFJ-245</a>:AsyncTwitter / TwitterListener 関連の変更<br>
-TwitterListener.onException(TwitterException te, int method) は廃止され、替わりに TwitterListener.onException(TwitterException te, TwitterMethod method) が導入されました。<br>
-TwitterListener.updatedDeliverlyDevice(User) は TwitterListener.updatedDeliveryDevice(User) へとリネームされました。<br>
-AsyncTwitter.updateDeliverlyDeviceAsync() は AsyncTwitter.updatedDeliveryDevice() へとリネームされました。<br>]
-$[en:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-245">TFJ-245</a>:AsyncTwitter / TwitterListener changes<br>
-TwitterListener.onException(TwitterException te, int method) has been retired, and TwitterListener.onException(TwitterException te, TwitterMethod method); is now available.<br>
-TwitterListener.updatedDeliverlyDevice() has been renamed to TwitterListener.updatedDeliveryDevice()<br>
-AsyncTwitter.updateDeliverlyDeviceAsync() has been renamed to AsyncTwitter.updatedDeliveryDevice()<br>]
+$[ja:- AsyncTwitter / TwitterListener 関連の変更(<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-244</a>)<br>
+TwitterListener.onException(TwitterException te, int method) は廃止され、替わりに TwitterListener.onException(TwitterException te, TwitterMethod method) が導入されました。<br>]
+$[en:- AsyncTwitter / TwitterListener changes(<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-244</a>)<br>
+TwitterListener.onException(TwitterException te, int method) has been retired, and TwitterListener.onException(TwitterException te, TwitterMethod method); is now available.<br>]
+
+$[ja:- メソッド名の修正(<a href="http://yusuke.homeip.net/jira/browse/TFJ-245">TFJ-245</a>)<br>
+<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#updateDeliverlyDevice(twitter4j.Twitter.Device)">Twitter.updateDeliverlyDevice()</a> は <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateDeliveryDevice(twitter4j.Twitter.Device)">Twitter.updateDeliveryDevice()</a> へとリネームされました。<br>
+<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/AsyncTwitter.html#updateDeliverlyDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliverlyDeviceAsync()</a> は <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#updateDeliveryDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliveryDevice()</a> へとリネームされました。<br>
+<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/TwitterListener.html#updatedDeliverlyDevice(twitter4j.User)">TwitterListener.updatedDeliverlyDevice()</a> は <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#updatedDeliveryDevice(twitter4j.User)">TwitterListener.updatedDeliveryDevice()</a> へとリネームされました。<br>]
+$[en:- Method name refactors<br>
+<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#updateDeliverlyDevice(twitter4j.Twitter.Device)">Twitter.updateDeliverlyDevice()</a> has been renamed to <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateDeliveryDevice(twitter4j.Twitter.Device)">Twitter.updateDeliveryDevice()</a>.<br>
+<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/AsyncTwitter.html#updateDeliverlyDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliverlyDeviceAsync()</a> has been renamed to <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#updateDeliveryDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliveryDevice()</a>.<br>
+<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#updateDeliverlyDevice(twitter4j.Twitter.Device)">TwitterListener.updateDeliverlyDevice()</a> has been renamed <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateDeliveryDevice(twitter4j.Twitter.Device)">TwitterListener.updateDeliveryDevice()</a>.<br>
+]
 
 $[ja:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-162">TFJ-162</a>:XML 利用の廃止<br>
 これは内部のリファクタリングで、コード変更は必要ありません。<br>
