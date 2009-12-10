@@ -10,20 +10,20 @@
 <p><a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">･$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include> JavaDoc</a><br>
 <a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">･JavaDoc diff from $[ja:バージョン]$[en:Version] <include>latest-version.fragment</include></a>
 <h2><a name="migration">$[ja:バージョン2.0.xから2.1.xへの移行]$[en:Migrating from 2.0.x to 2.1.x]</a></h2>
-<p>$[ja:- 非推奨メソッドの廃止<br>
-バージョン2.0.10で非推奨となっていたメソッドは全て廃止(削除)されました。<br>
+<p>$[ja:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-113</a>,<a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-240</a>非推奨メソッドの廃止<br>
+バージョン2.0.10で非推奨となっていたメソッド全てとgetFeatured()は廃止(削除)されました。<br>
 <br>]
-$[en:- Retirement of deprecated methods<br>
-All methods marked as deprecated at version 2.0.10 have been retired (removed).<br>
+$[en:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-113</a>,<a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-240</a>:Retirement of deprecated methods<br>
+All methods marked as deprecated at version 2.0.10, and getFeatured() have been retired (removed).<br>
 <br>]
-$[ja:- getFriendsStatuses() と getFollowersStatuses() のカーソルベースのぺージング<br>
+$[ja:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-234">TFJ-234</a>:getFriendsStatuses() と getFollowersStatuses() のカーソルベースのぺージング<br>
 getFriendsStatuses(Paging) と getFollowersStatuses(Paging) は廃止されました。<br>
 代わりに<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(long)">getFriendsStatuses(long)</a> と <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String,%20long)">getFollowersStatuses(long)</a>でカーソルベースのページングを行えます。<br>
 これらのメソッドは<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/CursorSupport.html">CursorSupport</a>を実装する<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/PagableResponseList.html">PagableResponseList</a>&lt;twitter4j.List&gt; を返します。<br>
 パラメータなしの getFriendsStatuses() と getFollowersStatuses() は getFriendsStatuses(-1l) または getFollowersStatuses(-1l) を呼び出すのと同じで、最初のページを返します。<br>
 getFriendsStatuses(前回のレスポンス.getNextCursor()) を呼ぶことで次のぺージを取得できます。<br>
 <br>]
-$[en:- Cursor based pagenation with getFriendsStatuses() and getFollowersStatuses()<br>
+$[en:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-234">TFJ-234</a>:Cursor based pagenation with getFriendsStatuses() and getFollowersStatuses()<br>
 getFriendsStatuses(Paging) and getFollowersStatuses(Paging) have been retired.<br>
 Instead, you can use cursor based pagenation with <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(long)">getFriendsStatuses(long)</a> and <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String,%20long)">getFollowersStatuses(long)</a>.<br>
 They return <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/PagableResponseList.html">PagableResponseList</a>&lt;twitter4j.List&gt; which implements <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/CursorSupport.html">CursorSupport</a>.<br>
@@ -38,14 +38,23 @@ $[en:- twitter4j.ResponseList instead of java.util.List<br>
 Previously, client codes using methods that returns List of TwitterResponse need to pick one element inside the list to check the rate limit status.<br>
 Now those methods returns <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/ResponseList.html">twitter4j.ResponseList</a> instead of java.util.List, and rate limit status is available directly through the ResponseList.<br>
 <br>]
-$[ja:- XML 利用の廃止<br>
+$[ja:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-245">TFJ-245</a>:AsyncTwitter / TwitterListener 関連の変更<br>
+TwitterListener.onException(TwitterException te, int method) は廃止され、替わりに TwitterListener.onException(TwitterException te, TwitterMethod method) が導入されました。<br>
+TwitterListener.updatedDeliverlyDevice(User) は TwitterListener.updatedDeliveryDevice(User) へとリネームされました。<br>
+AsyncTwitter.updateDeliverlyDeviceAsync() は AsyncTwitter.updatedDeliveryDevice() へとリネームされました。<br>]
+$[en:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-245">TFJ-245</a>:AsyncTwitter / TwitterListener changes<br>
+TwitterListener.onException(TwitterException te, int method) has been retired, and TwitterListener.onException(TwitterException te, TwitterMethod method); is now available.<br>
+TwitterListener.updatedDeliverlyDevice() has been renamed to TwitterListener.updatedDeliveryDevice()<br>
+AsyncTwitter.updateDeliverlyDeviceAsync() has been renamed to AsyncTwitter.updatedDeliveryDevice()<br>]
+
+$[ja:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-162">TFJ-162</a>:XML 利用の廃止<br>
 これは内部のリファクタリングで、コード変更は必要ありません。<br>
 全ての Twitter4J のメソッドは JSON ベースのメソッドを使うようになりました。<br>
 これは JIT コンパイラを持たない Android 上で飛躍的にパフォーマンスを改善し、また Dalvik の XML パーサのひどいバグを回避します。<br>
 ・ <a href="http://code.google.com/p/android/issues/detail?id=2607">Issue 2607: org.apache.harmony.xml.parsers.DocumentBuilderImpl does not resolve unicode entity refs</a><br>
 ・ <a href="http://code.google.com/p/android/issues/detail?id=4666">Issue 4666: DocumentBuilder (XML DOM) doesn't support external entities</a><br>
 <br>]
-$[en:- No more XML, not any more<br>
+$[en:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-162">TFJ-162</a>:No more XML, not any more<br>
 This is just an internal rework and no code change is required.<br>
 All over Twitter4J methods are now using JSON based methods.<br>
 This will significantly boost performance on Android platforms (which doesn't implement JIT compiler :( ) and workaround the Dalvik's horrible XML parser bugs of the Dalvik JVM.<br>

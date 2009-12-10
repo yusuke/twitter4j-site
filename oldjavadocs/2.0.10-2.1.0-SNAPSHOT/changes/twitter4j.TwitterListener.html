@@ -107,6 +107,13 @@ Interface twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.gotFeatured_removed(java.util.List<twitter4j.User>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/TwitterListener.html#gotFeatured(java.util.List<twitter4j.User>)" target="_top"><tt>gotFeatured</tt></A>(<code>List&lt;User&gt;</code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.TwitterListener.gotFollowers_removed(java.util.List<twitter4j.User>)"></A>
   <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/TwitterListener.html#gotFollowers(java.util.List<twitter4j.User>)" target="_top"><tt>gotFollowers</tt></A>(<code>List&lt;User&gt;</code>)</nobr>
   </TD>
@@ -156,6 +163,13 @@ Interface twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.updatedDeliverlyDevice_removed(twitter4j.User)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/TwitterListener.html#updatedDeliverlyDevice(twitter4j.User)" target="_top"><tt>updatedDeliverlyDevice</tt></A>(<code>User</code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.TwitterListener.updatedLocation_removed(twitter4j.User)"></A>
   <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/TwitterListener.html#updatedLocation(twitter4j.User)" target="_top"><tt>updatedLocation</tt></A>(<code>User</code>)</nobr>
   </TD>
@@ -182,6 +196,27 @@ Interface twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html
   <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotFriendsStatuses(twitter4j.PagableResponseList<twitter4j.User>)" target="_top"><tt>gotFriendsStatuses</tt></A>(<code>PagableResponseList&lt;User&gt;</code>)</nobr>
   </TD>
   <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.updatedDeliveryDevice_added(twitter4j.User)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#updatedDeliveryDevice(twitter4j.User)" target="_top"><tt>updatedDeliveryDevice</tt></A>(<code>User</code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.updatedProfileBackgroundImage_added(twitter4j.User)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#updatedProfileBackgroundImage(twitter4j.User)" target="_top"><tt>updatedProfileBackgroundImage</tt></A>(<code>User</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">@since Twitter4J 2.1.0</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.updatedProfileImage_added(twitter4j.User)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#updatedProfileImage(twitter4j.User)" target="_top"><tt>updatedProfileImage</tt></A>(<code>User</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">@since Twitter4J 2.1.0</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -218,16 +253,6 @@ Change in signature from <code>List&lt;DirectMessage&gt;</code> to <code>Respons
   </TD>
   <TD VALIGN="TOP" WIDTH="30%">
 Change in signature from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
-  </TD>
-  <TD>&nbsp;</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.TwitterListener.gotFeatured_changed(twitter4j.ResponseList<twitter4j.User>)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#gotFeatured(twitter4j.ResponseList<twitter4j.User>)" target="_top"><tt>gotFeatured</tt></A>(<code>ResponseList&lt;User&gt;</code>)  </nobr>
-  </TD>
-  <TD VALIGN="TOP" WIDTH="30%">
-Change in signature from <code>List&lt;User&gt;</code> to <code>ResponseList&lt;User&gt;</code>.<br>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
@@ -320,6 +345,17 @@ Change in signature from <code>List&lt;DirectMessage&gt;</code> to <code>Respons
 Change in signature from <code>List&lt;Status&gt;</code> to <code>ResponseList&lt;Status&gt;</code>.<br>
   </TD>
   <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.TwitterListener.onException_changed(twitter4j.TwitterException, twitter4j.TwitterMethod)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#onException(twitter4j.TwitterException, twitter4j.TwitterMethod)" target="_top"><tt>onException</tt></A>(<code>TwitterException,</nobr> TwitterMethod<nobr><nobr></code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from (<code>TwitterException, int</code>) to (<code>TwitterException, TwitterMethod</code>).<br>
+  </TD>
+  <TD VALIGN="TOP">@param te     TwitterException
+ </TD>
 </TR>
 </TABLE>
 &nbsp;

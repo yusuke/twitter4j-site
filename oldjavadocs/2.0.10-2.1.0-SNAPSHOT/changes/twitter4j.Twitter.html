@@ -39,7 +39,7 @@ twitter4j.Twitter
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell3"><FONT SIZE="-2"> DETAIL: &nbsp;
 <a href="#constructors">CONSTRUCTORS</a>&nbsp;|&nbsp;
 <a href="#methods">METHODS</a>&nbsp;|&nbsp;
-<a href="#fields">FIELDS</a>
+FIELDS
   </FONT></TD>
 </TR>
 </TABLE>
@@ -196,6 +196,13 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
   <nobr><code>String</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getDowntimeSchedule()" target="_top"><tt>getDowntimeSchedule</tt></A>()</nobr>
   </TD>
   <TD VALIGN="TOP">Returns the same text displayed on http://twitter.com/home when a maintenance window is scheduled, in the requested format.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFeatured_removed()"></A>
+  <nobr><code>List&lt;User&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getFeatured()" target="_top"><tt>getFeatured</tt></A>()</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns a list of the users currently featured on the site with their current statuses inline.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -689,13 +696,6 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.Twitter.getApiBaseURL_added()"></A>
-  <nobr><code>String</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getApiBaseURL()" target="_top"><tt>getApiBaseURL</tt></A>()</nobr>
-  </TD>
-  <TD VALIGN="TOP">Returns the API base url (i.e.</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getFollowersStatuses_added(java.lang.String, long)"></A>
   <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String, long)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
   </TD>
@@ -780,6 +780,20 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.updateProfileBackgroundImage_added(java.io.File, boolean)"></A>
+  <nobr><code>User</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateProfileBackgroundImage(java.io.File, boolean)" target="_top"><tt>updateProfileBackgroundImage</tt></A>(<code>File,</nobr> boolean<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Updates the authenticating user's profile background image.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.updateProfileImage_added(java.io.File)"></A>
+  <nobr><code>User</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateProfileImage(java.io.File)" target="_top"><tt>updateProfileImage</tt></A>(<code>File</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Updates the authenticating user's profile image.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.updateUserList_added(java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)"></A>
   <nobr><code>List</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateUserList(java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)" target="_top"><tt>updateUserList</tt></A>(<code>String,</nobr> int<nobr>,</nobr> String<nobr>,</nobr> String<nobr>,</nobr> String<nobr><nobr></code>)</nobr>
   </TD>
@@ -804,16 +818,6 @@ Change of visibility from public to protected.<br>
   <TD VALIGN="TOP">Returns the base URL
 
  </TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.Twitter.getFeatured_changed()"></A>
-  <nobr><code>ResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFeatured()" target="_top"><tt>getFeatured</tt></A>()  </nobr>
-  </TD>
-  <TD VALIGN="TOP" WIDTH="30%">
-Change in return type from <code>List&lt;User&gt;</code> to <code>ResponseList&lt;User&gt;</code>.<br>
-  </TD>
-  <TD VALIGN="TOP">Returns a list of the users currently featured on the site with their current statuses inline.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -1130,21 +1134,6 @@ Change in return type from <code>List&lt;Status&gt;</code> to <code>ResponseList
 </TABLE>
 &nbsp;
 <a NAME="fields"></a>
-<p>
-<a NAME="Added"></a>
-<TABLE summary="Added Fields" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Added Fields</B></FONT></TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.Twitter.V1"></A>
-  <nobr><code>String</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#V1" target="_top"><tt>V1</tt></A></nobr>
-  </TD>
-  <TD>&nbsp;</TD>
-</TR>
-</TABLE>
-&nbsp;
 <HR>
 <!-- Start of nav bar -->
 <TABLE summary="Navigation bar" BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">

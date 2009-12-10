@@ -250,6 +250,13 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.getFeaturedAsync_removed(twitter4j.TwitterListener)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#getFeaturedAsync(twitter4j.TwitterListener)" target="_top"><tt>getFeaturedAsync</tt></A>(<code>TwitterListener</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns a list of the users currently featured on the site with their current statuses inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.AsyncTwitter.getFollowersAsync_removed(java.lang.String, int, twitter4j.TwitterListener)"></A>
   <nobr><code>void</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#getFollowersAsync(java.lang.String, int, twitter4j.TwitterListener)" target="_top"><tt>getFollowersAsync</tt></A>(<code>String,</nobr> int<nobr>,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
   </TD>
@@ -732,6 +739,20 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
   </TD>
   <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
 </TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.updateProfileBackgroundImageAsync_added(java.io.File, boolean, twitter4j.TwitterListener)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#updateProfileBackgroundImageAsync(java.io.File, boolean, twitter4j.TwitterListener)" target="_top"><tt>updateProfileBackgroundImageAsync</tt></A>(<code>File,</nobr> boolean<nobr>,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Updates the authenticating user's profile background image.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.updateProfileImageAsync_added(java.io.File, twitter4j.TwitterListener)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#updateProfileImageAsync(java.io.File, twitter4j.TwitterListener)" target="_top"><tt>updateProfileImageAsync</tt></A>(<code>File,</nobr> TwitterListener<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Updates the authenticating user's profile image.</TD>
+</TR>
 </TABLE>
 &nbsp;
 <a NAME="fields"></a>
@@ -750,6 +771,48 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.CREATE"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#CREATE" target="_top"><tt>CREATE</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.CREATED_BLOCK"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#CREATED_BLOCK" target="_top"><tt>CREATED_BLOCK</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.CREATE_FAVORITE"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#CREATE_FAVORITE" target="_top"><tt>CREATE_FAVORITE</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.CREATE_FRIENDSHIP"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#CREATE_FRIENDSHIP" target="_top"><tt>CREATE_FRIENDSHIP</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.CURRENT_TRENDS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#CURRENT_TRENDS" target="_top"><tt>CURRENT_TRENDS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.DAILY_TRENDS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#DAILY_TRENDS" target="_top"><tt>DAILY_TRENDS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.AsyncTwitter.DESTORY"></A>
   <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#DESTORY" target="_top"><tt>DESTORY</tt></A></nobr>
   </TD>
@@ -764,10 +827,87 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.DESTROYED_BLOCK"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#DESTROYED_BLOCK" target="_top"><tt>DESTROYED_BLOCK</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.DESTROY_DIRECT_MESSAGES"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#DESTROY_DIRECT_MESSAGES" target="_top"><tt>DESTROY_DIRECT_MESSAGES</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.DESTROY_FAVORITE"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#DESTROY_FAVORITE" target="_top"><tt>DESTROY_FAVORITE</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.DESTROY_FRIENDSHIP"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#DESTROY_FRIENDSHIP" target="_top"><tt>DESTROY_FRIENDSHIP</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.DESTROY_STATUS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#DESTROY_STATUS" target="_top"><tt>DESTROY_STATUS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.DIRECT_MESSAGES"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#DIRECT_MESSAGES" target="_top"><tt>DIRECT_MESSAGES</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.DISABLE_NOTIFICATION"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#DISABLE_NOTIFICATION" target="_top"><tt>DISABLE_NOTIFICATION</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.ENABLE_NOTIFICATION"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#ENABLE_NOTIFICATION" target="_top"><tt>ENABLE_NOTIFICATION</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.AsyncTwitter.EXISTS"></A>
   <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#EXISTS" target="_top"><tt>EXISTS</tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">@deprecated Use EXISTS_FRIENDSHIP instead.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.EXISTS_FRIENDSHIP"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#EXISTS_FRIENDSHIP" target="_top"><tt>EXISTS_FRIENDSHIP</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.FAVORITES"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#FAVORITES" target="_top"><tt>FAVORITES</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.FEATURED"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#FEATURED" target="_top"><tt>FEATURED</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -785,8 +925,29 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.FOLLOWERS_IDS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#FOLLOWERS_IDS" target="_top"><tt>FOLLOWERS_IDS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.AsyncTwitter.FRIENDS"></A>
   <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#FRIENDS" target="_top"><tt>FRIENDS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.FRIENDS_IDS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#FRIENDS_IDS" target="_top"><tt>FRIENDS_IDS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.FRIENDS_TIMELINE"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#FRIENDS_TIMELINE" target="_top"><tt>FRIENDS_TIMELINE</tt></A></nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
@@ -799,10 +960,38 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.HOME_TIMELINE"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#HOME_TIMELINE" target="_top"><tt>HOME_TIMELINE</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.AsyncTwitter.LEAVE"></A>
   <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#LEAVE" target="_top"><tt>LEAVE</tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">@deprecated Use DISABLE_NOTIFICATION instead.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.MENTIONS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#MENTIONS" target="_top"><tt>MENTIONS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.PUBLIC_TIMELINE"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#PUBLIC_TIMELINE" target="_top"><tt>PUBLIC_TIMELINE</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.RATE_LIMIT_STATUS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#RATE_LIMIT_STATUS" target="_top"><tt>RATE_LIMIT_STATUS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -813,10 +1002,73 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.RETWEETED_BY_ME"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#RETWEETED_BY_ME" target="_top"><tt>RETWEETED_BY_ME</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.RETWEETED_TO_ME"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#RETWEETED_TO_ME" target="_top"><tt>RETWEETED_TO_ME</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.RETWEETS_OF_ME"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#RETWEETS_OF_ME" target="_top"><tt>RETWEETS_OF_ME</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.RETWEET_STATUS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#RETWEET_STATUS" target="_top"><tt>RETWEET_STATUS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.SEARCH"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#SEARCH" target="_top"><tt>SEARCH</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.SEND_DIRECT_MESSAGE"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#SEND_DIRECT_MESSAGE" target="_top"><tt>SEND_DIRECT_MESSAGE</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.AsyncTwitter.SHOW"></A>
   <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#SHOW" target="_top"><tt>SHOW</tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">@deprecated Use SHOW_STATUS instead.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.SHOW_STATUS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#SHOW_STATUS" target="_top"><tt>SHOW_STATUS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.TEST"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#TEST" target="_top"><tt>TEST</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.TRENDS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#TRENDS" target="_top"><tt>TRENDS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -834,10 +1086,38 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.UPDATE_DELIVERLY_DEVICE"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#UPDATE_DELIVERLY_DEVICE" target="_top"><tt>UPDATE_DELIVERLY_DEVICE</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.AsyncTwitter.UPDATE_LOCATION"></A>
   <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#UPDATE_LOCATION" target="_top"><tt>UPDATE_LOCATION</tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">@deprecated Use UPDATE_PROFILE instead.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.UPDATE_PROFILE"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#UPDATE_PROFILE" target="_top"><tt>UPDATE_PROFILE</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.UPDATE_PROFILE_COLORS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#UPDATE_PROFILE_COLORS" target="_top"><tt>UPDATE_PROFILE_COLORS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.AsyncTwitter.UPDATE_STATUS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#UPDATE_STATUS" target="_top"><tt>UPDATE_STATUS</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -846,32 +1126,17 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html" targe
   </TD>
   <TD>&nbsp;</TD>
 </TR>
-</TABLE>
-&nbsp;
-<p>
-<a NAME="Added"></a>
-<TABLE summary="Added Fields" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Added Fields</B></FONT></TD>
-</TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.AsyncTwitter.FOLLOWERS_STATUSES"></A>
-  <nobr><code>int</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#FOLLOWERS_STATUSES" target="_top"><tt>FOLLOWERS_STATUSES</tt></A></nobr>
+  <A NAME="twitter4j.AsyncTwitter.USER_TIMELINE"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#USER_TIMELINE" target="_top"><tt>USER_TIMELINE</tt></A></nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.AsyncTwitter.FRIENDS_STATUSES"></A>
-  <nobr><code>int</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#FRIENDS_STATUSES" target="_top"><tt>FRIENDS_STATUSES</tt></A></nobr>
-  </TD>
-  <TD>&nbsp;</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.AsyncTwitter.SHOW_USER"></A>
-  <nobr><code>int</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#SHOW_USER" target="_top"><tt>SHOW_USER</tt></A></nobr>
+  <A NAME="twitter4j.AsyncTwitter.WEEKLY_TRENDS"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../2.0.10/twitter4j/AsyncTwitter.html#WEEKLY_TRENDS" target="_top"><tt>WEEKLY_TRENDS</tt></A></nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
