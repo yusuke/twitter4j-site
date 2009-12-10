@@ -10,10 +10,10 @@
 <p><a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">･$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include> JavaDoc</a><br>
 <a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">･JavaDoc diff from $[ja:バージョン]$[en:Version] <include>latest-version.fragment</include></a>
 <h2><a name="migration">$[ja:バージョン2.0.xから2.1.xへの移行]$[en:Migrating from 2.0.x to 2.1.x]</a></h2>
-<p>$[ja:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-113</a>,<a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-240</a>非推奨メソッドの廃止<br>
+<p>$[ja:- 非推奨メソッドの廃止(<a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-113</a>,<a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-240</a>)<br>
 バージョン2.0.10で非推奨となっていたメソッド全てとgetFeatured()は廃止(削除)されました。<br>
 <br>]
-$[en:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-113</a>,<a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-240</a>:Retirement of deprecated methods<br>
+$[en:- Retirement of deprecated methods(<a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-113</a>,<a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-240</a>)<br>
 All methods marked as deprecated at version 2.0.10, and getFeatured() have been retired (removed).<br>
 <br>]
 $[ja:- getFriendsStatuses() と getFollowersStatuses()(<a href="http://yusuke.homeip.net/jira/browse/TFJ-234">TFJ-234</a>) のカーソルベースのぺージング<br>
