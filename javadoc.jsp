@@ -45,8 +45,11 @@ $[ja:Stringを引数にとるものはユーザ関連のメソッドは、数値
 $[en:User related methods that take (String id) had ambiguities about numeric-only screen names. Following methods now take (int userId) as well as (String screenName) and it is now possible to treat numeric-only screen names properly.<br>]
 getUserTimeline()<br>
 showUser()<br>
+sendDirectMessage()<br>
 getFriendsStatuses()<br>
 getFollowersStatuses()<br>
+enableNotification()<br>
+disableNotification()<br>
 createBlock()<br>
 destroyBlock()<br>
 existsBlock()<br>
