@@ -38,10 +38,27 @@ $[en:- twitter4j.ResponseList instead of java.util.List<br>
 Previously, client codes using methods that returns List of TwitterResponse need to pick one element inside the list to check the rate limit status.<br>
 Now those methods returns <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/ResponseList.html">twitter4j.ResponseList</a> instead of java.util.List, and rate limit status is available directly through the ResponseList.<br>
 <br>]
-$[ja:- AsyncTwitter / TwitterListener 関連の変更(<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-244</a>)<br>
-TwitterListener.onException(TwitterException te, int method) は廃止され、替わりに TwitterListener.onException(TwitterException te, TwitterMethod method) が導入されました。<br>]
-$[en:- AsyncTwitter / TwitterListener changes(<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-244</a>)<br>
-TwitterListener.onException(TwitterException te, int method) has been retired, and TwitterListener.onException(TwitterException te, TwitterMethod method); is now available.<br>]
+$[ja:- screen_name と user_id の曖昧さの除去]
+$[en:- disambiguation of screen name and user id<](<a href="http://yusuke.homeip.net/jira/browse/TFJ-207">TFJ-207</a>)<br>
+$[ja:Stringを引数にとるものはユーザ関連のメソッドは、数値はユーザIDとして、非数値文字列はスクリーン名として解釈されていました。<br>
+以下のメソッドは (int userId)を引数にとるメソッドを追加し、スクリーン名が数値のユーザを適切に扱えるようになりました。<br>]
+$[en:User related methods that take (String id) had ambiguities about numeric-only screen names. Following methods now take (int userId) as well as (String screenName) and it is now possible to treat numeric-only screen names properly.<br>]
+getUserTimeline()<br>
+showUser()<br>
+getFriendsStatuses()<br>
+getFollowersStatuses()<br>
+createBlock()<br>
+destroyBlock()<br>
+existsBlock()<br>
+createFriendShip()<br>
+destroyFriendShip()<br>
+<br>
+$[ja:- AsyncTwitter / TwitterListener 関連の変更]
+$[en:- AsyncTwitter / TwitterListener changes<](<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-244</a>,<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-246</a>)<br>
+$[ja:TwitterListener.onException(TwitterException te, int method) は廃止され、替わりに TwitterListener.onException(TwitterException te, TwitterMethod method) が導入されました。
+TwiteterListener を引数にとらない非同期メソッドは廃止されました。(<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-246</a>)<br>]
+$[en:TwitterListener.onException(TwitterException te, int method) has been retired, and TwitterListener.onException(TwitterException te, TwitterMethod method); is now available.<br>
+Async methods that don't take TwitterListener were all retired.(<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-246</a>)<br>]
 
 $[ja:- メソッド名の修正(<a href="http://yusuke.homeip.net/jira/browse/TFJ-245">TFJ-245</a>)<br>
 <a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#updateDeliverlyDevice(twitter4j.Twitter.Device)">Twitter.updateDeliverlyDevice()</a> は <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateDeliveryDevice(twitter4j.Twitter.Device)">Twitter.updateDeliveryDevice()</a> へとリネームされました。<br>
@@ -52,32 +69,24 @@ $[en:- Method name refactors<br>
 <a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/AsyncTwitter.html#updateDeliverlyDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliverlyDeviceAsync()</a> has been renamed to <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#updateDeliveryDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliveryDevice()</a>.<br>
 <a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#updateDeliverlyDevice(twitter4j.Twitter.Device)">TwitterListener.updateDeliverlyDevice()</a> has been renamed <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateDeliveryDevice(twitter4j.Twitter.Device)">TwitterListener.updateDeliveryDevice()</a>.<br>
 ]
-
-$[ja:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-162">TFJ-162</a>:XML 利用の廃止<br>
+$[ja:- TwitterResponse はクラスではなくなりました<br>
+多くの場合、関係ありませんが、<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponse.html">TwitterResponse</a> は rate limit status のアクセサを意味するインターフェースになりました。もうレスポンスオブジェクトの親クラスではありません。より正確に、内部の話をするとバージョン2.1.0からほとんどのレスポンスクラスは<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponseImpl.html">TwitterResponseImpl</a> を継承するようになりました。]
+$[en:- TwitterResponse is not a class anymore.<br>
+Shouldn't matter in most cases. <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponse.html">TwitterResponse</a> is now an interface representing just rate limit status accessors. It's not a super class of every response objects anymore. More specifically and internally, most of response classes are extending <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponseImpl.html">TwitterResponseImpl</a> from Version 2.1.0.]
+$[ja:- XML 利用の廃止(<a href="http://yusuke.homeip.net/jira/browse/TFJ-162">TFJ-162</a>)<br>
 これは内部のリファクタリングで、コード変更は必要ありません。<br>
 全ての Twitter4J のメソッドは JSON ベースのメソッドを使うようになりました。<br>
 これは JIT コンパイラを持たない Android 上で飛躍的にパフォーマンスを改善し、また Dalvik の XML パーサのひどいバグを回避します。<br>
 ・ <a href="http://code.google.com/p/android/issues/detail?id=2607">Issue 2607: org.apache.harmony.xml.parsers.DocumentBuilderImpl does not resolve unicode entity refs</a><br>
 ・ <a href="http://code.google.com/p/android/issues/detail?id=4666">Issue 4666: DocumentBuilder (XML DOM) doesn't support external entities</a><br>
 <br>]
-$[en:- <a href="http://yusuke.homeip.net/jira/browse/TFJ-162">TFJ-162</a>:No more XML, not any more<br>
+$[en:- No more XML, not any more(<a href="http://yusuke.homeip.net/jira/browse/TFJ-162">TFJ-162</a>)<br>
 This is just an internal rework and no code change is required.<br>
 All over Twitter4J methods are now using JSON based methods.<br>
 This will significantly boost performance on Android platforms (which doesn't implement JIT compiler :( ) and workaround the Dalvik's horrible XML parser bugs of the Dalvik JVM.<br>
 -&gt; <a href="http://code.google.com/p/android/issues/detail?id=2607">Issue 2607: org.apache.harmony.xml.parsers.DocumentBuilderImpl does not resolve unicode entity refs</a><br>
 -&gt; <a href="http://code.google.com/p/android/issues/detail?id=4666">Issue 4666: DocumentBuilder (XML DOM) doesn't support external entities</a><br>
 <br>]
-$[ja:- TwitterResponse はクラスではなくなりました<br>
-多くの場合、関係ありませんが、<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponse.html">TwitterResponse</a> は rate limit status のアクセサを意味するインターフェースになりました。もうレスポンスオブジェクトの親クラスではありません。より正確に、内部の話をするとバージョン2.1.0からほとんどのレスポンスクラスは<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponseImpl.html">TwitterResponseImpl</a> を継承するようになりました。]
-$[en:- TwitterResponse is not a class anymore.<br>
-Shouldn't matter in most cases. <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponse.html">TwitterResponse</a> is now an interface representing just rate limit status accessors. It's not a super class of every response objects anymore. More specifically and internally, most of response classes are extending <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponseImpl.html">TwitterResponseImpl</a> from Version 2.1.0.]
-$[ja:- バージョン識別API URL の利用<br>
-Twitter4J はhttp(s)://twitter.com のかわりに http(s)://api.twitter.com/ にアクセスするようになりました。<br>
-コードの変更は必要ありません。<br>
-・<a href="http://groups.google.com/group/twitter-api-announce/browse_thread/thread/2b70bd6ea4aec175?hl=en">Laying the foundation for API versioning</a><br>]
-$[en:- use of Versioned API UR><br>
-Twitter4J now accesses http(s)://api.twitter.com/ instead of http(s)://twitter.com.<br>
--&gt; <a href="http://groups.google.com/group/twitter-api-announce/browse_thread/thread/2b70bd6ea4aec175?hl=en">Laying the foundation for API versioning</a><br>]
 </pre>
 </p>
 

@@ -269,6 +269,13 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFollowersStatuses_removed(java.lang.String)"></A>
+  <nobr><code>List&lt;User&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>String</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getFollowersStatuses_removed(java.lang.String, twitter4j.Paging)"></A>
   <nobr><code>List&lt;User&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String, twitter4j.Paging)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>String,</nobr> Paging<nobr><nobr></code>)</nobr>
   </TD>
@@ -343,6 +350,13 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
   <nobr><code>IDs</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getFriendsIDs(java.lang.String, twitter4j.Paging)" target="_top"><tt>getFriendsIDs</tt></A>(<code>String,</nobr> Paging<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Returns an array of numeric IDs for every user the specified user is following.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsStatuses_removed(java.lang.String)"></A>
+  <nobr><code>List&lt;User&gt;</code>&nbsp;<A HREF="../../2.0.10/twitter4j/Twitter.html#getFriendsStatuses(java.lang.String)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>String</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the user's friends, each with current status inline.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -675,6 +689,27 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.createBlock_added(int)"></A>
+  <nobr><code>User</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#createBlock(int)" target="_top"><tt>createBlock</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Blocks the user specified in the ID parameter as the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.createFriendship_added(int)"></A>
+  <nobr><code>User</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#createFriendship(int)" target="_top"><tt>createFriendship</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Befriends the user specified in the ID parameter as the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.createFriendship_added(int, boolean)"></A>
+  <nobr><code>User</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#createFriendship(int, boolean)" target="_top"><tt>createFriendship</tt></A>(<code>int,</nobr> boolean<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Befriends the user specified in the ID parameter as the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.createUserList_added(java.lang.String, java.lang.String, java.lang.String, java.lang.String)"></A>
   <nobr><code>List</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#createUserList(java.lang.String, java.lang.String, java.lang.String, java.lang.String)" target="_top"><tt>createUserList</tt></A>(<code>String,</nobr> String<nobr>,</nobr> String<nobr>,</nobr> String<nobr><nobr></code>)</nobr>
   </TD>
@@ -686,6 +721,27 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
   <nobr><code>List</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#deleteUserList(java.lang.String, int)" target="_top"><tt>deleteUserList</tt></A>(<code>String,</nobr> int<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Deletes the specified list.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.destroyBlock_added(int)"></A>
+  <nobr><code>User</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#destroyBlock(int)" target="_top"><tt>destroyBlock</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Un-blocks the user specified in the ID parameter as the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.destroyFriendship_added(int)"></A>
+  <nobr><code>User</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#destroyFriendship(int)" target="_top"><tt>destroyFriendship</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Discontinues friendship with the user specified in the ID parameter as the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.existsBlock_added(int)"></A>
+  <nobr><code>boolean</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#existsBlock(int)" target="_top"><tt>existsBlock</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Tests if a friendship exists between two users.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -703,10 +759,31 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFollowersStatuses_added(int)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(int)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the specified user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFollowersStatuses_added(int, long)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(int, long)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>int,</nobr> long<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the specified user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFollowersStatuses_added(java.lang.String)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>String</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the specified user's followers, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getFollowersStatuses_added(java.lang.String, long)"></A>
   <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String, long)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
   </TD>
-  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
+  <TD VALIGN="TOP">Returns the specified user's followers, each with current status inline.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -717,17 +794,41 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsStatuses_added(int)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(int)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsStatuses_added(int, long)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(int, long)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>int,</nobr> long<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getFriendsStatuses_added(java.lang.String)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(java.lang.String)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>String</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getFriendsStatuses_added(java.lang.String, long)"></A>
   <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(java.lang.String, long)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
   </TD>
-  <TD VALIGN="TOP">Returns the user's friends, each with current status inline.</TD>
+  <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getFriendsStatuses_added(long)"></A>
   <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(long)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>long</code>)</nobr>
   </TD>
-  <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
+  <TD VALIGN="TOP">Returns the user's friends, each with current status inline.<br>
+ <br>This method calls http://api.twitter.com/1/statuses/friends
+
+ </TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -759,6 +860,20 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserTimeline_added(int)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserTimeline(int)" target="_top"><tt>getUserTimeline</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the specified userid.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserTimeline_added(int, twitter4j.Paging)"></A>
+  <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserTimeline(int, twitter4j.Paging)" target="_top"><tt>getUserTimeline</tt></A>(<code>int,</nobr> Paging<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the specified screen name.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getUserTimeline_added(java.lang.String)"></A>
   <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserTimeline(java.lang.String)" target="_top"><tt>getUserTimeline</tt></A>(<code>String</code>)</nobr>
   </TD>
@@ -769,7 +884,7 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
   <A NAME="twitter4j.Twitter.getUserTimeline_added(java.lang.String, twitter4j.Paging)"></A>
   <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserTimeline(java.lang.String, twitter4j.Paging)" target="_top"><tt>getUserTimeline</tt></A>(<code>String,</nobr> Paging<nobr><nobr></code>)</nobr>
   </TD>
-  <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the specified userid.</TD>
+  <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the specified screen name.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -777,6 +892,13 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
   <nobr><code>ResponseList&lt;Status&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserTimeline(twitter4j.Paging)" target="_top"><tt>getUserTimeline</tt></A>(<code>Paging</code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Returns the most recent statuses posted in the last 24 hours from the authenticating user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.showUser_added(int)"></A>
+  <nobr><code>User</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#showUser(int)" target="_top"><tt>showUser</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns extended information of a given user, specified by ID.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -946,16 +1068,6 @@ Change in return type from <code>List&lt;User&gt;</code> to <code>PagableRespons
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.Twitter.getFollowersStatuses_changed(java.lang.String)"></A>
-  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFollowersStatuses(java.lang.String)" target="_top"><tt>getFollowersStatuses</tt></A>(<code>String</code>)  </nobr>
-  </TD>
-  <TD VALIGN="TOP" WIDTH="30%">
-Change in return type from <code>List&lt;User&gt;</code> to <code>PagableResponseList&lt;User&gt;</code>.<br>
-  </TD>
-  <TD VALIGN="TOP">Returns the authenticating user's followers, each with current status inline.</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getFriendsStatuses_changed()"></A>
   <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses()" target="_top"><tt>getFriendsStatuses</tt></A>()  </nobr>
   </TD>
@@ -963,17 +1075,6 @@ Change in return type from <code>List&lt;User&gt;</code> to <code>PagableRespons
 Change in return type from <code>List&lt;User&gt;</code> to <code>PagableResponseList&lt;User&gt;</code>.<br>
   </TD>
   <TD VALIGN="TOP">Returns the specified user's friends, each with current status inline.</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.Twitter.getFriendsStatuses_changed(java.lang.String)"></A>
-  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getFriendsStatuses(java.lang.String)" target="_top"><tt>getFriendsStatuses</tt></A>(<code>String</code>)  </nobr>
-  </TD>
-  <TD VALIGN="TOP" WIDTH="30%">
-Change in return type from <code>List&lt;User&gt;</code> to <code>PagableResponseList&lt;User&gt;</code>.<br>
-  </TD>
-  <TD VALIGN="TOP">Returns the user's friends, each with current status inline.<br>
- This method automatically provides a value of cursor=-1 to begin paging.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
