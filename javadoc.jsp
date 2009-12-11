@@ -39,7 +39,7 @@ Previously, client codes using methods that returns List of TwitterResponse need
 Now those methods returns <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/ResponseList.html">twitter4j.ResponseList</a> instead of java.util.List, and rate limit status is available directly through the ResponseList.<br>
 <br>]
 $[ja:- screen_name と user_id の曖昧さの除去]
-$[en:- disambiguation of screen name and user id<](<a href="http://yusuke.homeip.net/jira/browse/TFJ-207">TFJ-207</a>)<br>
+$[en:- disambiguation of screen name and user id](<a href="http://yusuke.homeip.net/jira/browse/TFJ-207">TFJ-207</a>)<br>
 $[ja:Stringを引数にとるものはユーザ関連のメソッドは、数値はユーザIDとして、非数値文字列はスクリーン名として解釈されていました。<br>
 以下のメソッドは (int userId)を引数にとるメソッドを追加し、スクリーン名が数値のユーザを適切に扱えるようになりました。<br>]
 $[en:User related methods that take (String id) had ambiguities about numeric-only screen names. Following methods now take (int userId) as well as (String screenName) and it is now possible to treat numeric-only screen names properly.<br>]
@@ -54,10 +54,10 @@ createFriendShip()<br>
 destroyFriendShip()<br>
 <br>
 $[ja:- AsyncTwitter / TwitterListener 関連の変更]
-$[en:- AsyncTwitter / TwitterListener changes<](<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-244</a>,<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-246</a>)<br>
+$[en:- AsyncTwitter / TwitterListener changes](<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-244</a>,<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-246</a>)<br>
 $[ja:TwitterListener.onException(TwitterException te, int method) は廃止され、替わりに TwitterListener.onException(TwitterException te, TwitterMethod method) が導入されました。
 TwiteterListener を引数にとらない非同期メソッドは廃止されました。(<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-246</a>)<br>]
-$[en:TwitterListener.onException(TwitterException te, int method) has been retired, and TwitterListener.onException(TwitterException te, TwitterMethod method); is now available.<br>
+$[en:TwitterListener.onException(TwitterException te, int method) has been retired, and TwitterListener.onException(TwitterException te, TwitterMethod method) is now available.<br>
 Async methods that don't take TwitterListener were all retired.(<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-246</a>)<br>]
 
 $[ja:- メソッド名の修正(<a href="http://yusuke.homeip.net/jira/browse/TFJ-245">TFJ-245</a>)<br>
