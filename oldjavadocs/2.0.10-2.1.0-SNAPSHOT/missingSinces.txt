@@ -4,6 +4,7 @@ MISSING @SINCE TAG: twitter4j.http.HttpResponseListener Interface
 MISSING @SINCE TAG: twitter4j.List Class
 MISSING @SINCE TAG: twitter4j.PagableResponseList Class
 MISSING @SINCE TAG: twitter4j.RateLimitStatusListener Interface
+OK: twitter4j.Relationship Class
 MISSING @SINCE TAG: twitter4j.ResponseList Class
 MISSING @SINCE TAG: twitter4j.TwitterMethod Class
 MISSING @SINCE TAG: twitter4j.TwitterResponseImpl Class
@@ -32,6 +33,7 @@ OK: twitter4j.AsyncTwitter Method existsBlockAsync(int, twitter4j.TwitterListene
 MISSING @SINCE TAG: twitter4j.Twitter Method get(java.lang.String, boolean)
 MISSING @SINCE TAG: twitter4j.Twitter Method get(java.lang.String, twitter4j.http.PostParameter[], java.util.List<twitter4j.http.PostParameter>, boolean)
 MISSING @SINCE TAG: twitter4j.http.PostParameter Method getContentType()
+OK: twitter4j.AsyncTwitter Method getFollowersIDsAsync(java.lang.String, twitter4j.TwitterListener)
 OK: twitter4j.Twitter Method getFollowersStatuses(int)
 OK: twitter4j.Twitter Method getFollowersStatuses(int, long)
 OK: twitter4j.Twitter Method getFollowersStatuses(java.lang.String)
@@ -66,9 +68,15 @@ NO DOC BLOCK: twitter4j.TwitterAdapter Method gotFollowersStatuses(twitter4j.Pag
 NO DOC BLOCK: twitter4j.TwitterListener Method gotFollowersStatuses(twitter4j.PagableResponseList<twitter4j.User>)
 NO DOC BLOCK: twitter4j.TwitterAdapter Method gotFriendsStatuses(twitter4j.PagableResponseList<twitter4j.User>)
 NO DOC BLOCK: twitter4j.TwitterListener Method gotFriendsStatuses(twitter4j.PagableResponseList<twitter4j.User>)
+OK: twitter4j.TwitterAdapter Method gotShowFriendship(twitter4j.Relationship)
+OK: twitter4j.TwitterListener Method gotShowFriendship(twitter4j.Relationship)
 NO DOC BLOCK: twitter4j.Paging Method hashCode()
 NO DOC BLOCK: twitter4j.http.PostParameter Method isFile()
 OK: twitter4j.Twitter Method sendDirectMessage(int, java.lang.String)
+OK: twitter4j.Twitter Method showFriendShip(int, int)
+OK: twitter4j.Twitter Method showFriendShip(java.lang.String, java.lang.String)
+OK: twitter4j.AsyncTwitter Method showFriendShipAsync(int, int, twitter4j.TwitterListener)
+OK: twitter4j.AsyncTwitter Method showFriendShipAsync(java.lang.String, java.lang.String, twitter4j.TwitterListener)
 OK: twitter4j.Twitter Method showUser(int)
 MISSING @SINCE TAG: twitter4j.AsyncTwitter Method showUserAsync(int, twitter4j.TwitterListener)
 OK: twitter4j.Twitter Method showUserList(java.lang.String, int)
