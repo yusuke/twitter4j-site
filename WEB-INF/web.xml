@@ -17,7 +17,7 @@
   </context-param>
   <context-param>
     <param-name>decorators</param-name> 
-    <param-value>jika.decorators.MultilingualDecorator</param-value>
+    <param-value>jika.decorators.Html2JSPDecorator,jika.decorators.MultilingualDecorator</param-value>
   </context-param>
   <filter>
     <filter-name>html2jsp</filter-name>
@@ -41,7 +41,7 @@
     <url-pattern>/*</url-pattern>
     <dispatcher>FORWARD</dispatcher>
     <dispatcher>REQUEST</dispatcher>
-    </filter-mapping>
+  </filter-mapping>
   <servlet>
     <servlet-name>JikaController</servlet-name>
     <display-name>JikaController</display-name>
@@ -70,5 +70,6 @@
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
