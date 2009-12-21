@@ -39,6 +39,9 @@ function setVisibility(id,page){
   <li><a href="api-support.html#Timeline Methods" onclick="return scrollGracefully(this.href)">Timeline Methods</a></li>
   <li><a href="api-support.html#Status Methods" onclick="return scrollGracefully(this.href)">Status Methods</a></li>
   <li><a href="api-support.html#User Methods" onclick="return scrollGracefully(this.href)">User Methods</a></li>
+  <li><a href="api-support.html#List Methods" onclick="return scrollGracefully(this.href)">List Methods</a></li>
+  <li><a href="api-support.html#List Members Methods" onclick="return scrollGracefully(this.href)">List Members Methods</a></li>
+  <li><a href="api-support.html#List Subscribers Methods" onclick="return scrollGracefully(this.href)">List Subscribers Methods</a></li>
   <li><a href="api-support.html#Direct Message Methods" onclick="return scrollGracefully(this.href)">Direct Message Methods</a></li>
   <li><a href="api-support.html#Friendship Methods" onclick="return scrollGracefully(this.href)">Friendship Methods</a></li>
   <li><a href="api-support.html#Social Graph Methods" onclick="return scrollGracefully(this.href)">Social Graph Methods</a></li>
@@ -53,14 +56,15 @@ function setVisibility(id,page){
 <li><a href="/jira/browse/TFJ#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel">$[ja:変更履歴]$[en:Change Log]</a></li>
 <li><a href="index.html#pricing" onclick="return scrollGracefully(this.href)">$[ja:寄付する]$[en:Donate]</a></li>
 </ul>
+<center>
+<a href="http://www.twitter.com/t4j_news"><img src="http://twitter-badges.s3.amazonaws.com/follow_bird-a.png" alt="Follow t4j_news on Twitter"/></a><br><br>
+<include>adsense200x200.html</include>
+</center>
 <script>
 setVisibility("index","index");
 setVisibility("code-examples","code-examples");
 setVisibility("api-support","api-support");
 </script>
-<center>
-<include>adsense200x200.html</include>
-</center>
 <!--script src="http://images.del.icio.us/static/js/blogbadge.js"></script>
 <script type="text/javascript">
 //digg_url = document.location.href;

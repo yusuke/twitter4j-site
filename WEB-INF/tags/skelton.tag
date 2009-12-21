@@ -22,6 +22,7 @@ $[ja:<head xml:lang="ja" lang="ja">]$[en:<head xml:lang="en" lang="en">]
     <jsp:doBody/>
     <center><include>adsense468x60.html</include></center>
   </div>
+<br>
 </div>
 <include>urchin.html</include>
 </body>

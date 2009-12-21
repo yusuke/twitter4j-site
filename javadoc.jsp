@@ -6,13 +6,12 @@
 <h2><a name="latst">$[ja:最新バージョン]$[en:Latest version]</a></h2>
 <p><a href="./javadoc/index.html">･$[ja:バージョン]$[en:Version] <include>latest-version.fragment</include> JavaDoc</a></p>
 
-<h2><a name="latst">$[ja:最新スナップショット]$[en:Latest snapshot version]</a></h2>
+<h2><a name="latst">$[ja:最新安定スナップショットビルド]$[en:Latest stable snapshot build]</a></h2>
 <p><a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">･$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include> JavaDoc</a><br>
 <a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">･JavaDoc diff from $[ja:バージョン]$[en:Version] <include>latest-version.fragment</include></a>
-<h2><a name="migration">$[ja:バージョン2.0.xから2.1.xへの移行]$[en:Migrating from 2.0.x to 2.1.x]</a></h2>
-<p>$[ja:- プロジェクトの再ビルド<br>
-バージョン2.1.0 は旧バージョンから若干の非互換箇所があります。旧バージョンを利用していたプロジェクトでバージョン2.1.0を利用する場合は必ずプロジェクトの再ビルドを行ってください。<br>
-<br>]
+<h2><a name="migration">$[ja:バージョン 2.0.x から 2.1.x への移行ガイド]$[en:Migration guide from 2.0.x to 2.1.x]</a></h2>
+<p>$[ja:- まずプロジェクトの再ビルドを！<br>
+バージョン2.1.0 は旧バージョンから若干の非互換箇所があります。旧バージョンを利用していたプロジェクトでバージョン2.1.0を利用する場合は必ずプロジェクトの再ビルドを行ってください。<br>]
 $[en:- Rebuild your project first!<br>
 Version 2.1.0 is slightly incompatible with older versions. Projects that have been using older versions are required to be rebuilt before using Version 2.1.0.]
 <p>$[ja:- 非推奨メソッドの廃止(<a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-113</a>,<a href="http://yusuke.homeip.net/jira/browse/TFJ-113">TFJ-240</a>)<br>
@@ -44,7 +43,7 @@ Previously, client codes using methods that returns List of TwitterResponse need
 Now those methods returns <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/ResponseList.html">twitter4j.ResponseList</a> instead of java.util.List, and rate limit status is available directly through the ResponseList.<br>
 <br>]
 $[ja:- screen_name と user_id の曖昧さの除去]
-$[en:- disambiguation of screen name and user id](<a href="http://yusuke.homeip.net/jira/browse/TFJ-207">TFJ-207</a>)<br>
+$[en:- Disambiguation of screen name and user id](<a href="http://yusuke.homeip.net/jira/browse/TFJ-207">TFJ-207</a>)<br>
 $[ja:Stringを引数にとるものはユーザ関連のメソッドは、数値はユーザIDとして、非数値文字列はスクリーン名として解釈されていました。<br>
 以下のメソッドは (int userId)を引数にとるメソッドを追加し、スクリーン名が数値のユーザを適切に扱えるようになりました。<br>]
 $[en:User related methods that take (String id) had ambiguities about numeric-only screen names. Following methods now take (int userId) as well as (String screenName) and it is now possible to treat numeric-only screen names properly.<br>]
@@ -67,16 +66,24 @@ $[ja:TwitterListener.onException(TwitterException te, int method) は廃止さ�
 TwiteterListener を引数にとらない非同期メソッドは廃止されました。(<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-246</a>)<br>]
 $[en:TwitterListener.onException(TwitterException te, int method) has been retired, and TwitterListener.onException(TwitterException te, TwitterMethod method) is now available.<br>
 Async methods that don't take TwitterListener were all retired.(<a href="http://yusuke.homeip.net/jira/browse/TFJ-244">TFJ-246</a>)<br>]
-
-$[ja:- メソッド名の修正(<a href="http://yusuke.homeip.net/jira/browse/TFJ-245">TFJ-245</a>)<br>
-<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#updateDeliverlyDevice(twitter4j.Twitter.Device)">Twitter.updateDeliverlyDevice()</a> は <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateDeliveryDevice(twitter4j.Twitter.Device)">Twitter.updateDeliveryDevice()</a> へとリネームされました。<br>
-<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/AsyncTwitter.html#updateDeliverlyDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliverlyDeviceAsync()</a> は <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#updateDeliveryDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliveryDevice()</a> へとリネームされました。<br>
-<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/TwitterListener.html#updatedDeliverlyDevice(twitter4j.User)">TwitterListener.updatedDeliverlyDevice()</a> は <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#updatedDeliveryDevice(twitter4j.User)">TwitterListener.updatedDeliveryDevice()</a> へとリネームされました。<br>]
-$[en:- Method name refactors<br>
-<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#updateDeliverlyDevice(twitter4j.Twitter.Device)">Twitter.updateDeliverlyDevice()</a> has been renamed to <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateDeliveryDevice(twitter4j.Twitter.Device)">Twitter.updateDeliveryDevice()</a>.<br>
-<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/AsyncTwitter.html#updateDeliverlyDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliverlyDeviceAsync()</a> has been renamed to <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#updateDeliveryDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliveryDevice()</a>.<br>
-<a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#updateDeliverlyDevice(twitter4j.Twitter.Device)">TwitterListener.updateDeliverlyDevice()</a> has been renamed <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateDeliveryDevice(twitter4j.Twitter.Device)">TwitterListener.updateDeliveryDevice()</a>.<br>
-]
+<br>
+$[ja:- Streaming API サポートの削除、リミット通知対応]
+$[en:- Streaming API supports deletion and track limit notices](<a href="http://yusuke.homeip.net/jira/browse/TFJ-210">TFJ-210</a>)<br>
+$[ja:<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/StatusListener.html#onDeletionNotice(twitter4j.StatusDeletionNotice)">StatusListener.onDeletionNotice(StatusDeletionNotice)</a>,<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/StatusListener.html#onTrackLimitationNotice(int)">StatusListener.onTrackLimitationNotice(int)</a> が導入されました。
+また、StatusStream の next メソッドシグニチャは
+ <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.0.10/twitter4j/StatusStream.html#next()">Status next()</a> から <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/StatusStream.html#next(twitter4j.StatusListener)">void next(StatusListener listener)</a> へと変更されました。<br>]
+$[en:<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/StatusListener.html#onDeletionNotice(twitter4j.StatusDeletionNotice)">StatusListener.onDeletionNotice(StatusDeletionNotice)</a> and <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/StatusListener.html#onTrackLimitationNotice(int)">StatusListener.onTrackLimitationNotice(int)</a> have been introduced.
+The method signature of StatusStream#next has been changed from <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.0.10/twitter4j/StatusStream.html#next()">Status next()</a> to <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/StatusStream.html#next(twitter4j.StatusListener)">void next(StatusListener listener)</a>.<br>]
+<br>
+$[ja:- メソッド名の修正(<a href="http://yusuke.homeip.net/jira/browse/TFJ-245">TFJ-245</a>)]
+$[en:- Method name refactors]<br>
+$[ja:<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.0.10/twitter4j/Twitter.html#updateDeliverlyDevice(twitter4j.Twitter.Device)">Twitter.updateDeliverlyDevice()</a> は <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateDeliveryDevice(twitter4j.Twitter.Device)">Twitter.updateDeliveryDevice()</a> へとリネームされました。<br>
+<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.0.10/twitter4j/AsyncTwitter.html#updateDeliverlyDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliverlyDeviceAsync()</a> は <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#updateDeliveryDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliveryDevice()</a> へとリネームされました。<br>
+<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.0.10/twitter4j/TwitterListener.html#updatedDeliverlyDevice(twitter4j.User)">TwitterListener.updatedDeliverlyDevice()</a> は <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterListener.html#updatedDeliveryDevice(twitter4j.User)">TwitterListener.updatedDeliveryDevice()</a> へとリネームされました。<br>]
+$[en:<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.0.10/twitter4j/Twitter.html#updateDeliverlyDevice(twitter4j.Twitter.Device)">Twitter.updateDeliverlyDevice()</a> has been renamed to <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateDeliveryDevice(twitter4j.Twitter.Device)">Twitter.updateDeliveryDevice()</a>.<br>
+<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.0.10/twitter4j/AsyncTwitter.html#updateDeliverlyDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliverlyDeviceAsync()</a> has been renamed to <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/AsyncTwitter.html#updateDeliveryDeviceAsync(twitter4j.Twitter.Device,%20twitter4j.TwitterListener)">AsyncTwitter.updateDeliveryDevice()</a>.<br>
+<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.0.10/twitter4j/Twitter.html#updateDeliverlyDevice(twitter4j.Twitter.Device)">TwitterListener.updateDeliverlyDevice()</a> has been renamed <a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateDeliveryDevice(twitter4j.Twitter.Device)">TwitterListener.updateDeliveryDevice()</a>.<br>]
+<br>
 $[ja:- TwitterResponse はクラスではなくなりました<br>
 多くの場合、関係ありませんが、<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponse.html">TwitterResponse</a> は rate limit status のアクセサを意味するインターフェースになりました。もうレスポンスオブジェクトの親クラスではありません。より正確に、内部の話をするとバージョン2.1.0からほとんどのレスポンスクラスは<a href="http://yusuke.homeip.net/twitter4j/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponseImpl.html">TwitterResponseImpl</a> を継承するようになりました。]
 $[en:- TwitterResponse is not a class anymore.<br>
@@ -98,7 +105,7 @@ This will significantly boost performance on Android platforms (which doesn't im
 </pre>
 </p>
 
-<h2><a name="oldVersions">$[ja:古いバージョン]$[en:Old Versions]</a></h2>
+<h2><a name="oldVersions">$[ja:古いバージョンの JavaDoc と差分]$[en:Old JavaDocs and diffs]</a></h2>
 <p><%@ include file="oldjavadocs.jsp"%>
 </p>
 </div>

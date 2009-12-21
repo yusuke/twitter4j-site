@@ -689,6 +689,29 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.addUserListMember_added(int, int)"></A>
+  <nobr><code>UserList</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#addUserListMember(int, int)" target="_top"><tt>addUserListMember</tt></A>(<code>int,</nobr> int<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Adds a member to a list.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.checkUserListMembership_added(java.lang.String, int, int)"></A>
+  <nobr><code>User</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#checkUserListMembership(java.lang.String, int, int)" target="_top"><tt>checkUserListMembership</tt></A>(<code>String,</nobr> int<nobr>,</nobr> int<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Check if a user is a member of the specified list.<br>
+ <br>This method calls http://api.twitter.com/1/[listOwner]/[listId]/members/id.json
+ </TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.checkUserListSubscription_added(java.lang.String, int, int)"></A>
+  <nobr><code>User</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#checkUserListSubscription(java.lang.String, int, int)" target="_top"><tt>checkUserListSubscription</tt></A>(<code>String,</nobr> int<nobr>,</nobr> int<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Check if the specified user is a subscriber of the specified list.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.createBlock_added(int)"></A>
   <nobr><code>User</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#createBlock(int)" target="_top"><tt>createBlock</tt></A>(<code>int</code>)</nobr>
   </TD>
@@ -710,17 +733,24 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.Twitter.createUserList_added(java.lang.String, java.lang.String, java.lang.String, java.lang.String)"></A>
-  <nobr><code>List</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#createUserList(java.lang.String, java.lang.String, java.lang.String, java.lang.String)" target="_top"><tt>createUserList</tt></A>(<code>String,</nobr> String<nobr>,</nobr> String<nobr>,</nobr> String<nobr><nobr></code>)</nobr>
+  <A NAME="twitter4j.Twitter.createUserList_added(java.lang.String, boolean, java.lang.String)"></A>
+  <nobr><code>UserList</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#createUserList(java.lang.String, boolean, java.lang.String)" target="_top"><tt>createUserList</tt></A>(<code>String,</nobr> boolean<nobr>,</nobr> String<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Creates a new list for the authenticated user.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.Twitter.deleteUserList_added(java.lang.String, int)"></A>
-  <nobr><code>List</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#deleteUserList(java.lang.String, int)" target="_top"><tt>deleteUserList</tt></A>(<code>String,</nobr> int<nobr><nobr></code>)</nobr>
+  <A NAME="twitter4j.Twitter.deleteUserList_added(int)"></A>
+  <nobr><code>UserList</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#deleteUserList(int)" target="_top"><tt>deleteUserList</tt></A>(<code>int</code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Deletes the specified list.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.deleteUserListMember_added(int, int)"></A>
+  <nobr><code>UserList</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#deleteUserListMember(int, int)" target="_top"><tt>deleteUserListMember</tt></A>(<code>int,</nobr> int<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Removes the specified member from the list.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -846,8 +876,15 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserListMembers_added(java.lang.String, int, long)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserListMembers(java.lang.String, int, long)" target="_top"><tt>getUserListMembers</tt></A>(<code>String,</nobr> int<nobr>,</nobr> long<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the members of the specified list.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getUserListMemberships_added(java.lang.String, long)"></A>
-  <nobr><code>PagableResponseList&lt;List&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserListMemberships(java.lang.String, long)" target="_top"><tt>getUserListMemberships</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
+  <nobr><code>PagableResponseList&lt;UserList&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserListMemberships(java.lang.String, long)" target="_top"><tt>getUserListMemberships</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">List the lists the specified user has been added to.</TD>
 </TR>
@@ -860,15 +897,22 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.getUserListSubscribers_added(java.lang.String, int, long)"></A>
+  <nobr><code>PagableResponseList&lt;User&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserListSubscribers(java.lang.String, int, long)" target="_top"><tt>getUserListSubscribers</tt></A>(<code>String,</nobr> int<nobr>,</nobr> long<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Returns the subscribers of the specified list.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getUserListSubscriptions_added(java.lang.String, long)"></A>
-  <nobr><code>PagableResponseList&lt;List&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserListSubscriptions(java.lang.String, long)" target="_top"><tt>getUserListSubscriptions</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
+  <nobr><code>PagableResponseList&lt;UserList&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserListSubscriptions(java.lang.String, long)" target="_top"><tt>getUserListSubscriptions</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">List the lists the specified user follows.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.getUserLists_added(java.lang.String, long)"></A>
-  <nobr><code>PagableResponseList&lt;List&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserLists(java.lang.String, long)" target="_top"><tt>getUserLists</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
+  <nobr><code>PagableResponseList&lt;UserList&gt;</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#getUserLists(java.lang.String, long)" target="_top"><tt>getUserLists</tt></A>(<code>String,</nobr> long<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">List the lists of the specified user.</TD>
 </TR>
@@ -916,8 +960,8 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.Twitter.showFriendShip_added(int, int)"></A>
-  <nobr><code>Relationship</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#showFriendShip(int, int)" target="_top"><tt>showFriendShip</tt></A>(<code>int,</nobr> int<nobr><nobr></code>)</nobr>
+  <A NAME="twitter4j.Twitter.showFriendship_added(int, int)"></A>
+  <nobr><code>Relationship</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#showFriendship(int, int)" target="_top"><tt>showFriendship</tt></A>(<code>int,</nobr> int<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Gets the detailed relationship status between a source user and a target user
  <br>This method calls http://api.twitter.com/1/friendships/show.json
@@ -926,8 +970,8 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.Twitter.showFriendShip_added(java.lang.String, java.lang.String)"></A>
-  <nobr><code>Relationship</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#showFriendShip(java.lang.String, java.lang.String)" target="_top"><tt>showFriendShip</tt></A>(<code>String,</nobr> String<nobr><nobr></code>)</nobr>
+  <A NAME="twitter4j.Twitter.showFriendship_added(java.lang.String, java.lang.String)"></A>
+  <nobr><code>Relationship</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#showFriendship(java.lang.String, java.lang.String)" target="_top"><tt>showFriendship</tt></A>(<code>String,</nobr> String<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Gets the detailed relationship status between a source user and a target user
  <br>This method calls http://api.twitter.com/1/friendships/show.json
@@ -943,9 +987,23 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="twitter4j.Twitter.showUserList_added(java.lang.String, int)"></A>
-  <nobr><code>List</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#showUserList(java.lang.String, int)" target="_top"><tt>showUserList</tt></A>(<code>String,</nobr> int<nobr><nobr></code>)</nobr>
+  <nobr><code>UserList</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#showUserList(java.lang.String, int)" target="_top"><tt>showUserList</tt></A>(<code>String,</nobr> int<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Show the specified list.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.subscribeUserList_added(java.lang.String, int)"></A>
+  <nobr><code>UserList</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#subscribeUserList(java.lang.String, int)" target="_top"><tt>subscribeUserList</tt></A>(<code>String,</nobr> int<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Make the authenticated user follow the specified list.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="twitter4j.Twitter.unsubscribeUserList_added(java.lang.String, int)"></A>
+  <nobr><code>UserList</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#unsubscribeUserList(java.lang.String, int)" target="_top"><tt>unsubscribeUserList</tt></A>(<code>String,</nobr> int<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Unsubscribes the authenticated user form the specified list.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -970,8 +1028,8 @@ Class twitter4j.<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html" target="_t
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="twitter4j.Twitter.updateUserList_added(java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)"></A>
-  <nobr><code>List</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateUserList(java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)" target="_top"><tt>updateUserList</tt></A>(<code>String,</nobr> int<nobr>,</nobr> String<nobr>,</nobr> String<nobr>,</nobr> String<nobr><nobr></code>)</nobr>
+  <A NAME="twitter4j.Twitter.updateUserList_added(int, java.lang.String, boolean, java.lang.String)"></A>
+  <nobr><code>UserList</code>&nbsp;<A HREF="../../2.1.0-SNAPSHOT/twitter4j/Twitter.html#updateUserList(int, java.lang.String, boolean, java.lang.String)" target="_top"><tt>updateUserList</tt></A>(<code>int,</nobr> String<nobr>,</nobr> boolean<nobr>,</nobr> String<nobr><nobr></code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Updates the specified list.</TD>
 </TR>

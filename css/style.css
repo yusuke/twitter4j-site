@@ -9,7 +9,7 @@ body {
 }
 
 .logo {
-    width: 800px;
+    width: 820px;
     height: 71px;
     background-image: url( ../images/logo2.jpg );
     cursor: pointer;
@@ -82,7 +82,7 @@ h1, h2, h3 {
 }
 
 .center {
-    width: 800px;
+    width: 820px;
     margin: 10px auto 30px auto;
     position: relative;
     font-size: 90%;
@@ -95,8 +95,8 @@ h1, h2, h3 {
     position: fixed;
     position: expression( "absolute" );
     top: expression( 0 +( ignoreMe = document . body . scrollTop ) + 'px' );
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     background-color: #FFF;
     filter: alpha( opacity = 70 );
     -moz-opacity: 0.70;
@@ -119,7 +119,7 @@ h1, h2, h3 {
     position: expression( "absolute" );
     top: 12px;
     top: expression( 10 +( ignoreMe = document . body . scrollTop ) + 'px' );
-    width: 200px;
+    width: 220px;
     font-size: 90%;
 }
 
@@ -136,7 +136,7 @@ h1, h2, h3 {
 .content {
     position: relative;
     width: 600px;
-    left: 200px;
+    left: 220px;
     top: 0px;
     text-align: left;
 }
