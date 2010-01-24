@@ -97,10 +97,8 @@ public class MultilingualDecorator implements Decorator {
   public int parseRequest(HttpServletRequest req, HttpServletResponse res,RequestContext context){
     int index;
     String resourcePath = context.getResourcePath();
-    System.out.println("resourcePath:"+resourcePath);
     if(-1 != (index = resourcePath.indexOf("/",1))){
       String language = resourcePath.substring(1,index);
-      System.out.println("language:"+language);
       for(int i=0;i<languages.length;i++){
         if(languages[i].equals(language)){
           resourcePath = resourcePath.substring(3);

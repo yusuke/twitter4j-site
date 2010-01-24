@@ -64,18 +64,23 @@ h1, h2, h3 {
 .api-support .pagination a:hover {
     color: #1c1;
 }
-
+.credential-rate-check {
+ text-align: center;
+ color: #1c1;
+}
 
 .api-support .method-path{
-  width: 240px;
+  width: 200px;
 }
 .api-support .t4jmethod{
-  width: 240px;
+  width: 200px;
+}
+.api-support .credential-rate{
+  width: 50px;
 }
 .api-support .paging-support{
-  width: 120px;
+  width: 80px;
 }
-
 .faq h2{
     font-size:100%;
     color: #314;

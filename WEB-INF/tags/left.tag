@@ -33,7 +33,7 @@ function setVisibility(id,page){
   <li><a href="code-examples.html#oauth" onclick="return scrollGracefully(this.href)">$[ja:OAuth認可]$[en:OAuth support]</a></li>
  </ol>
 <li><a href="./javadoc.html">JavaDoc</a></li>
-<li><a href="api-support.html"">$[ja:サポートしているAPI]$[en:API Support matrix]</a></li>
+<li><a href="api-support.html">$[ja:サポートしているAPI]$[en:API Support matrix]</a></li>
  <ol style="display:none" id="api-support">
   <li><a href="api-support.html#Search API Methods" onclick="return scrollGracefully(this.href)">Search API Methods</a></li>
   <li><a href="api-support.html#Timeline Methods" onclick="return scrollGracefully(this.href)">Timeline Methods</a></li>
@@ -52,6 +52,14 @@ function setVisibility(id,page){
   <li><a href="api-support.html#Help Methods" onclick="return scrollGracefully(this.href)">Help Methods</a></li>
   <li><a href="api-support.html#Streaming API Methods" onclick="return scrollGracefully(this.href)">Streaming API Methods</a></li>
  </ol>
+<li><a href="versions.html">$[ja:バージョン]$[en:Versions]</a></li>
+ <ol style="display:none" id="versions">
+  <li><a href="versions.html#2.1" onclick="return scrollGracefully(this.href)">2.1</a></li>
+  <li><a href="versions.html#migration" onclick="return scrollGracefully(this.href)">$[ja:バージョン 2.0.x からの移行]$[en:Migration guide from 2.0.x]</a></li>
+  <li><a href="versions.html#2.0" onclick="return scrollGracefully(this.href)">2.0</a></li>
+  <li><a href="versions.html#1.0" onclick="return scrollGracefully(this.href)">1.0</a></li>
+ </ol>
+
 <li><a href="faq.html"">$[ja:よくある質問]$[en:FAQ]</a></li>
 <li><a href="/jira/browse/TFJ#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel">$[ja:変更履歴]$[en:Change Log]</a></li>
 <li><a href="index.html#pricing" onclick="return scrollGracefully(this.href)">$[ja:寄付する]$[en:Donate]</a></li>
@@ -64,6 +72,7 @@ function setVisibility(id,page){
 setVisibility("index","index");
 setVisibility("code-examples","code-examples");
 setVisibility("api-support","api-support");
+setVisibility("versions","versions");
 </script>
 <!--script src="http://images.del.icio.us/static/js/blogbadge.js"></script>
 <script type="text/javascript">

@@ -24,19 +24,19 @@ JVM: Java 1.4.2 or later]</p>
     <p>$[ja:twitter4j-<include>latest-version.fragment</include>.jar をクラスパスに通して、好きなメソッドを呼び出してください。<br>
     Java が分かっていれば <a href="./javadoc/index.html">JavaDoc</a> を見るのが早いです。<br>
     twitter4j.<a href="javadoc/twitter4j/Twitter.html">Twitter</a> クラスが最初に見るべきクラスです。]
-    $[en:Just add twitter4j-<include>latest-version.fragment</include>.jar to your application classpath.<br>
+    $[en:Just add twitter4j-<include>latest-version.fragment</include>-core.jar to your application classpath.<br>
     If you are familiar with Java language, looking at the <a href="./javadoc/index.html">JavaDoc</a> should be the shortest way for you to get started.<br>
     <a href="javadoc/twitter4j/Twitter.html">twitter4j.Twitter</a> class is the one you may want to look at first.]
     </p>
 </ol>
 
 <a name="download"><h2>$[ja:ダウンロード]$[en:Download]</h2></a>
-<p>･$[ja:最新ビルド (<a href="http://yusuke.homeip.net/jira/secure/IssueNavigator.jspa?mode=hide&requestId=10010">現在開発中</a>の安定ビルド)]$[en:Latest stable build (<a href="http://yusuke.homeip.net/jira/secure/IssueNavigator.jspa?mode=hide&requestId=10010">In development</a>)]<br><a href="http://yusuke.homeip.net/twitter4j/en/<include>latest-SNAPSHOT-version.fragment</include>/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.jar"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
-    <a href="http://yusuke.homeip.net/twitter4j/en/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip</a> (<a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">JavaDoc</a> / <a href="http://yusuke.homeip.net/twitter4j/$[ja:ja]$[en:en]/javadoc.html#migration">$[ja:2.0.x から 2.1.x への移行ガイド]$[en:Migration guide from 2.0.x to 2.1.x])</a><br>
+<p>･$[ja:最新ビルド (<a href="http://twitter4j.org/jira/secure/IssueNavigator.jspa?mode=hide&requestId=10010">現在開発中</a>の安定ビルド)]$[en:Latest stable build (<a href="http://twitter4j.org/jira/secure/IssueNavigator.jspa?mode=hide&requestId=10010">In development</a>)]<br><a href="http://twitter4j.org/en/<include>latest-SNAPSHOT-version.fragment</include>/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.jar"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
+    <a href="http://twitter4j.org/en/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip</a> (<a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">JavaDoc</a> / <a href="http://twitter4j.org/$[ja:ja]$[en:en]/versions.html#migration">$[ja:2.0.x から 2.1.x への移行ガイド]$[en:Migration guide from 2.0.x to 2.1.x])</a><br>
 <br>
 ･$[ja:Maven Central Repository で入手可能な最新バージョン]$[en:Latest Maven Central Repository available version]<br>
-<a href="http://yusuke.homeip.net/twitter4j/en/twitter4j-<include>latest-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
-    <a href="http://yusuke.homeip.net/twitter4j/en/twitter4j-<include>latest-version.fragment</include>.zip">twitter4j-<include>latest-version.fragment</include>.zip</a> (<a href="./javadoc/index.html">JavaDoc</a>)<br>
+<a href="http://twitter4j.org/en/twitter4j-<include>latest-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
+    <a href="http://twitter4j.org/en/twitter4j-<include>latest-version.fragment</include>.zip">twitter4j-<include>latest-version.fragment</include>.zip</a> (<a href="./javadoc/index.html">JavaDoc</a>)<br>
 <br>
 </p>
 
@@ -45,10 +45,10 @@ JVM: Java 1.4.2 or later]</p>
     プロジェクトのリポジトリには以下の URL からアクセスできます。]
     $[en:The archive contains jar file along with source code.<br>
     You can also browse the project repository at:]
-    <pre class="codeSample">Fisheye: <a href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk">http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk</a></pre>
-    $[ja:または以下のように subversion クライアント、または git を使って最新のソースコードをチェックアウトすることもできます。]
-    $[en: Or you can check out the latest source code anonymously with a subversion client as follows:]
-    <pre class="codeSample">svn checkout http://yusuke.homeip.net/svn/twitter4j/trunk twitter4j</pre>
+    <pre class="codeSample">Fisheye: <a href="http://twitter4j.org/fisheye/browse/twitter4j">http://twitter4j.org/fisheye/browse/twitter4j</a></pre>
+    $[ja:または以下のように<!-- subversion クライアント、または--> git を使って最新のソースコードをチェックアウトすることもできます。]
+    $[en: Or you can check out the latest source code anonymously <!--with a subversion client -->as follows:]
+<!--    <pre class="codeSample">svn checkout http://twitter4j.org/svn/twitter4j/trunk twitter4j</pre>-->
     <pre class="codeSample">git clone git://github.com/yusuke/twitter4j.git</pre>
     </p>
 
@@ -57,9 +57,9 @@ JVM: Java 1.4.2 or later]</p>
 $[en:You can integrate Twitter4j easily by including following lines into your pom.xml.]
 <pre class="codeSample">   &lt;repositories&gt;
       &lt;repository&gt;
-         &lt;id&gt;yusuke.homeip.net&lt;/id&gt;
-         &lt;name&gt;yusuke.homeip.net Repository&lt;/name&gt;
-         &lt;url&gt;http://yusuke.homeip.net/maven2&lt;/url&gt;
+         &lt;id&gt;twitter4j.org&lt;/id&gt;
+         &lt;name&gt;twitter4j.org Repository&lt;/name&gt;
+         &lt;url&gt;http://twitter4j.org/maven2&lt;/url&gt;
          &lt;releases&gt;
             &lt;enabled&gt;true&lt;/enabled&gt;
          &lt;/releases&gt;
@@ -70,8 +70,8 @@ $[en:You can integrate Twitter4j easily by including following lines into your p
    &lt;/repositories&gt;
    &lt;dependencies&gt;
       &lt;dependency&gt;
-         &lt;groupId&gt;net.homeip.yusuke&lt;/groupId&gt;
-         &lt;artifactId&gt;twitter4j&lt;/artifactId&gt;
+         &lt;groupId&gt;org.twitter4j&lt;/groupId&gt;
+         &lt;artifactId&gt;twitter4j-core&lt;/artifactId&gt;
          &lt;version&gt;[2.1,)&lt;/version&gt;
          &lt;scope&gt;compile&lt;/scope&gt;
       &lt;/dependency&gt;
@@ -79,7 +79,7 @@ $[en:You can integrate Twitter4j easily by including following lines into your p
 
 $[ja:Maven Central Repository を使いたい場合、pom.xml に以下のように記載してください。]
 $[en:If you prefer the Maven central repository, include following lines to your pom.xml.]
-<pre class="codeSample">   &lt;dependencies&gt;<br/>       &lt;dependency&gt;<br/>           &lt;groupId&gt;net.homeip.yusuke&lt;/groupId&gt;<br/>           &lt;artifactId&gt;twitter4j&lt;/artifactId&gt;<br/>           &lt;version&gt;[2.0,)&lt;/version&gt;<br/>       &lt;/dependency&gt;<br/>       ...<br/>   &lt;/dependencies&gt;<br/></pre>
+<pre class="codeSample">   &lt;dependencies&gt;<br/>       &lt;dependency&gt;<br/>           &lt;groupId&gt;net.homeip.yusuke&lt;/groupId&gt;<br/>           &lt;artifactId&gt;twitter4j-core&lt;/artifactId&gt;<br/>           &lt;version&gt;[2.1,)&lt;/version&gt;<br/>       &lt;/dependency&gt;<br/>       ...<br/>   &lt;/dependencies&gt;<br/></pre>
 
 
 </p>
@@ -100,7 +100,7 @@ $[en:If you prefer the Maven central repository, include following lines to your
 <tr><td align=right> <a href="http://groups.google.com/group/twitter4j-j">このグループにアクセス</a> </td></tr>
 </table>
 バグ、ロードマップなどについては Jira に登録してあります。<br>
-    <a href="http://yusuke.homeip.net/jira/browse/TFJ">Jira へ</a>
+    <a href="http://twitter4j.org/jira/browse/TFJ">Jira へ</a>
     ]
     $[en:Any comment, bug report, feature request or patch is highly welcomed.<br>
     Feel free to post your comments to the mailing list.<br>
@@ -124,7 +124,7 @@ $[en:If you prefer the Maven central repository, include following lines to your
 </table>
 <br>
 Known bugs and feature requests will be filed to the Jira site.<br>
-    <a href="http://yusuke.homeip.net/jira/browse/TFJ">Go to Jira</a>
+    <a href="http://twitter4j.org/jira/browse/TFJ">Go to Jira</a>
     ]
     </p>
 

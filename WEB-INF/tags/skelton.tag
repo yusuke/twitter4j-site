@@ -5,7 +5,7 @@ $[ja:<head xml:lang="ja" lang="ja">]$[en:<head xml:lang="en" lang="en">]
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="Content-Language" content="$[ja:ja]$[en:en]">
 <meta name="verify-v1" content="YFpQGqxuw7kZYOQ2M/HWLOJEjRhLTyoH4sIP2sQf1wA=" />
-<link rel="shortcut icon" href="http://yusuke.homeip.net/twitter4j/$[ja:ja]$[en:en]/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://twitter4j.org/$[ja:ja]$[en:en]/favicon.ico" type="image/x-icon">
   <title><%=title%></title>
   <link rel="stylesheet" href="css/style.css" type="text/css" >
   <link rel="stylesheet" href="lightbox/lightbox.css" type="text/css" >

@@ -28,13 +28,13 @@ $[ja:こちらのページもご覧ください]$[en:See also]:<br>
     <a href="http://code.google.com/p/twitter-api/issues/list">Issues -  twitter-api - Google Code</a>
   </li>
   <li class="numberedlist">
-    <a href="http://yusuke.homeip.net/jira/browse/TFJ?report=com.atlassian.jira.plugin.system.project:roadmap-panel">Twitter4J $[ja:ロードマップ]$[en: Road Map]</a>
+    <a href="http://twitter4j.org/jira/browse/TFJ?report=com.atlassian.jira.plugin.system.project:roadmap-panel">Twitter4J $[ja:ロードマップ]$[en: Road Map]</a>
   </li>
 </ul>
 
   <li class="numberedlist">$[ja:プロキシサーバはどうやって設定しますか？]$[en:How do I configure proxy server for Twitter4J?]</li>
-$[ja:システムプロパティ(-Dtwitter4j.http.proxyHost, -Dtwitter4j.http.proxyPort) か、 <a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#setHttpProxy(java.lang.String,%20int)">setHttpProxy(proxyHost,proxyPort)</a>で設定できます。]
-$[en:You can either to use system properties(-Dtwitter4j.http.proxyHost, -Dtwitter4j.http.proxyPort) or <a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#setHttpProxy(java.lang.String,%20int)">setHttpProxy(proxyHost,proxyPort)</a>.]
+$[ja:システムプロパティ(-Dtwitter4j.http.proxyHost, -Dtwitter4j.http.proxyPort) か、 <a href="http://twitter4j.org/en/javadoc/twitter4j/Twitter.html#setHttpProxy(java.lang.String,%20int)">setHttpProxy(proxyHost,proxyPort)</a>で設定できます。]
+$[en:You can either to use system properties(-Dtwitter4j.http.proxyHost, -Dtwitter4j.http.proxyPort) or <a href="http://twitter4j.org/en/javadoc/twitter4j/Twitter.html#setHttpProxy(java.lang.String,%20int)">setHttpProxy(proxyHost,proxyPort)</a>.]
 
   <li class="numberedlist">$[ja:Twitter4J をつかったアプリケーションをデバッグする良い方法はありますか？]$[en:How do I debug my application?]</li>
 $[ja:システムプロパティ twitter4j.debug を true に設定すると Twitter API とのやりとりが標準出力にダンプされます。]

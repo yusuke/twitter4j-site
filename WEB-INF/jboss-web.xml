@@ -1,4 +1,4 @@
 <jboss-web>
-  <context-root>/twitter4j</context-root>
-  <virtual-host>yusuke.homeip.net</virtual-host>
+  <context-root>/</context-root>
+  <virtual-host>twitter4j.org</virtual-host>
 </jboss-web>

@@ -9,9 +9,9 @@
     <ol class="main">
 <li class="numberedlist"><a name="updatingStatus">$[ja:スタテータスの更新]$[en:Updating status]</a></li>
 <p>$[ja:Twitter.<a href="javadoc/twitter4j/Twitter.html#updateStatus(java.lang.String)">updateStatus()</a> メソッドで&quot;今なにをしているか&quot;を更新することができます。<br>
-詳しくは <a href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/Update.java?r=HEAD">twitter4j.examples.Update.java</a> をご覧ください。]
+詳しくは <a href="http://twitter4j.org/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/Update.java?r=HEAD">twitter4j.examples.Update.java</a> をご覧ください。]
 $[en:You can update &quot;What are you doing?&quot; via Twitter.<a href="javadoc/twitter4j/Twitter.html#updateStatus(java.lang.String)">updateStatus()</a> method.<br>
-See also <a href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/Update.java?r=HEAD">twitter4j.examples.Update.java</a> for detail.]
+See also <a href="http://twitter4j.org/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/Update.java?r=HEAD">twitter4j.examples.Update.java</a> for detail.]
 <pre class="codeSample">
     Twitter twitter = new Twitter(twitterID,twitterPassword);
     Status status = twitter.updateStatus(latestStatus);
@@ -20,9 +20,9 @@ See also <a href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/sr
 </p>
 <li class="numberedlist"><a name="gettingTimeline">$[ja:タイムラインの取得]$[en:Getting Timeline]</a></li>
 <p>$[ja:Twitter.<a href="javadoc/twitter4j/Twitter.html#getPublicTimeline()">get****Timeline()</a> メソッドで友達、パブリック、または指定ユーザの最近のタイムラインを返します。<br>
-詳しくは <a href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/GetTimelines.java?r=HEAD">twitter4j.examples.GetTimelines.java</a> をご覧ください。]
+詳しくは <a href="http://twitter4j.org/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/GetTimelines.java?r=HEAD">twitter4j.examples.GetTimelines.java</a> をご覧ください。]
 $[en:Twitter.<a href="javadoc/twitter4j/Twitter.html#getPublicTimeline()">get****Timeline()</a> returns a List of public, friends or specified user's timeline.<br>
-See also <a href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/GetTimelines.java?r=HEAD">twitter4j.examples.GetTimelines.java</a> for detail.]
+See also <a href="http://twitter4j.org/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/GetTimelines.java?r=HEAD">twitter4j.examples.GetTimelines.java</a> for detail.]
 <pre class="codeSample">
     Twitter twitter = new Twitter(twitterID,twitterPassword);
     List&lt;Status&gt; statuses = twitter.getFriendsTimeline();
@@ -38,9 +38,9 @@ $[ja:Java1.4 や <a href="http://processing.org/">Processing</a> でコンパイ
 <li class="numberedlist"><a name="directMessage">$[ja:ダイレクトメッセージの送受信]$[en:Sending / Receiving Direct Messages]</a></li>
 <p>$[ja:Twitter.<a href="javadoc/twitter4j/Twitter.html#sendDirectMessage()">sendDirectMessage()</a> / Twitter.<a href="javadoc/twitter4j/Twitter.html#getDirectMessages()">getDirectMessages()</a> メソッドでダイレクトメッセージの送受信ができます。<br>
 このメッセージは送信した相手にしか見えません。<br>
-詳しくは <a href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/SendDirectMessage.java?r=HEAD">twitter4j.examples.SendDirectMessage.java</a> をご覧ください。]
+詳しくは <a href="http://twitter4j.org/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/SendDirectMessage.java?r=HEAD">twitter4j.examples.SendDirectMessage.java</a> をご覧ください。]
 $[en:You can send and receive direct messages via Twitter.<a href="javadoc/twitter4j/Twitter.html#sendDirectMessage()">sendDirectMessage()</a> / Twitter.<a href="javadoc/twitter4j/Twitter.html#getDirectMessages()">getDirectMessages()</a>.<br>
-See also <a href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/SendDirectMessage.java?r=HEAD">twitter4j.examples.SendDirectMessage.java</a> for detail.]
+See also <a href="http://twitter4j.org/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/SendDirectMessage.java?r=HEAD">twitter4j.examples.SendDirectMessage.java</a> for detail.]
 <pre class="codeSample">
     Twitter twitter = new Twitter(senderID,senderPassword);
     sender.sendDirectMessage(recipientId,message);
@@ -73,10 +73,10 @@ $[ja:Java1.4 や <a href="http://processing.org/">Processing</a> でコンパイ
 <p>$[ja:非同期APIを使うと実際のメソッドコールの終了を待たずして処理を続行することができます。<br>
 実際のメソッドコールは別のスレッドで行われ、処理の結果は TwitterListener インターフェースにて受信できます。<br>
 非同期 API を使うには <a href="javadoc/twitter4j/Twitter.html">Twitter</a> クラスの替わりに twitter4j.<a href="javadoc/twitter4j/AsyncTwitter.html">AsyncTwitter</a> クラスを使い、***Async() メソッドを twitter4j.<a href="javadoc/twitter4j/TwitterListener.html">TwitterListener</a> のインスタンスと共に呼び出します。<br>
-詳しくは <a href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/AsyncUpdate.java?r=HEAD">twitter4j.examples.AsyncUpdate.java</a> をご覧ください。]
+詳しくは <a href="http://twitter4j.org/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/AsyncUpdate.java?r=HEAD">twitter4j.examples.AsyncUpdate.java</a> をご覧ください。]
 $[en:It is possible to call the time consuming Twitter APIs asynchronously using twitter4j.<a href="javadoc/twitter4j/AsyncTwitter.html">AsyncTwitter</a> class along with <a href="javadoc/twitter4j/TwitterListener.html">TwitterListener</a>.<br>
 Actual method calls will be done in a separate thread and you can get the responses through <a href="javadoc/twitter4j/TwitterListener.html">TwitterListener</a> interface.<br>
-See also <a href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/AsyncUpdate.java?r=HEAD">twitter4j.examples.AsyncUpdate.java</a> for detail.]
+See also <a href="http://twitter4j.org/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/examples/AsyncUpdate.java?r=HEAD">twitter4j.examples.AsyncUpdate.java</a> for detail.]
 <pre class="codeSample">
     AsyncTwitter twitter = new AsyncTwitter(senderId,senderPassword);
     twitter.updateStatusAsync(args[2], new TwitterAdapter() {
@@ -129,8 +129,8 @@ Note that some of above parameters are not accepted by those APIs. Please refer 
 </p>
 
 <li class="numberedlist"><a name="oauth">$[ja:OAuth認可]$[en:OAuth support]</a></li>
-<p>$[ja:OAuth 認可方式を使うとユーザーにユーザID、パスワードを提供してもらうことなくユーザのアカウントにアクセスできます。OAuth を利用するには <a href="http://twitter.com/oauth_clients/new">http://twitter.com/oauth_clients/new</a> で事前にアプリケーションを登録しておき consumer key, consumer secret を取得しておく必要があります。key と secret は <a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#setOAuthConsumer(java.lang.String,%20java.lang.String)">Twitter#setOAuthConsumer()</a> でセットするか、システムプロパティで VM パラメータとして以下のように指定しておきます。]
-$[en:With OAuth authorization scheme, an application can access the user account without userid/password combination given. You need to register your application at <a href="http://twitter.com/oauth_clients/new">http://twitter.com/oauth_clients/new</a> to acquire consumer key, and consumer secret in advance. key / secret pair can be set via <a href="http://yusuke.homeip.net/twitter4j/en/javadoc/twitter4j/Twitter.html#setOAuthConsumer(java.lang.String,%20java.lang.String)">Twitter#setOAuthConsumer()</a>, or following system properties:]
+<p>$[ja:OAuth 認可方式を使うとユーザーにユーザID、パスワードを提供してもらうことなくユーザのアカウントにアクセスできます。OAuth を利用するには <a href="http://twitter.com/oauth_clients/new">http://twitter.com/oauth_clients/new</a> で事前にアプリケーションを登録しておき consumer key, consumer secret を取得しておく必要があります。key と secret は <a href="http://twitter4j.org/en/javadoc/twitter4j/Twitter.html#setOAuthConsumer(java.lang.String,%20java.lang.String)">Twitter#setOAuthConsumer()</a> でセットするか、システムプロパティで VM パラメータとして以下のように指定しておきます。]
+$[en:With OAuth authorization scheme, an application can access the user account without userid/password combination given. You need to register your application at <a href="http://twitter.com/oauth_clients/new">http://twitter.com/oauth_clients/new</a> to acquire consumer key, and consumer secret in advance. key / secret pair can be set via <a href="http://twitter4j.org/en/javadoc/twitter4j/Twitter.html#setOAuthConsumer(java.lang.String,%20java.lang.String)">Twitter#setOAuthConsumer()</a>, or following system properties:]
 <pre class="codeSample">-Dtwitter4j.oauth.consumerKey=[consumer key]
 -Dtwitter4j.oauth.consumerSecret=[consumer secret]</pre>
 $[ja:最初はユーザアカウントへのアクセス権がありません。以下のように authorization URL にユーザを誘導し、AccessToken を取得する必要があります。]$[en:Initially, you don't have a permission to access the user's account and need to acquire access token by redirecting the user to an authorization URL as follows:]
@@ -195,7 +195,7 @@ See also:
 
 <li class="numberedlist"><a name="streaming">$[ja:ストリーミング API]$[en:Streaming API]</a></li>
 <p>$[ja:<a href="javadoc/twitter4j/Query.html">Query</a> クラスと Twitter.<a href="javadoc/twitter4j/Twitter.html#search(twitter4j.Query)">search(twitter4j.Query)</a> メソッドで検索を行えます。]
-$[en:There are <a href="http://yusuke.homeip.net/twitter4j/en/api-support.html#Streaming%20API%20Methods">several methods</a> you can use to get TweetsAPIsYou can search for Tweets using <a href="javadoc/twitter4j/Query.html">Query</a> class and Twitter.<a href="javadoc/twitter4j/Twitter.html#search(twitter4j.Query)">search(twitter4j.Query)</a> method as following:]
+$[en:There are <a href="http://twitter4j.org/en/api-support.html#Streaming%20API%20Methods">several methods</a> you can use to get TweetsAPIsYou can search for Tweets using <a href="javadoc/twitter4j/Query.html">Query</a> class and Twitter.<a href="javadoc/twitter4j/Twitter.html#search(twitter4j.Query)">search(twitter4j.Query)</a> method as following:]
 <pre class="codeSample">
     Twitter twitter = new Twitter();
     Query query = new Query("source:twitter4j yusukey");

@@ -19,8 +19,13 @@ public class JikaFilter implements Filter {
   
   public void destroy() {
   }
+  Object flag = new Object();
   
   public void doFilter(ServletRequest request, ServletResponse response,FilterChain chain) throws IOException, ServletException {
+  if(null != request.getAttribute("flag")){
+    chain.doFilter(request,response);
+    return;
+  }
     String encoding = this.encoding;
     HttpServletRequest req = (HttpServletRequest)request;
     HttpServletResponse res = (HttpServletResponse)response;
@@ -65,6 +70,7 @@ public class JikaFilter implements Filter {
       response.setContentLength(theContent.length);
       response.getOutputStream().write(theContent);
     }else{
+      request.setAttribute("flag", flag);
       request.getRequestDispatcher(requestContext.getResourcePath()).forward(req,res);
     }
   }
