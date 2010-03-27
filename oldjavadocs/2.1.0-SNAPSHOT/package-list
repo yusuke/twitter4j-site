@@ -1,6 +1,4 @@
 twitter4j
 twitter4j.api
 twitter4j.conf
-twitter4j.examples
 twitter4j.http
-twitter4j.logging

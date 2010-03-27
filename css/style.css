@@ -11,7 +11,7 @@ body {
 .logo {
     width: 820px;
     height: 71px;
-    background-image: url( ../images/logo2.jpg );
+    background-image: url( ../images/twitter4j-logo.png );
     cursor: pointer;
 }
 
@@ -22,6 +22,11 @@ h1, h2, h3 {
     font-size:100%;
     color: #314;
 }
+h3{
+    font-size:80%;
+    color: #314;
+}
+
 .history ul{
     list-style: none;
 

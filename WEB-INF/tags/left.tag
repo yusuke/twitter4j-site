@@ -1,9 +1,12 @@
-﻿<div class="left"
+﻿<div class="left">
 	<div style="text-align:center">$[ja:<a id="lang-link" href="../en/index.html">English</a> | Japanese]$[en:English | <a id="lang-link" href="../ja/index.html">Japanese</a>]</div>
 <script>
-var currentPage = location.href.substring(location.href.lastIndexOf("/"));
-$[ja:document.getElementById("lang-link").href="../en"+ currentPage;]
-$[en:document.getElementById("lang-link").href="../ja"+ currentPage;]
+var currentPage = location.href.substring(location.href.lastIndexOf("/") + 1);
+$[ja:document.getElementById("lang-link").href="../en/"+ currentPage;]
+$[en:document.getElementById("lang-link").href="../ja/"+ currentPage;]
+if(-1 != currentPage.indexOf("#")){
+  currentPage = currentPage.substring(0,currentPage.indexOf("#"));
+}
 function setVisibility(id,page){
   if(document.getElementById(id)){
    document.getElementById(id).style.display = (-1 != currentPage.indexOf(page)) ? "block" : "none";
@@ -12,68 +15,26 @@ function setVisibility(id,page){
 </script>
 <ul>
 <li><a href="index.html#introduction" onclick="return scrollGracefully(this.href)">$[ja:トップ]$[en:Main]</a></li>
- <ol id="index" style="display:none">
-  <li><a href="index.html#systemRequirements" onclick="return scrollGracefully(this.href)">$[ja:システム要件]$[en:System Requirements]</a></li>
-  <li><a href="index.html#howToUse" onclick="return scrollGracefully(this.href)">$[ja:使い方]$[en:How To Use]</a></li>
-  <li><a href="index.html#download" onclick="return scrollGracefully(this.href)">$[ja:ダウンロード]$[en:Download]</a></li>
-  <li><a href="index.html#sourceCode" onclick="return scrollGracefully(this.href)">$[ja:ソースコード]$[en:Source Code]</a></li>
-  <li><a href="index.html#maven" onclick="return scrollGracefully(this.href)">$[ja:Maven 統合]$[en:Maven Integration]</a></li>
-  <li><a href="index.html#mailingList" onclick="return scrollGracefully(this.href)">$[ja:メーリングリスト]$[en:Mailing list]</a></li>
-  <li><a href="index.html#license" onclick="return scrollGracefully(this.href)">$[ja:ライセンス]$[en:License]</a></li>
-  <li><a href="index.html#pricing" onclick="return scrollGracefully(this.href)">$[ja:寄付]$[en:Donation]</a></li>
- </ol>
+ <ol style="display:none" id="index.html"></ol>
 <li><a href="code-examples.html">$[ja:コード例]$[en:Code Examples]</a></li>
- <ol style="display:none" id="code-examples">
-  <li><a href="code-examples.html#updatingStatus" onclick="return scrollGracefully(this.href)">$[ja:スタテータスの更新]$[en:Updating status]</a></li>
-  <li><a href="code-examples.html#gettingTimeline" onclick="return scrollGracefully(this.href)">$[ja:タイムラインの取得]$[en:Getting Timeline]</a></li>
-  <li><a href="code-examples.html#directMessage" onclick="return scrollGracefully(this.href)">$[ja:ダイレクトメッセージ]$[en:Direct Messages]</a></li>
-  <li><a href="code-examples.html#search" onclick="return scrollGracefully(this.href)">$[ja:検索]$[en:Search]</a></li>
-  <li><a href="code-examples.html#asyncAPI" onclick="return scrollGracefully(this.href)">$[ja:非同期API]$[en:Async API]</a></li>
-  <li><a href="code-examples.html#pagination" onclick="return scrollGracefully(this.href)">$[ja:ページ処理]$[en:Pagination control]</a></li>
-  <li><a href="code-examples.html#oauth" onclick="return scrollGracefully(this.href)">$[ja:OAuth認可]$[en:OAuth support]</a></li>
- </ol>
+ <ol style="display:none" id="code-examples.html"></ol>
 <li><a href="./javadoc.html">JavaDoc</a></li>
+ <ol style="display:none" id="javadoc.html"></ol>
 <li><a href="api-support.html">$[ja:サポートしているAPI]$[en:API Support matrix]</a></li>
- <ol style="display:none" id="api-support">
-  <li><a href="api-support.html#Search API Methods" onclick="return scrollGracefully(this.href)">Search API Methods</a></li>
-  <li><a href="api-support.html#Timeline Methods" onclick="return scrollGracefully(this.href)">Timeline Methods</a></li>
-  <li><a href="api-support.html#Status Methods" onclick="return scrollGracefully(this.href)">Status Methods</a></li>
-  <li><a href="api-support.html#User Methods" onclick="return scrollGracefully(this.href)">User Methods</a></li>
-  <li><a href="api-support.html#List Methods" onclick="return scrollGracefully(this.href)">List Methods</a></li>
-  <li><a href="api-support.html#List Members Methods" onclick="return scrollGracefully(this.href)">List Members Methods</a></li>
-  <li><a href="api-support.html#List Subscribers Methods" onclick="return scrollGracefully(this.href)">List Subscribers Methods</a></li>
-  <li><a href="api-support.html#Direct Message Methods" onclick="return scrollGracefully(this.href)">Direct Message Methods</a></li>
-  <li><a href="api-support.html#Friendship Methods" onclick="return scrollGracefully(this.href)">Friendship Methods</a></li>
-  <li><a href="api-support.html#Social Graph Methods" onclick="return scrollGracefully(this.href)">Social Graph Methods</a></li>
-  <li><a href="api-support.html#Account Methods" onclick="return scrollGracefully(this.href)">Account Methods</a></li>
-  <li><a href="api-support.html#Favorite Methods" onclick="return scrollGracefully(this.href)">Favorite Methods</a></li>
-  <li><a href="api-support.html#Notification Methods" onclick="return scrollGracefully(this.href)">Notification Methods</a></li>
-  <li><a href="api-support.html#Block Methods" onclick="return scrollGracefully(this.href)">Block Methods</a></li>
-  <li><a href="api-support.html#Help Methods" onclick="return scrollGracefully(this.href)">Help Methods</a></li>
-  <li><a href="api-support.html#Streaming API Methods" onclick="return scrollGracefully(this.href)">Streaming API Methods</a></li>
- </ol>
+ <ol style="display:none" id="api-support.html"></ol>
 <li><a href="versions.html">$[ja:バージョン]$[en:Versions]</a></li>
- <ol style="display:none" id="versions">
-  <li><a href="versions.html#2.1" onclick="return scrollGracefully(this.href)">2.1</a></li>
-  <li><a href="versions.html#migration" onclick="return scrollGracefully(this.href)">$[ja:バージョン 2.0.x からの移行]$[en:Migration guide from 2.0.x]</a></li>
-  <li><a href="versions.html#2.0" onclick="return scrollGracefully(this.href)">2.0</a></li>
-  <li><a href="versions.html#1.0" onclick="return scrollGracefully(this.href)">1.0</a></li>
- </ol>
-
+ <ol style="display:none" id="versions.html"></ol>
 <li><a href="faq.html"">$[ja:よくある質問]$[en:FAQ]</a></li>
+ <ol style="display:none" id="faq.html"></ol>
 <li><a href="/jira/browse/TFJ#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel">$[ja:変更履歴]$[en:Change Log]</a></li>
-<li><a href="index.html#pricing" onclick="return scrollGracefully(this.href)">$[ja:寄付する]$[en:Donate]</a></li>
+<li><a href="index.html#donation" onclick="return scrollGracefully(this.href)">$[ja:寄付する]$[en:Donate]</a></li>
+<li><a href="./powered-by.html">Powered By Twitter4J</a></li>
+ <ol style="display:none" id="powered-by.html"></ol>
 </ul>
 <center>
 <a href="http://www.twitter.com/t4j_news"><img src="http://twitter-badges.s3.amazonaws.com/follow_bird-a.png" alt="Follow t4j_news on Twitter"/></a><br><br>
 <include>adsense200x200.html</include>
 </center>
-<script>
-setVisibility("index","index");
-setVisibility("code-examples","code-examples");
-setVisibility("api-support","api-support");
-setVisibility("versions","versions");
-</script>
 <!--script src="http://images.del.icio.us/static/js/blogbadge.js"></script>
 <script type="text/javascript">
 //digg_url = document.location.href;

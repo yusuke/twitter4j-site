@@ -4,24 +4,23 @@
 <div class="javadoc">
     <a name="versions"><h1>$[ja:バージョン]$[en:Versions]</h1></a>
 
-<h2><a name="latst">$[ja:開発中のバージョン]$[en:In development]</a></h2>
-<p><a href="http://twitter4j.org/jira/secure/IssueNavigator.jspa?mode=hide&requestId=10030">･$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include></a><br>
-<a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">･$[ja:バージョン <include>latest-version.fragment</include> からの JavaDoc diff]$[en:JavaDoc diff from Version <include>latest-version.fragment</include>]</a>
-
-<h2><a name="2.1">$[ja:バージョン]$[en:Version] 2.1</a></h2>
-<p>$[ja:2010/1/24 リリース: 最新APIセットを全てサポート。パフォーマンス、メモリ消費改善。Android 完全対応。]$[en:Released on 1/24/2010: Supports all existing methods. Performance and memory footprint improvements. Completely Android compatible.]</p>
-<h3><a name="migration">$[ja:バージョン 2.0.x から 2.1.x への移行ガイド]$[en:Migration guide from 2.0.x to 2.1.x]</a></h3>
-<p>$[ja:- まずプロジェクトの再ビルドを！<br>
+<tag:h2 name="latst" title="$[ja:開発中のバージョン]$[en:In development]">
+･<a href="http://twitter4j.org/jira/secure/IssueNavigator.jspa?requestId=10030">$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include></a><br>
+･<a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">$[ja:バージョン <include>latest-version.fragment</include> からの JavaDoc diff]$[en:JavaDoc diff from Version <include>latest-version.fragment</include>]</a>
+</tag:h2>
+<tag:h2 name="2.1" title="$[ja:バージョン]$[en:Version] 2.1">
+$[ja:2010/1/24 リリース: 最新APIセットを全てサポート。パフォーマンス、メモリ消費改善。Android 完全対応。]$[en:Released on 1/24/2010: Supports all existing methods. Performance and memory footprint improvements. Better Android compatiblity.]
+</tag:h2>
+<tag:h2 name="migration20x-21x" title="$[ja:バージョン 2.0.x から 2.1.x への移行]$[en:Migrating from 2.0.x to 2.1.x]">
+$[ja:- まずプロジェクトの再ビルドを！<br>
 バージョン2.1.0 は旧バージョンから若干の非互換箇所があります。旧バージョンを利用していたプロジェクトでバージョン2.1.0を利用する場合は必ずプロジェクトの再ビルドを行ってください。]
 $[en:- Rebuild your project first!<br>
 Version 2.1.0 is slightly incompatible with older versions. Projects that have been using older versions are required to be rebuilt before using Version 2.1.0.]<br>
 <br>
 $[ja:- artifactId、groupId の変更]
 $[en:- artifactId, groupId  changes] (<a href="http://twitter4j.org/jira/browse/TFJ-225">TFJ-225</a>)<br>
-$[ja:artifactId は twiter4j から twitter4j-core へ変更されました。また groupId は net.homeip.yusuke から org.twitter4j へ変更されます。<br>
-groupId - org.twitter4j が maven central repository で有効になるまでの間、groupId - net.homeip.yusuke は存続する予定です。<br>]
-$[en:artifactId has been changed from twiter4j to twitter4j-core. groupId is going to be changed from net.homeip.yusuke to org.twitter4j.<br>
-groupId - net.homeip.yusuke will be kept available until groupId - org.twitter4j gets available in the maven central repository.<br>]
+$[ja:artifactId は twiter4j から twitter4j-core へ変更されました。また groupId は net.homeip.yusuke から org.twitter4j へ変更されました。<br>]
+$[en:artifactId has been changed from twiter4j to twitter4j-core, and groupId has been changed from net.homeip.yusuke to org.twitter4j.<br>]
 <br>
 $[ja:- ファクトリクラスの導入、オブジェクトの不変(immutable)化]
 $[en:- Introduction of Factory classes] (<a href="http://twitter4j.org/jira/browse/TFJ-231">TFJ-231</a>)<br>
@@ -158,11 +157,13 @@ $[ja:- TwitterResponse はクラスではなくなりました<br>
 $[en:- TwitterResponse is not a class anymore.<br>
 Shouldn't matter in most cases. <a href="http://twitter4j.org/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponse.html">TwitterResponse</a> is now an interface representing just rate limit status accessors. It's not a super class of every response objects anymore. More specifically and internally, most of response classes are extending <a href="http://twitter4j.org/en/oldjavadocs/2.1.0-SNAPSHOT/twitter4j/TwitterResponseImpl.html">TwitterResponseImpl</a> from Version 2.1.0.]
 </pre>
-</p>
-<h2><a name="2.0">$[ja:バージョン]$[en:Version] 2.0</a></h2>
-<p>$[ja:2009/04/19 リリース: OAuth, Twitpocalypse 問題に対応(バージョン2.0.8〜)]$[en:Released on 4/9/2009: OAuth supported version. Twitpocalypse safe (from version 2.0.8)]</p>
-<h2><a name="1.0">$[ja:バージョン]$[en:Version] 1.0</a></h2>
-<p>$[ja:2007/06/09 リリース: 初版リリース]$[en:Released on 2007/06/09: initial release.]</p>
+</tag:h2>
+<tag:h2 name="2.0" title="$[ja:バージョン]$[en:Version] 2.0">
+$[ja:2009/04/19 リリース: OAuth, Twitpocalypse 問題に対応(バージョン2.0.8〜)]$[en:Released on 4/9/2009: OAuth supported version. Twitpocalypse safe (from version 2.0.8)]
+</tag:h2>
+<tag:h2 name="1.0" title="$[ja:バージョン]$[en:Version] 1.0">
+$[ja:2007/06/09 リリース: 初版リリース]$[en:Released on 2007/06/09: initial release.]
+</tag:h2>
 </div>
 </p>
 </tag:skelton>

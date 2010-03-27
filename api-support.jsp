@@ -4,7 +4,7 @@
 
 <div class="api-support">
   <a name="supportedAPI"><h1>$[ja:サポートAPI]$[en:API Support matrix]</h1></a>
-<include>api-support-fragment.jsp</include>
+<%@include file="api-support-fragment.jsp" %> 
 </div>
 <br>
 </tag:skelton>

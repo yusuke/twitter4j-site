@@ -14,16 +14,32 @@ $[ja:<head xml:lang="ja" lang="ja">]$[en:<head xml:lang="en" lang="en">]
   <script type="text/javascript" src="js/gracefulscroll.js"></script>
 </head>
 <body>
+<script>
+  var submenu;
+</script>
 <div class="center" id="center">
   <a name="top"><div onclick="location.href='./index.html'" class="logo"><div class="transparent"></div></div></a>
   <tag:left/>
   <div class="content" id="content"><br>
-    <center><include>adsense468x60.html</include></center>
+    <center><include>adsense468x15.html</include><br>
+    <include>adsense468x60.html</include></center>
     <jsp:doBody/>
     <center><include>adsense468x60.html</include></center>
   </div>
 <br>
 </div>
 <include>urchin.html</include>
+<script>
+if(submenu){
+  var h = "";
+  for(var i=0;i<submenu.length;i++){
+    h = h + "<li><a href='" + currentPage + "#" + submenu[i]["name"] + "' onclick='return scrollGracefully(this.href)'>" + submenu[i]["title"] + "</a></li>";
+  }
+  if(document.getElementById(currentPage)){
+   document.getElementById(currentPage).style.display = (-1 != currentPage.indexOf(currentPage)) ? "block" : "none";
+   document.getElementById(currentPage).innerHTML = h;
+  }
+}
+</script>
 </body>
 </html>
