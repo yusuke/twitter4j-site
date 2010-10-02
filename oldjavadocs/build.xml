@@ -13,19 +13,19 @@ Creates a report in the directory "myreport". This will not run as shipped.
   <taskdef name="jdiff" 
            classname="jdiff.JDiffAntTask" 
            classpath="${JDIFF_HOME}/antjdiff.jar" />
-  <jdiff destdir="2.1.1-SNAPSHOT-2.1.0" 
+  <jdiff destdir="2.1.2-2.1.4" 
          verbose="on"
          stats="on"
          docchanges="off">
-    <old name="../2.1.1-SNAPSHOT">
+    <old name="../2.1.2">
       <!-- This is the location of your old source files -->
-      <dirset dir="2.1.1-SNAPSHOT-source" includes="twitter4j/**"
-      excludes="twitter4j/internal/**,twitter4j/org/**,twitter4j/logging/**"/>
+      <dirset dir="2.1.2-source" includes="twitter4j/**"
+      excludes="twitter4j/internal/**,twitter4j/org/**"/>
     </old>
-    <new name="../2.1.0">
+    <new name="../2.1.4">
       <!-- This is the location of your new source files -->
-      <dirset dir="2.1.0-source" includes="twitter4j/**"
-      excludes="twitter4j/internal/**,twitter4j/org/**,twitter4j/logging/**"/>
+      <dirset dir="2.1.4-source" includes="twitter4j/**"
+      excludes="twitter4j/internal/**,twitter4j/org/**"/>
     </new>
   </jdiff>
 </target>

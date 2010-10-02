@@ -5,15 +5,15 @@
 <tag:h2 name="introduction" title="$[ja:Twitter4Jとは？]$[en:Introduction]">
 $[ja:Twitter4J は <a href="http://apiwiki.twitter.com/Twitter-API-Documentation">Twitter API</a> の Java ラッパです。<br>
     Twitter4J を使うと XML や HTTP に詳しくなくても容易に Twitter とインタラクトするアプリケーションを書くことが出来ます。Twitter4J は Twitter 非公式のライブラリです。]
-$[en:Twitter4J is a Java library for the <a href="http://apiwiki.twitter.com/Twitter-API-Documentation">Twitter API</a>.<br>
+$[en:Twitter4J is an unofficial Java library for the <a href="http://apiwiki.twitter.com/Twitter-API-Documentation">Twitter API</a>.<br>
     With Twitter4J, you can easily integrate your Java application with the Twitter service. Twitter4J is an unofficial library.<br>
     <br>Twitter4J is featuring:]
 <br>
 <font color="green">✔</font> 100% Pure Java - works on any Java Platform version 1.4.2 or later<br>
-<font color="green">✔</font> $[en:Works on <a href="http://code.google.com/android/">Android</a> platform (from Version 2.1.0)]$[ja:<a href="http://code.google.com/android/">Android</a> プラットフォーム上でも動作します]<br>
+<font color="green">✔</font> $[en:<a href="http://code.google.com/android/">Android</a> platform and <a href="http://code.google.com/appengine/">Google APP Engine</a> ready]$[ja:<a href="http://code.google.com/android/">Android</a> や<a href="http://code.google.com/appengine/">Google APP Engine</a>上でも動作します]<br>
 <font color="green">✔</font> $[en:Zero dependency : No additional jars required]$[ja:依存なし : 追加の jar ファイルなどは必要ありません]<br>
 <font color="green">✔</font> $[en:Built-in OAuth support]$[ja:OAuth に対応]<br>
-<font color="green">✔</font> $[en:Out-of-the-box gzip support for faster performance]$[ja:デフォルトで gip をサポートするため高速]<br>
+<font color="green">✔</font> $[en:Out-of-the-box gzip support]$[ja:デフォルトで gzip をサポートするため高速]<br>
 </tag:h2>
 <tag:h2 name="systemRequirements" title="$[ja:システム要件]$[en:System Requirements]">
     $[ja:OS: Java をサポートする Windows または Unix 系 OS<br>
@@ -30,7 +30,7 @@ JVM: Java 1.4.2 or later]
     <a href="javadoc/twitter4j/Twitter.html">twitter4j.Twitter</a> class is the one you may want to look at first.]
 </tag:h2>
 <tag:h2 name="download" title="$[ja:ダウンロード]$[en:Download]">
-･$[ja:最新安定ビルド (<a href="http://twitter4j.org/jira/secure/IssueNavigator.jspa?mode=hide&requestId=10010">現在開発中バージョン</a>の安定ビルド)]$[en:Latest stable build (<a href="http://twitter4j.org/jira/secure/IssueNavigator.jspa?mode=hide&requestId=10010">In development</a>)]<br><a href="http://twitter4j.org/en/<include>latest-SNAPSHOT-version.fragment</include>/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.jar"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
+･$[ja:最新安定ビルド (<a href="http://twitter4j.org/jira/secure/IssueNavigator.jspa?mode=hide&requestId=10030">現在開発中バージョン</a>の安定ビルド)]$[en:Latest stable build (<a href="http://twitter4j.org/jira/secure/IssueNavigator.jspa?mode=hide&requestId=10030">In development</a>)]<br><a href="http://twitter4j.org/en/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
     <a href="http://twitter4j.org/en/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip</a> (<a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">JavaDoc</a>)<br>
 <br>
 ･$[ja:Maven Central Repository で入手可能な最新バージョン]$[en:Latest Maven Central Repository available version]<br>
@@ -117,7 +117,7 @@ $[en:If you prefer the Maven central repository, include the following lines to 
 バグ、ロードマップなどについては Jira に登録してあります。<br>
     <a href="http://twitter4j.org/jira/browse/TFJ">Jira へ</a>
     ]
-    $[en:Any comment, bug report, feature request or patch is highly welcomed.<br>
+    $[en:Any question, comment, bug report, feature request or patch is highly welcomed.<br>
     Feel free to post your comments to the mailing list.<br>
 <table border=0 style="background-color: #fff; padding: 5px;" cellspacing=0>
   <tr><td>

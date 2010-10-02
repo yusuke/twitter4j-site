@@ -24,7 +24,7 @@ public class Html2JSPDecorator implements Decorator {
 
   public int parseRequest(HttpServletRequest req, HttpServletResponse res,RequestContext context){
     String resourcePath = context.getResourcePath();
-    if(!resourcePath.contains("/javadoc/") && !resourcePath.contains("/oldjavadocs/") && resourcePath.endsWith(".html")){
+    if(!resourcePath.contains("/javadoc/") && !resourcePath.contains("/oldjavadocs/") && !resourcePath.contains("/javadoc-latest/") && resourcePath.endsWith(".html")){
         resourcePath = resourcePath.substring(0,resourcePath.length()-5)+".jsp";
         context.setResourcePath(resourcePath);
         return FORWARD;

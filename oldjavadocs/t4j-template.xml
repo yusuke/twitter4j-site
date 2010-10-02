@@ -20,12 +20,12 @@ Creates a report in the directory "myreport". This will not run as shipped.
     <old name="../OLD_VER">
       <!-- This is the location of your old source files -->
       <dirset dir="OLD_VER-source" includes="twitter4j/**"
-      excludes="twitter4j/internal/**,twitter4j/org/**,twitter4j/logging/**"/>
+      excludes="twitter4j/internal/**,twitter4j/org/**"/>
     </old>
     <new name="../NEW_VER">
       <!-- This is the location of your new source files -->
       <dirset dir="NEW_VER-source" includes="twitter4j/**"
-      excludes="twitter4j/internal/**,twitter4j/org/**,twitter4j/logging/**"/>
+      excludes="twitter4j/internal/**,twitter4j/org/**"/>
     </new>
   </jdiff>
 </target>

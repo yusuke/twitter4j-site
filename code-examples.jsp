@@ -166,14 +166,14 @@ $[ja:最初はユーザアカウントへのアクセス権がありません。
       }
     }
     //$[ja:将来の参照用に accessToken を永続化する]$[en:persist to the accessToken for future reference.]
-    storeAccessToken(twitter.verifyCredentials().getId() , at);
+    storeAccessToken(twitter.verifyCredentials().getId() , accessToken);
     Status status = twitter.updateStatus(args[0]);
     System.out.println("Successfully updated the status to [" + status.getText() + "].");
     System.exit(0);
   }
-  private void storeAccessToken(int useId, AccessToken at){
-    //$[en:store ]at.getToken()$[ja: を保存]
-    //$[en:store ]at.getTokenSecret()$[ja: を保存]
+  private static void storeAccessToken(int useId, AccessToken accessToken){
+    //$[en:store ]accessToken.getToken()$[ja: を保存]
+    //$[en:store ]accessToken.getTokenSecret()$[ja: を保存]
   }
 </pre>
 $[ja:AccessToken を取得した以降は RequestToken は不要になります。次回からは consumer key/secret と AccessToken のみでユーザアカウントにアクセスできます。]
@@ -190,7 +190,7 @@ $[en:After you acquired the AccessToken for the user, the RequestToken is not re
     System.out.println("Successfully updated the status to [" + status.getText() + "].");
     System.exit(0);
   }
-  private AccessToken loadAccessToken(int useId){
+  private static AccessToken loadAccessToken(int useId){
     String token = // load from a persistent store
     String tokenSecret = // load from a persistent store
     return new AccessToken(token, tokenSecret);
@@ -212,7 +212,7 @@ $[ja:ストリーミング API 向けに <a href="javadoc/twitter4j/TwitterStrea
 $[en:<a href="javadoc/twitter4j/TwitterStream.html">TwitterStream</a> class has <a href="http://twitter4j.org/en/api-support.html#Streaming%20API%20Methods">several methods</a> prepared for the streaming API. All you need is to have a class implementing <a href="javadoc/twitter4j/StatusListener.html">StatusListener</a>. Twitter4J will do creating a thread, consuming the stream.<br>
 See also <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/PrintSampleStream.java">twitter4j.examples.PrintSampleStream.java</a> for detail.]
 <pre class="codeSample">
-public static void main(String[] args)throws TwitterException {
+public static void main(String[] args) throws TwitterException, IOException{
     StatusListener listener = new StatusListener(){
         public void onStatus(Status status) {
             System.out.println(status.getUser().getName() + " : " + status.getText());
