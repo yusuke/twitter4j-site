@@ -4,29 +4,32 @@
     <a name="codeExamples"><h2>$[ja:コードサンプル]$[en:Code Examples]</h2></a>
     <p>$[ja:サンプルコードは src/twitter4j/examples/ 以下に配置されています。<br>
     それぞれ bin/<i>className</i>.cmd|sh で実行できます。]
-    $[en:Sample codes are located at src/twitter4j/examples/ and you can run each classs using bin/<i>className</i>.cmd|sh.]
+    $[en:Sample codes are located at src/twitter4j/examples/ and you can run each classs using bin/<i>className</i>.cmd|sh.]<br>
+$[ja:サンプルコードを動作させるには OAuth の認証情報を twitter4j.properties 記載しておく必要があります。twittetr4j.properties の設定方法について詳しくは<a href="./configuration.html">Twitter4J - 設定</a>のページをご覧ください]
+    $[en:To run the example codes, you need to have OAuth credentials configured in twitter4j.properties. See <a href="./configuration.html">Twitter4J - Configuration</a> for the detail.]
+    
     </p>
     <ol class="main">
 <tag:h3-num name="updatingStatus" title="$[ja:スタテータスの更新]$[en:Updating status]">
 $[ja:Twitter.<a href="javadoc/twitter4j/Twitter.html#updateStatus(java.lang.String)">updateStatus()</a> メソッドで&quot;今なにをしているか&quot;を更新することができます。<br>
-詳しくは <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/Update.java">twitter4j.examples.Update.java</a> をご覧ください。]
+詳しくは <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/tweets/UpdateStatus.java">twitter4j.examples.tweets.UpdateStatus.java</a> をご覧ください。]
 $[en:You can update &quot;What are you doing?&quot; via Twitter.<a href="javadoc/twitter4j/Twitter.html#updateStatus(java.lang.String)">updateStatus()</a> method.<br>
-See also <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/Update.java">twitter4j.examples.Update.java</a> for detail.]
+See also <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/tweets/UpdateStatus.java">twitter4j.examples.tweets.UpdateStatus.java</a> for the detail.]
 <pre class="codeSample">
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
-    Twitter twitter = new TwitterFactory().getInstance(twitterID,twitterPassword);
+    Twitter twitter = new TwitterFactory().getInstance();
     Status status = twitter.updateStatus(latestStatus);
     System.out.println("Successfully updated the status to [" + status.getText() + "].");
 </pre>
 </tag:h3-num>
 <tag:h3-num name="gettingTimeline" title="$[ja:タイムラインの取得]$[en:Getting Timeline]">
 $[ja:Twitter.<a href="javadoc/twitter4j/Twitter.html#getHomeTimeline()">get****Timeline()</a> メソッドで友達、または指定ユーザのホームタイムラインを返します。<br>
-詳しくは <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/GetTimelines.java">twitter4j.examples.GetTimelines.java</a> をご覧ください。]
+詳しくは <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/timeline/GetHomeTimeline.java">twitter4j.examples.timeline.GetHomeTimeline.java</a> をご覧ください。]
 $[en:Twitter.<a href="javadoc/twitter4j/Twitter.html#getHomeTimeline()">get****Timeline()</a> returns a List of friends or specified user's home timeline.<br>
-See also <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/GetTimelines.java">twitter4j.examples.GetTimelines.java</a> for detail.]
+See also <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/timeline/GetHomeTimeline.java">twitter4j.examples.timeline.GetHomeTimeline.java</a> for the detail.]
 <pre class="codeSample">
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
-    Twitter twitter = new TwitterFactory().getInstance(twitterID,twitterPassword);
+    Twitter twitter = new TwitterFactory().getInstance();
     List&lt;Status&gt; statuses = twitter.getFriendsTimeline();
     System.out.println("Showing friends timeline.");
     for (Status status : statuses) {
@@ -37,28 +40,25 @@ See also <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examp
 $[ja:Java1.4 や <a href="http://processing.org/">Processing</a> でコンパイルできませんか？ <a href="faq.html#generics">FAQ</a> をご覧ください]$[en:Doesn't work on Java1.4, or <a href="http://processing.org/">Processing</a>? Check the <a href="faq.html#generics">FAQ</a>!]
 </tag:h3-num>
 <tag:h3-num name="directMessage" title="$[ja:ダイレクトメッセージの送受信]$[en:Sending / Receiving Direct Messages]">
-$[ja:Twitter.<a href="javadoc/twitter4j/Twitter.html#sendDirectMessage()">sendDirectMessage()</a> / Twitter.<a href="javadoc/twitter4j/Twitter.html#getDirectMessages()">getDirectMessages()</a> メソッドでダイレクトメッセージの送受信ができます。<br>
+$[ja:Twitter.<a href="javadoc/twitter4j/Twitter.html#sendDirectMessage(int,%20java.lang.String)">sendDirectMessage()</a> / Twitter.<a href="javadoc/twitter4j/Twitter.html#getDirectMessages()">getDirectMessages()</a> メソッドでダイレクトメッセージの送受信ができます。<br>
 このメッセージは送信した相手にしか見えません。<br>
-詳しくは <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/SendDirectMessage.java">twitter4j.examples.SendDirectMessage.java</a> をご覧ください。]
-$[en:You can send and receive direct messages via Twitter.<a href="javadoc/twitter4j/Twitter.html#sendDirectMessage()">sendDirectMessage()</a> / Twitter.<a href="javadoc/twitter4j/Twitter.html#getDirectMessages()">getDirectMessages()</a>.<br>
-See also <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/SendDirectMessage.java">twitter4j.examples.SendDirectMessage.java</a> for detail.]
+詳しくは <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/directmessage/SendDirectMessage.java">twitter4j.examples.directmessage.SendDirectMessage.java</a> をご覧ください。]
+$[en:You can send and receive direct messages via Twitter.<a href="javadoc/twitter4j/Twitter.html#sendDirectMessage(int,%20java.lang.String)">sendDirectMessage()</a> / Twitter.<a href="javadoc/twitter4j/Twitter.html#getDirectMessages()">getDirectMessages()</a>.<br>
+See also <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/directmessage/SendDirectMessage.java">twitter4j.examples.directmessage.SendDirectMessage.java</a> for the detail.]
 <pre class="codeSample">
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
-    Twitter twitter = new TwitterFactory().getInstance(senderID,senderPassword);
-    sender.sendDirectMessage(recipientId,message);
-    Twitter receiver = new TwitterFactory().getInstance(recipientId,recipientPassword);
-    List&lt;DirectMessage&gt; messages = receiver.getDirectMessages();
-    for (DirectMessage message : messages) {
-        System.out.println("Sender:" + message.getSenderScreenName());
-        System.out.println("Text:" + message.getText() + "\n");
-    }
+    Twitter sender = new TwitterFactory().getInstance();
+    DirectMessage message = sender.sendDirectMessage(recipientId, message);
+    System.out.println("Sent: " message.getText() + " to @" + message.getRecipientScreenName());
 </pre>
 $[ja:Java1.4 や <a href="http://processing.org/">Processing</a> でコンパイルできませんか？ <a href="faq.html#generics">FAQ</a> をご覧ください]$[en:Doesn't work on Java1.4, or <a href="http://processing.org/">Processing</a>? Check the <a href="faq.html#generics">FAQ</a>!]
 
 </tag:h3-num>
 <tag:h3-num name="search" title="$[ja:Tweetの検索]$[en:Search for Tweets]">
-$[ja:<a href="javadoc/twitter4j/Query.html">Query</a> クラスと Twitter.<a href="javadoc/twitter4j/Twitter.html#search(twitter4j.Query)">search(twitter4j.Query)</a> メソッドで検索を行えます。]
-$[en:You can search for Tweets using <a href="javadoc/twitter4j/Query.html">Query</a> class and Twitter.<a href="javadoc/twitter4j/Twitter.html#search(twitter4j.Query)">search(twitter4j.Query)</a> method as following:]
+$[ja:<a href="javadoc/twitter4j/Query.html">Query</a> クラスと Twitter.<a href="javadoc/twitter4j/Twitter.html#search(twitter4j.Query)">search(twitter4j.Query)</a> メソッドで検索を行えます。<br>
+詳しくは <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/search/SearchTweets.java">twitter4j.examples.search.SearchTweets.java</a> をご覧ください。]
+$[en:You can search for Tweets using <a href="javadoc/twitter4j/Query.html">Query</a> class and Twitter.<a href="javadoc/twitter4j/Twitter.html#search(twitter4j.Query)">search(twitter4j.Query)</a> method.<br>
+See <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/search/SearchTweets.java">twitter4j.examples.search.SearchTweets.java</a> for the detail.]
 <pre class="codeSample">
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
     Twitter twitter = new TwitterFactory().getInstance();
@@ -75,10 +75,10 @@ $[ja:Java1.4 や <a href="http://processing.org/">Processing</a> でコンパイ
 $[ja:非同期APIを使うと実際のメソッドコールの終了を待たずして処理を続行することができます。<br>
 実際のメソッドコールは別のスレッドで行われ、処理の結果は TwitterListener インターフェースにて受信できます。<br>
 非同期 API を使うには <a href="javadoc/twitter4j/Twitter.html">Twitter</a> クラスの替わりに twitter4j.<a href="javadoc/twitter4j/AsyncTwitter.html">AsyncTwitter</a> クラスを使い、***Async() メソッドを twitter4j.<a href="javadoc/twitter4j/TwitterListener.html">TwitterListener</a> のインスタンスと共に呼び出します。<br>
-詳しくは <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/AsyncUpdate.java">twitter4j.examples.AsyncUpdate.java</a> をご覧ください。]
+詳しくは <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/async/AsyncUpdate.java">twitter4j.examples.async.AsyncUpdate.java</a> をご覧ください。]
 $[en:It is possible to call the time consuming Twitter APIs asynchronously using twitter4j.<a href="javadoc/twitter4j/AsyncTwitter.html">AsyncTwitter</a> class along with <a href="javadoc/twitter4j/TwitterListener.html">TwitterListener</a>.<br>
 Actual method calls will be done in a separate thread and you can get the responses through <a href="javadoc/twitter4j/TwitterListener.html">TwitterListener</a> interface.<br>
-See also <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/AsyncUpdate.java">twitter4j.examples.AsyncUpdate.java</a> for detail.]
+See also <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/async/AsyncUpdate.java">twitter4j.examples.async.AsyncUpdate.java</a> for the detail.]
 <pre class="codeSample">
     TwitterListener listener = new TwitterAdapter() {
         @Override public void updatedStatus(Status status) {
@@ -95,9 +95,9 @@ See also <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examp
         }
     }
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
-    AsyncTwitterFactory factory = new AsyncTwitterFactory();
-    AsyncTwitter asyncTwitter = factory.getInstance(senderId,senderPassword, listenrer);
-    asyncTwitter.updateStatus(args[2]);
+    AsyncTwitterFactory factory = new AsyncTwitterFactory(listenrer);
+    AsyncTwitter asyncTwitter = factory.getInstance();
+    asyncTwitter.updateStatus(args[0]);
 </pre>
 </tag:h3-num>
 <tag:h3-num name="pagination" title="$[ja:ページ処理]$[en:Pagination control]">
@@ -117,7 +117,7 @@ You can use <a href="javadoc/twitter4j/Paging.html">Paging</a> class to specify 
 Note that some of above parameters are not accepted by those APIs. Please refer the <a href="./api-support.html">Support API Matrix</a> to see which parameters are accepted by which methods.]
 <pre class="codeSample">
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
-    Twitter twitter = new TwitterFactory().getInstance("user", "password");
+    Twitter twitter = new TwitterFactory().getInstance();
     // $[ja:２ページ目をリクエスト, １ページあたりの件数は 40件]$[en:requesting page 2, number of elements per page is 40]
     Paging paging = new Paging(2, 40);
     List<Status> statuses = twitter.getFriendsTimeline(paging);
@@ -182,10 +182,8 @@ $[en:After you acquired the AccessToken for the user, the RequestToken is not re
   public static void main(String args[]) thrwos Exception{
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
     TwitterFactory factory = new TwitterFactory();
-    Twitter twitter = factory.getInstance();
-    twitter.setOAuthConsumer("[consumer key]", "[consumer secret]");
 <font color="red">    AccessToken accessToken = loadAccessToken(Integer.parseInt(args[0]));
-    twitter.setOAuthAccessToken(accessToken);</font>
+    Twitter twitter = factory.getOAuthAuthorizedInstance"[consumer key]", "[consumer secret]", accessToken);</font>
     Status status = twitter.updateStatus(args[1]);
     System.out.println("Successfully updated the status to [" + status.getText() + "].");
     System.exit(0);
@@ -208,9 +206,9 @@ An example implementation is available at <a href="http://github.com/yusuke/sign
 </tag:h3-num>
 <tag:h3-num name="streaming" title="$[ja:ストリーミング API]$[en:Streaming API]">
 $[ja:ストリーミング API 向けに <a href="javadoc/twitter4j/TwitterStream.html">TwitterStream</a> クラス には<a href="http://twitter4j.org/ja/api-support.html#Streaming%20API%20メソッド">複数のメソッド</a> が用意されています。<a href="javadoc/twitter4j/StatusListener.html">StatusListener</a> インターフェースの実装を用意しておけばスレッド作成、ストリームの読み込みは Twitter4J が行ってくれます。<br>
-詳しくは <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/PrintSampleStream.java">twitter4j.examples.PrintSampleStream.java</a> をご覧ください。]
+詳しくは <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/stream/PrintSampleStream.java">twitter4j.examples.stream.PrintSampleStream.java</a> をご覧ください。]
 $[en:<a href="javadoc/twitter4j/TwitterStream.html">TwitterStream</a> class has <a href="http://twitter4j.org/en/api-support.html#Streaming%20API%20Methods">several methods</a> prepared for the streaming API. All you need is to have a class implementing <a href="javadoc/twitter4j/StatusListener.html">StatusListener</a>. Twitter4J will do creating a thread, consuming the stream.<br>
-See also <a href="http://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/PrintSampleStream.java">twitter4j.examples.PrintSampleStream.java</a> for detail.]
+See also <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/stream/PrintSampleStream.java">twitter4j.examples.stream.PrintSampleStream.java</a> for the detail.]
 <pre class="codeSample">
 public static void main(String[] args) throws TwitterException, IOException{
     StatusListener listener = new StatusListener(){
@@ -223,7 +221,7 @@ public static void main(String[] args) throws TwitterException, IOException{
             ex.printStackTrace();
         }
     };
-    TwitterStream twitterStream = new TwitterStreamFactory(listener).getInstance(screenName,password);
+    TwitterStream twitterStream = new TwitterStreamFactory(listener).getInstance();
     // sample() method internally creates a thread which manipulates TwitterStream and calls these adequate listener methods continuously.
     twitterStream.sample();
 }

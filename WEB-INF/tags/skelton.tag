@@ -18,10 +18,11 @@ $[ja:<head xml:lang="ja" lang="ja">]$[en:<head xml:lang="en" lang="en">]
   var submenu;
 </script>
 <div class="center" id="center">
-  <a name="top"><div onclick="location.href='./index.html'" class="logo"><div class="transparent"></div></div></a>
+  <a name="top"><!--div onclick="location.href='./index.html'" class="logo"><div class="transparent"></div></div--></a>
   <tag:left/>
   <div class="content" id="content"><br>
-    <center><include>adsense468x15.html</include><br>
+  <a href="./index.html"><img src="./images/twitter4j-logo.png"></a>
+    <center>$[en:<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5911167"><img src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif"></a>]$[ja:<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5911501"><img src="https://www.paypal.com/ja_JP/i/btn/x-click-but04.gif"></a>]<br><br><include>adsense468x15.html</include><br>
     <include>adsense468x60.html</include></center>
     <jsp:doBody/>
     <center><include>adsense468x60.html</include></center>

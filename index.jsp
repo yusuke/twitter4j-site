@@ -4,7 +4,7 @@
 
 <tag:h2 name="introduction" title="$[ja:Twitter4Jとは？]$[en:Introduction]">
 $[ja:Twitter4J は <a href="http://apiwiki.twitter.com/Twitter-API-Documentation">Twitter API</a> の Java ラッパです。<br>
-    Twitter4J を使うと XML や HTTP に詳しくなくても容易に Twitter とインタラクトするアプリケーションを書くことが出来ます。Twitter4J は Twitter 非公式のライブラリです。]
+    Twitter4J を使うと JSON や HTTP に詳しくなくても容易に Twitter とインタラクトするアプリケーションを書くことが出来ます。Twitter4J は Twitter 非公式のライブラリです。]
 $[en:Twitter4J is an unofficial Java library for the <a href="http://apiwiki.twitter.com/Twitter-API-Documentation">Twitter API</a>.<br>
     With Twitter4J, you can easily integrate your Java application with the Twitter service. Twitter4J is an unofficial library.<br>
     <br>Twitter4J is featuring:]
@@ -22,7 +22,7 @@ $[en:OS: Windows or any flavor of Unix that supports Java.<br>
 JVM: Java 1.4.2 or later]
 </tag:h2>
 <tag:h2 name="howToUse" title="$[ja:使い方]$[en:How To Use]">
-    $[ja:twitter4j-<include>latest-version.fragment</include>.jar をクラスパスに通して、好きなメソッドを呼び出してください。<br>
+    $[ja:twitter4j-core-<include>latest-version.fragment</include>.jar をクラスパスに通して、好きなメソッドを呼び出してください。<br>
     Java が分かっていれば <a href="./javadoc/index.html">JavaDoc</a> を見るのが早いです。<br>
     twitter4j.<a href="javadoc/twitter4j/Twitter.html">Twitter</a> クラスが最初に見るべきクラスです。]
     $[en:Just add twitter4j-core-<include>latest-version.fragment</include>.jar to your application classpath.<br>
@@ -30,13 +30,15 @@ JVM: Java 1.4.2 or later]
     <a href="javadoc/twitter4j/Twitter.html">twitter4j.Twitter</a> class is the one you may want to look at first.]
 </tag:h2>
 <tag:h2 name="download" title="$[ja:ダウンロード]$[en:Download]">
-･$[ja:最新安定ビルド (<a href="http://twitter4j.org/jira/secure/IssueNavigator.jspa?mode=hide&requestId=10030">現在開発中バージョン</a>の安定ビルド)]$[en:Latest stable build (<a href="http://twitter4j.org/jira/secure/IssueNavigator.jspa?mode=hide&requestId=10030">In development</a>)]<br><a href="http://twitter4j.org/en/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
-    <a href="http://twitter4j.org/en/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip</a> (<a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">JavaDoc</a>)<br>
-<br>
-･$[ja:Maven Central Repository で入手可能な最新バージョン]$[en:Latest Maven Central Repository available version]<br>
+･$[ja:最新安定バージョン]$[en:Latest stable version]<br>
 <a href="http://twitter4j.org/en/twitter4j-<include>latest-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
-    <a href="http://twitter4j.org/en/twitter4j-<include>latest-version.fragment</include>.zip">twitter4j-<include>latest-version.fragment</include>.zip</a> (<a href="./javadoc/index.html">JavaDoc</a> / <a href="http://twitter4j.org/$[ja:ja]$[en:en]/versions.html#migration">$[ja:2.0.x から 2.1.x への移行ガイド]$[en:Migration guide from 2.0.x to 2.1.x]</a>)<br>
-<br>
+    <a href="http://twitter4j.org/en/twitter4j-<include>latest-version.fragment</include>.zip">twitter4j-<include>latest-version.fragment</include>.zip</a> (<a href="./javadoc/index.html">JavaDoc</a> / <a href="http://twitter4j.org/$[ja:ja]$[en:en]/versions.html#migration21x-22x">$[ja:2.1.x から 2.2.x への移行ガイド]$[en:Migration guide from 2.1.x to 2.2.x]</a>)<br>
+    <a href="http://twitter4j.org/en/twitter4j-android-<include>latest-version.fragment</include>.zip">twitter4j-android-<include>latest-version.fragment</include>.zip</a>($[ja:Android向けのスリムバージョン]$[en:slimmed version for Android platform])<br>
+<br>･$[ja:最新スナップショットビルド]$[en:Latest snapshot build]<br><a href="http://twitter4j.org/en/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
+    <a href="http://twitter4j.org/en/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip</a> (<a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">JavaDoc</a>)<br>
+    <a href="http://twitter4j.org/en/twitter4j-android-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-android-<include>latest-SNAPSHOT-version.fragment</include>.zip</a>($[ja:Android向けのスリムバージョン]$[en:slimmed version for Android platform])<br>
+
+<%--    <a href="http://twitter4j.org/en/twitter4j-android-<include>latest-version.fragment</include>.zip">twitter4j-android-<include>latest-version.fragment</include>.zip</a> (slimmed version for Android platform)<br>--%>
 </tag:h2>
 <tag:h2 name="sourceCode" title="$[ja:ソースコード]$[en:Source Code]">
     $[ja:アーカイブにはソースコードが含まれています。<br>
@@ -53,7 +55,7 @@ JVM: Java 1.4.2 or later]
 </tag:h2>
 <tag:h2 name="maven" title="$[ja:Maven 統合]$[en:Maven Integration]">
 $[ja:Maven を使っている場合、pom.xml に以下のように記載すればご自身のプロジェクトに twitter4j の最新安定ビルドを簡単に統合できます。]
-$[en:You can integrate the latest Twitter4j build easily by just including the following lines in your pom.xml.]
+$[en:You can integrate the latest Twitter4J build easily by just including the following lines in your pom.xml.]
 <pre class="codeSample">   &lt;repositories&gt;
       &lt;repository&gt;
          &lt;id&gt;twitter4j.org&lt;/id&gt;
@@ -77,7 +79,7 @@ $[en:You can integrate the latest Twitter4j build easily by just including the f
 
 $[ja:Maven Central Repository を使いたい場合、pom.xml に以下のように記載してください。]
 $[en:If you prefer the Maven central repository, include the following lines to your pom.xml.]
-<pre class="codeSample">   &lt;dependencies&gt;<br/>           &lt;groupId&gt;org.twitter4j&lt;/groupId&gt;<br/>           &lt;artifactId&gt;twitter4j-core&lt;/artifactId&gt;<br/>           &lt;version&gt;[2.1,)&lt;/version&gt;<br/>       &lt;/dependency&gt;<br/>       ...<br/>   &lt;/dependencies&gt;<br/></pre>
+<pre class="codeSample">   &lt;dependencies&gt;<br/>      &lt;dependency&gt;<br/>           &lt;groupId&gt;org.twitter4j&lt;/groupId&gt;<br/>           &lt;artifactId&gt;twitter4j-core&lt;/artifactId&gt;<br/>           &lt;version&gt;[2.1,)&lt;/version&gt;<br/>       &lt;/dependency&gt;<br/>       ...<br/>   &lt;/dependencies&gt;<br/></pre>
 </tag:h2>
 <tag:h2 name="mailingList" title="$[ja:メーリングリスト]$[en:Mailing list]">
     $[ja:Twitter4J に関する質問、バグレポート、リクエストなどありましたら以下のメーリングリストにお気軽にどうぞ。<br>
@@ -112,11 +114,7 @@ $[en:If you prefer the Maven central repository, include the following lines to 
 <tr><td align=right>
   <a href="http://groups.google.com/group/twitter4j">Visit this group</a>
 </td></tr>
-</table>
-
-バグ、ロードマップなどについては Jira に登録してあります。<br>
-    <a href="http://twitter4j.org/jira/browse/TFJ">Jira へ</a>
-    ]
+</table>]
     $[en:Any question, comment, bug report, feature request or patch is highly welcomed.<br>
     Feel free to post your comments to the mailing list.<br>
 <table border=0 style="background-color: #fff; padding: 5px;" cellspacing=0>
@@ -137,40 +135,25 @@ $[en:If you prefer the Maven central repository, include the following lines to 
   <a href="http://groups.google.com/group/twitter4j">Visit this group</a>
 </td></tr>
 </table>
-<br>
-Known bugs and feature requests will be filed to the Jira site.<br>
-    <a href="http://twitter4j.org/jira/browse/TFJ">Go to Jira</a>
-    ]
+]
 </tag:h2>
 <tag:h2 name="license" title="$[ja:ライセンス]$[en:License]">
-$[ja:Twitter4J は BSD ライセンスに基づいてリリースされています。<br>]
-$[en:Twitter4J is released under the BSD license.<br>]
+$[ja:Twitter4J は Apache License 2.0 に基づいてリリースされています。<br>]
+$[en:Twitter4J is released under Apache License 2.0.<br>]
 <hr/>
-<pre class="codeSample">
-Copyright (c) 2007-2010, Yusuke Yamamoto
-All rights reserved.
+<pre class="codeSample">Copyright 2007 Yusuke Yamamoto
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in the
-      documentation and/or other materials provided with the distribution.
-    * Neither the name of the Yusuke Yamamoto nor the
-      names of its contributors may be used to endorse or promote products
-      derived from this software without specific prior written permission.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-THIS SOFTWARE IS PROVIDED BY Yusuke Yamamoto ``AS IS'' AND ANY
-EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL Yusuke Yamamoto BE LIABLE FOR ANY
-DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
+      http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+Distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
 $[ja:Twitter4J は JSON レスポンスの解析のため JSON.org のソフトウェアを含んでいます。JSON.org のソフトウェアのライセンスについては<a href="http://www.JSON.org/license.html">The JSON License</a>をご覧ください。<br>]
 $[en:Twitter4J includes software from JSON.org to parse JSON response from the Twitter API. You can see the license term at <a href="http://www.JSON.org/license.html">The JSON License</a>.<br>]
 </tag:h2>

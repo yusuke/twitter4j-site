@@ -4,11 +4,11 @@
 <div class="javadoc">
     <a name="javaDoc"><h1>JavaDoc</h1></a>
 <tag:h2 name="latest" title="$[ja:最新バージョン]$[en:Latest version]">
-<a href="./javadoc/index.html">･$[ja:バージョン]$[en:Version] <include>latest-version.fragment</include> JavaDoc</a>
+<a href="./javadoc/index.html">･twitter4j-<include>latest-version.fragment</include> JavaDoc</a><br>
 </tag:h2>
 
 <tag:h2 name="latest-snapshot" title="$[ja:最新安定ビルド]$[en:Latest stable build]">
-<a href="./javadoc-latest/index.html">･$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include> JavaDoc</a><br>
+<a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">･twitter4j-<include>latest-SNAPSHOT-version.fragment</include> JavaDoc</a><br>
 <a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">･$[ja:バージョン <include>latest-version.fragment</include> からの JavaDoc diff]$[en:JavaDoc diff from Version] <include>latest-version.fragment</include></a>
 <p>･$[ja:バージョン]$[en:version] 2.1.x<br>
 <%@ include file="oldjavadocs21x.jsp"%>

@@ -8,6 +8,38 @@
 ･<a href="http://twitter4j.org/jira/secure/IssueNavigator.jspa?requestId=10030">$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include></a><br>
 ･<a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">$[ja:バージョン <include>latest-version.fragment</include> からの JavaDoc diff]$[en:JavaDoc diff from Version <include>latest-version.fragment</include>]</a>
 </tag:h2>
+<tag:h2 name="migration21x-22x" title="$[ja:バージョン 2.1.x から 2.2.x への移行]$[en:Migrating from 2.1.x to 2.2.x]">
+$[ja:- まずプロジェクトの再ビルドを！<br>
+バージョン2.2.0 は旧バージョンから若干の非互換箇所があります。旧バージョンを利用していたプロジェクトでバージョン2.2.0を利用する場合は必ずプロジェクトの再ビルドを行ってください。]
+$[en:- Rebuild your project first!<br>
+Version 2.2.0 is slightly incompatible with older versions. Projects that have been using older versions are required to be rebuilt before using Version 2.2.0.]<br>
+<br>
+$[ja:- twitter4j.http.*パッケージの移行]
+$[en:- migration of twitter4j.http.* package] (<a href="http://twitter4j.org/jira/browse/TFJ-559">TFJ-559</a>)<br>
+$[ja:twitter4j.http.* は twitter4j.auth.* へ移動しました。<br>]
+$[en:classes in twitter4j.http.* has been migrated to twitter4j.auth.*.<br>]
+<br>
+$[ja:- Basic認証の廃止]
+$[en:- retirement of Basic authentication] (<a href="http://twitter4j.org/jira/browse/TFJ-560">TFJ-560</a>)<br>
+$[ja:Basic認証の廃止に伴いTwitterFactory.getInstance(screenName,password)は廃止されました。xAuthでアクセストークンを取得するには<a href="http://twitter4j.org/en/javadoc-latest/core/twitter4j/auth/OAuthSupport.html#getOAuthAccessToken(java.lang.String,%20java.lang.String)">Twitter.getOAuthAccessToken(screenName, password)</a>を使います。<br>]
+$[en:TwitterFactory.getInstance(screenName,password) was retired. To get an access token using xAuth flow, use <a href="http://twitter4j.org/en/javadoc-latest/core/twitter4j/auth/OAuthSupport.html#getOAuthAccessToken(java.lang.String,%20java.lang.String)">Twitter.getOAuthAccessToken(screenName, password)</a>.<br>]
+<br>
+$[ja:- 非同期APIとストリーミングAPI専用artifactの導入]
+$[en:- introduction of new artifacts for async API and streaming API] (<a href="http://twitter4j.org/jira/browse/TFJ-345">TFJ-345</a>)<br>
+$[ja:非同期APIはtwitter4j-async(twitter4j-coreに依存)へ、ストリーミングAPIはtwitter4j-stream(twitter4j-asyncに依存)へ移動しました。<br>]
+$[en:Async API has been migrated to twitter4j-async artifact (depending on twitter4j-core), Streaming API support has been migrated to twitter4j-stream artifact (depending on twitter4j-async).<br>]
+<br>
+$[ja:- JSONストアの無効化]
+$[en:- JSON store is disabled by defalt] (<a href="http://twitter4j.org/jira/browse/TFJ-562">TFJ-562</a>)<br>
+$[ja:Twitterからのレスポンスの生JSONは<a href="http://twitter4j.org/en/javadoc/twitter4j/json/DataObjectFactory.html#getRawJSON(java.lang.Object)">DataObjectFactory#getRawJSON()</a>で取得できますが、デフォルトでこの機能は無効になりました。生のJSONへアクセスが必要なアプリケーションではtwitte4j.proeperties内でjsonStoreEnabledオプションをtrueに設定してください。<br>]
+$[en:You can get the raw json form of response from the API using<a href="http://twitter4j.org/en/javadoc/twitter4j/json/DataObjectFactory.html#getRawJSON(java.lang.Object)">DataObjectFactory#getRawJSON()</a>. But as of version 2.2.0, the feature is disabled by default. You can enable the feature by setting jsonStoreEnabled configuration parameter to true in twitter4j.properties.<br>]
+<br>
+$[ja:- ライセンスの変更]
+$[en:- licensing] (<a href="http://twitter4j.org/jira/browse/TFJ-446">TFJ-446</a>)<br>
+$[ja:ライセンスはBSDからApache License 2.0へ変更になりました。<br>]
+$[en:Note that Twitter4J is released under Apache License 2.0 from version 2.2.0.<br>]
+<br>
+</tag:h2>
 <tag:h2 name="2.1" title="$[ja:バージョン]$[en:Version] 2.1">
 $[ja:2010/1/24 リリース: 最新APIセットを全てサポート。パフォーマンス、メモリ消費改善。Android 完全対応。]$[en:Released on 1/24/2010: Supports all existing methods. Performance and memory footprint improvements. Better Android compatiblity.]
 </tag:h2>
