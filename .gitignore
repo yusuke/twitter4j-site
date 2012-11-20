@@ -1,5 +1,7 @@
 *.DS_Store
-oldjavadocs/*
-javadoc/*
-javadoc-latest/*
+site.iml
+target/*
+src/main/webapp/oldjavadocs/*
+src/main/webapp/javadoc/*
+src/main/webapp/javadoc-latest/*
 

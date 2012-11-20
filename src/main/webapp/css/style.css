@@ -1,0 +1,204 @@
+@charset "UTF-8";
+body {
+    text-align: center;
+    font-family: Verdana, Arial, sans-serif;
+    margin: 3px;
+    padding: 5px;
+    background-image: url(../images/background.gif);
+    background-attachment: fixed;
+}
+
+
+h3 {
+    font-size: 80%;
+}
+
+.history ul {
+    list-style: none;
+}
+
+.javadoc table {
+    font-size: 70%;
+    width: 100%;
+}
+
+.javadoc table th {
+    background-color: #aaa;
+}
+
+.javadoc table td {
+    text-align: center;
+    background-color: #ddd;
+}
+
+.api-support table {
+    font-size: 70%;
+    width: 100%;
+}
+
+.api-support table th {
+    background-color: #aaa;
+}
+
+.api-support table td {
+    background-color: #ddd;
+}
+
+.api-support .pagination {
+    text-align: center;
+}
+
+.api-support .pagination a {
+    color: #1c1;
+}
+
+.api-support .pagination a:visited {
+    color: #1c1;
+}
+
+.api-support .pagination a:hover {
+    color: #1c1;
+}
+
+.credential-rate-check {
+    text-align: center;
+    color: #1c1;
+}
+
+.api-support .method-path {
+    width: 200px;
+}
+
+.api-support .t4jmethod {
+    width: 200px;
+}
+
+.api-support .credential-rate {
+    width: 50px;
+}
+
+.api-support .paging-support {
+    width: 80px;
+}
+
+.faq h2 {
+    /*font-size: 100%;*/
+    color: #314;
+}
+
+.center {
+    padding-top: 5px;
+    margin: 10px auto 30px auto;
+    color: #314;
+    background-color: #FFF;
+}
+
+.options th {
+    font-size: 90%;
+    background-color: #ABF;
+}
+
+.options td {
+    background-color: #CDF;
+}
+
+.content {
+    font-size: 130%;
+    top: 0;
+    text-align: left;
+    line-height: 1.4em;
+}
+
+.left {
+    text-align: left;
+    /*position: absolute;*/
+    top: 12px;
+    font-size: 120%;
+}
+
+.left ul {
+    list-style: none;
+}
+
+.left ol {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 1px 5px;
+}
+
+
+ul {
+    list-style: disc;
+    margin: 10px 0;
+    padding: 0 0 12px;
+}
+
+li {
+    margin-bottom: 6px;
+    padding-left: 12px;
+}
+
+.numberedlist {
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.numberedlist a {
+    color: #314;
+}
+
+.download {
+    border: solid 1px;
+    border-color: #FFF;
+}
+
+.download:hover {
+    color: #04D;
+}
+
+a {
+    text-decoration: none;
+    color: #049;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #049;
+}
+
+h2 a, h2 a:visited, li a, li a:visited{
+    color: #049;
+}
+
+
+a:hover {
+    color: #04D;
+    text-decoration: underline;
+}
+
+img {
+    border: 0;
+}
+
+.codeSample {
+    padding: 3px;
+    font-size: 80%;
+    border: 1px solid #AA9;
+    width: 97%;
+    overflow: auto;
+    overflow-y: hidden;
+    _overflow-x: scroll;
+    background-color: #FFD;
+}
+
+.screenshot {
+    text-align: center;
+    margin-bottom: 10px;
+    /*font-size: 90%;*/
+}
+
+.screenshot img {
+    padding: 2px;
+    background: #aaa;
+    border: 1px solid #999;
+}
