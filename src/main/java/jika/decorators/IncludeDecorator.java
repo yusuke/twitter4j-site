@@ -49,7 +49,7 @@ public class IncludeDecorator extends AbstractTagSupportDecorator {
                             + getBeginTagName().length(), endIndex);
                     for (int i = 0; i < list.size(); i++) {
                         if (includePath.equals(list.get(i))) {
-                            StringBuffer buf = new StringBuffer("Found an infinite inclusion ");
+                            StringBuilder buf = new StringBuilder("Found an infinite inclusion ");
                             for (int j = 0; j < list.size(); j++) {
                                 buf.append(">").append(list.get(i));
                             }

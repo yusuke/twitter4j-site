@@ -1,4 +1,0 @@
-<jboss-web>
-  <context-root>/</context-root>
-  <virtual-host>twitter4j.org</virtual-host>
-</jboss-web>

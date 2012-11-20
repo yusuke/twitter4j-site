@@ -1,2 +1,0 @@
-MISSING @SINCE TAG: twitter4j.Configuration Class
-MISSING @SINCE TAG: twitter4j.Version Class

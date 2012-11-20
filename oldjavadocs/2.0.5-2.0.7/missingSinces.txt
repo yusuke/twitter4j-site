@@ -1,4 +1,0 @@
-NO DOC BLOCK: twitter4j.Configuration Method getRetryCount()
-NO DOC BLOCK: twitter4j.Configuration Method getRetryCount(int)
-NO DOC BLOCK: twitter4j.Configuration Method getRetryIntervalSecs()
-NO DOC BLOCK: twitter4j.Configuration Method getRetryIntervalSecs(int)

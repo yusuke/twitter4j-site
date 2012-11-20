@@ -1,6 +1,0 @@
-<!DOCTYPE weblogic-web-app PUBLIC "-//BEA Systems, Inc.//DTD Web Application 8.1//EN" "http://www.bea.com/servers/wls810/dtd/weblogic810-web-jar.dtd">
-<weblogic-web-app>
-<container-descriptor>
-<filter-dispatched-requests-enabled>false</filter-dispatched-requests-enabled>
-</container-descriptor>
-</weblogic-web-app>

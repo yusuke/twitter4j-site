@@ -1,1 +1,0 @@
-NO DOC BLOCK: twitter4j.TwitterResponse Method getTextContent(java.lang.String, org.w3c.dom.Element)

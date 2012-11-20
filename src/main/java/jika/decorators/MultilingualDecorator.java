@@ -93,7 +93,6 @@ public class MultilingualDecorator implements Decorator {
 
     public int parseRequest(HttpServletRequest req, HttpServletResponse res, RequestContext context) {
         int index;
-        System.out.println("path:"+context.getResourcePath());
         String resourcePath = toCanonicalPath(context.getResourcePath());
         if (-1 != (index = resourcePath.indexOf("/", 1))) {
             String language = resourcePath.substring(1, index);
@@ -102,7 +101,6 @@ public class MultilingualDecorator implements Decorator {
                     resourcePath = resourcePath.substring(3);
                     context.setProperty("language", language);
                     context.setResourcePath(resourcePath);
-                    System.out.println("ok");
                     return OK;
                 }
             }
@@ -117,13 +115,11 @@ public class MultilingualDecorator implements Decorator {
             for (String language1 : languages) {
                 if (language1.equals(language)) {
                     context.setResourcePath(req.getContextPath() + "/" + language + resourcePath);
-                    System.out.println("redirect"+context.getResourcePath());
                     return REDIRECT;
                 }
             }
         }
         context.setResourcePath(req.getContextPath() + "/en" + resourcePath);
-        System.out.println("redirect"+context.getResourcePath());
         return REDIRECT;
 
     }

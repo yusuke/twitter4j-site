@@ -1,2 +1,0 @@
-﻿<div class="header">
-</div>

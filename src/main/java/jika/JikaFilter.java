@@ -25,7 +25,7 @@ public class JikaFilter implements Filter {
         String encoding = this.encoding;
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
-        String resourcePath = req.getRequestURI().substring(req.getContextPath().length());
+        String resourcePath = req.getServletPath();
         RequestContext requestContext = new RequestContext(config.getServletContext(), req, resourcePath);
         request.setAttribute("context", requestContext);
         for (int i = 0; i < decorators.size(); i++) {
@@ -52,7 +52,6 @@ public class JikaFilter implements Filter {
                 encoding = "UTF-8";
             }
             ByteArrayResponseWrapper wrapper = new ByteArrayResponseWrapper(res);
-            System.out.println("resource path:"+requestContext.getResourcePath());
             request.getRequestDispatcher(requestContext.getResourcePath()).include(req, wrapper);
             wrapper.finish();
             content.setWholeContent(wrapper.getString(encoding));
