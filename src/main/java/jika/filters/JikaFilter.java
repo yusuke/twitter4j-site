@@ -1,4 +1,6 @@
-package jika;
+package jika.filters;
+
+import jika.*;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +12,7 @@ import java.util.regex.Pattern;
 
 public class JikaFilter implements Filter {
     private String encoding;
-    private List decorators = new ArrayList();
+    private List<Decorator> decorators;
 
     public void destroy() {
     }
@@ -30,8 +32,9 @@ public class JikaFilter implements Filter {
         String resourcePath = req.getServletPath();
         RequestContext requestContext = new RequestContext(config.getServletContext(), req, resourcePath);
         request.setAttribute("context", requestContext);
-        for (int i = 0; i < decorators.size(); i++) {
-            int returned = ((Decorator) decorators.get(i)).parseRequest(req, res, requestContext);
+
+        for (Decorator decorator : decorators) {
+            int returned = decorator.parseRequest(req, res, requestContext);
             switch (returned) {
                 case Decorator.OK:
                     //do nothing
@@ -67,8 +70,8 @@ public class JikaFilter implements Filter {
             response.setContentType(wrapper.getContentType());
             content.finish();
 
-            for (int i = 0; i < decorators.size(); i++) {
-                ((Decorator) decorators.get(i)).decorate(requestContext, content, content);
+            for (Decorator decorator : decorators) {
+                decorator.decorate(requestContext, content, content);
                 content.finish();
             }
             byte[] theContent = content.toString().getBytes(encoding);
@@ -92,7 +95,7 @@ public class JikaFilter implements Filter {
         String matchPattern = config.getInitParameter("match-pattern");
         pattern = Pattern.compile(matchPattern);
 
-        String passThroughDirectoriesParam = config.getInitParameter("pass-through-directories");
+        String passThroughDirectoriesParam = config.getServletContext().getInitParameter("pass-through-directories");
         if (null == passThroughDirectoriesParam) {
             throw new ServletException("pass-through-directories not set");
         }

@@ -18,7 +18,7 @@ import java.util.List;
  * @author yusukey
  */
 public class DecoratorRepository {
-    private static List decorators = new ArrayList();
+    private static List<Decorator> decorators = new ArrayList();
     private static boolean initialized = false;
 
     public static synchronized List getDecorators() {
@@ -29,33 +29,28 @@ public class DecoratorRepository {
         }
     }
 
-    public static synchronized List initialize(String[] list, ServletContext context) throws ServletException {
+    public static synchronized List<Decorator> initialize(String[] list, ServletContext context) throws ServletException {
         //instantiate builtin decorators
         decorators.add(new jika.decorators.IncludeDecorator());
 
         //instantiate decorators
-        for (int i = 0; i < list.length; i++) {
+        for (String aList : list) {
             try {
-                Decorator decorator = (Decorator) Class.forName(list[i].trim())
+                Decorator decorator = (Decorator) Class.forName(aList.trim())
                         .newInstance();
                 decorators.add(decorator);
 
             } catch (ClassCastException e) {
-                throw new ServletException(list[i]
+                throw new ServletException(aList
                         + " doesn not implement jika.Decorator");
-            } catch (InstantiationException e) {
-                throw new ServletException(e);
-            } catch (IllegalAccessException e) {
-                throw new ServletException(e);
-            } catch (ClassNotFoundException e) {
+            } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
                 throw new ServletException(e);
             }
-
         }
         decorators.add(new jika.decorators.AdminDecorator());
         //initialize decorators
-        for (int i = 0; i < decorators.size(); i++) {
-            ((Decorator) decorators.get(i)).init(context);
+        for (Decorator decorator : decorators) {
+            decorator.init(context);
         }
         initialized = true;
         return decorators;

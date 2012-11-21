@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class IncludeDecorator extends AbstractTagSupportDecorator {
 
@@ -23,24 +24,22 @@ public class IncludeDecorator extends AbstractTagSupportDecorator {
 
     void tagEnded(RequestContext context, String content, Output output)
             throws IOException {
-        ArrayList list = new ArrayList();
+        List<String> list = new ArrayList<>();
         list.add(context.getResourcePath());
         include(context, content, output, list);
 
     }
 
-    void include(RequestContext context, String path, Output output, ArrayList list) throws IOException {
-        BufferedReader br = null;
-        try {
-            boolean firstline = true;
-            br = context.getResourceAsReader(path);
+    void include(RequestContext context, String path, Output output, List<String> list) throws IOException {
+        try (BufferedReader br = context.getResourceAsReader(path)) {
+            boolean firstLine = true;
             String line;
-            while (null != (line = br.readLine())) {
+            while ((line = br.readLine()) != null) {
                 int index;
-                if (-1 != (index = line.indexOf(getBeginTagName()))) {
-                    if (firstline) {
+                if ((index = line.indexOf(getBeginTagName())) != -1) {
+                    if (firstLine) {
                         output.append(line.substring(0, index));
-                        firstline = false;
+                        firstLine = false;
                     } else {
                         output.addNextLine(line.substring(0, index));
                     }
@@ -50,7 +49,7 @@ public class IncludeDecorator extends AbstractTagSupportDecorator {
                     for (int i = 0; i < list.size(); i++) {
                         if (includePath.equals(list.get(i))) {
                             StringBuilder buf = new StringBuilder("Found an infinite inclusion ");
-                            for (int j = 0; j < list.size(); j++) {
+                            for (String aList : list) {
                                 buf.append(">").append(list.get(i));
                             }
                             buf.append(">*").append(includePath);
@@ -62,18 +61,12 @@ public class IncludeDecorator extends AbstractTagSupportDecorator {
                     list.remove(includePath);
                     output.append(line.substring(endIndex
                             + getEndTagName().length()));
+                } else if (firstLine) {
+                    output.append(line);
+                    firstLine = false;
                 } else {
-                    if (firstline) {
-                        output.append(line);
-                        firstline = false;
-                    } else {
-                        output.addNextLine(line);
-                    }
+                    output.addNextLine(line);
                 }
-            }
-        } finally {
-            if (null != br) {
-                br.close();
             }
         }
     }
