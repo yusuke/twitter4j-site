@@ -47,7 +47,6 @@ public class DecoratorRepository {
                 throw new ServletException(e);
             }
         }
-        decorators.add(new jika.decorators.AdminDecorator());
         //initialize decorators
         for (Decorator decorator : decorators) {
             decorator.init(context);
@@ -55,6 +54,4 @@ public class DecoratorRepository {
         initialized = true;
         return decorators;
     }
-
-
 }
