@@ -5,13 +5,13 @@ for(int i=0;i<versios21x.length;i++){%>
 <tr>
 <%for(int j=0;j<versios21x.length;j++){
     if(i==0){//header%>
-<th><%if(j!=0){%><a href="./oldjavadocs/<%=versios21x[j]%>/index.html"><%=versios21x[j]%></a><%}%></th>
+<th><%if(j!=0){%><a href="/oldjavadocs/<%=versios21x[j]%>/index.html"><%=versios21x[j]%></a><%}%></th>
   <%}else{// diffs
      if(j==0){%>
-       <th><a href="./oldjavadocs/<%=versios21x[i]%>/index.html"><%=versios21x[i]%></a></th>
+       <th><a href="/oldjavadocs/<%=versios21x[i]%>/index.html"><%=versios21x[i]%></a></th>
    <%}else{
        if(j > i){%>
-       <td><a href="./oldjavadocs/<%=versios21x[i]%>-<%=versios21x[j]%>/changes.html">diff</a></td>
+       <td><a href="/oldjavadocs/<%=versios21x[i]%>-<%=versios21x[j]%>/changes.html">diff</a></td>
        <%}else{%><td>-</td><%}%>
    <%}%>
   <%}%>
