@@ -21,20 +21,20 @@ JVM: Java 1.4.2 or later]
 </tag:h2>
 <tag:h2 name="howToUse" title="$[ja:使い方]$[en:How To Use]">
     $[ja:twitter4j-core-<include>latest-version.fragment</include>.jar をクラスパスに通して、好きなメソッドを呼び出してください。<br>
-    Java が分かっていれば <a href="./javadoc/index.html">JavaDoc</a> を見るのが早いです。<br>
+    Java が分かっていれば <a href="/javadoc/index.html">JavaDoc</a> を見るのが早いです。<br>
     twitter4j.<a href="javadoc/twitter4j/Twitter.html">Twitter</a> クラスが最初に見るべきインターフェースです。]
     $[en:Just add twitter4j-core-<include>latest-version.fragment</include>.jar to your application classpath.<br>
-    If you are familiar with Java language, looking into the <a href="./javadoc/index.html">JavaDoc</a> should be the shortest way for you to get started.<br>
+    If you are familiar with Java language, looking into the <a href="/javadoc/index.html">JavaDoc</a> should be the shortest way for you to get started.<br>
     <a href="javadoc/twitter4j/Twitter.html">twitter4j.Twitter</a> interface is the one you may want to look at first.]
 </tag:h2>
 <tag:h2 name="download" title="$[ja:ダウンロード]$[en:Download]">
 ･$[ja:最新安定バージョン]$[en:Latest stable version]<br>
-<a href="http://twitter4j.org/en/archive/twitter4j-<include>latest-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
-    <a href="http://twitter4j.org/en/archive/twitter4j-<include>latest-version.fragment</include>.zip">twitter4j-<include>latest-version.fragment</include>.zip</a> (<a href="./javadoc/index.html">JavaDoc</a> / <a href="http://twitter4j.org/$[ja:ja]$[en:en]/versions.html#migration21x-22x">$[ja:2.1.x から 2.2.x への移行ガイド]$[en:Migration guide from 2.1.x to 2.2.x]</a>)<br>
-    <a href="http://twitter4j.org/en/archive/twitter4j-android-<include>latest-version.fragment</include>.zip">twitter4j-android-<include>latest-version.fragment</include>.zip</a>($[ja:Android向けのスリムバージョン]$[en:slimmed version for Android platform])<br>
-<br><a name="snapshot"></a>･$[ja:最新スナップショットビルド]$[en:Latest snapshot build]<br><a href="http://twitter4j.org/en/archive/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
-    <a href="http://twitter4j.org/en/archive/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip</a> (<a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">JavaDoc</a>)<br>
-    <a href="http://twitter4j.org/en/archive/twitter4j-android-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-android-<include>latest-SNAPSHOT-version.fragment</include>.zip</a>($[ja:Android向けのスリムバージョン]$[en:slimmed version for Android platform])<br>
+<a href="http://twitter4j.org/archive/twitter4j-<include>latest-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
+    <a href="http://twitter4j.org/archive/twitter4j-<include>latest-version.fragment</include>.zip">twitter4j-<include>latest-version.fragment</include>.zip</a> (<a href="/javadoc/index.html">JavaDoc</a> / <a href="http://twitter4j.org/$[ja:ja]$[en:en]/versions.html#migration21x-22x">$[ja:2.1.x から 2.2.x への移行ガイド]$[en:Migration guide from 2.1.x to 2.2.x]</a>)<br>
+    <a href="http://twitter4j.org/archive/twitter4j-android-<include>latest-version.fragment</include>.zip">twitter4j-android-<include>latest-version.fragment</include>.zip</a>($[ja:Android向けのスリムバージョン]$[en:slimmed version for Android platform])<br>
+<br><a name="snapshot"></a>･$[ja:最新スナップショットビルド]$[en:Latest snapshot build]<br><a href="http://twitter4j.org/archive/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
+    <a href="http://twitter4j.org/archive/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip</a> (<a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">JavaDoc</a>)<br>
+    <a href="http://twitter4j.org/archive/twitter4j-android-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-android-<include>latest-SNAPSHOT-version.fragment</include>.zip</a>($[ja:Android向けのスリムバージョン]$[en:slimmed version for Android platform])<br>
 
 <%--    <a href="http://twitter4j.org/en/twitter4j-android-<include>latest-version.fragment</include>.zip">twitter4j-android-<include>latest-version.fragment</include>.zip</a> (slimmed version for Android platform)<br>--%>
 </tag:h2>

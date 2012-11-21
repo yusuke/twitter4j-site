@@ -15,12 +15,12 @@
     </context-param>
     <context-param>
         <param-name>pass-through-directories</param-name>
-        <param-value>/javadoc,/oldjavadocs,/archive</param-value>
+        <param-value>/javadoc/,/oldjavadocs/,/archive/</param-value>
     </context-param>
 
     <context-param>
         <param-name>decorators</param-name>
-        <param-value>jika.decorators.MultilingualDecorator,jika.decorators.Html2JSPDecorator</param-value>
+        <param-value>jika.decorators.MultilingualDecorator,jika.decorators.PassThroughDecorator,jika.decorators.Html2JSPDecorator</param-value>
     </context-param>
     <filter>
         <filter-name>jika.servlets.Twitter4JXMLFilter</filter-name>

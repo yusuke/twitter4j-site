@@ -50,15 +50,8 @@ public class JikaFilter implements Filter {
                     //do nothing
             }
         }
-        boolean willPassThrough = false;
-        for(String passThrough : passThroughDirectories){
-            if(requestContext.getResourcePath().startsWith(passThrough)){
-                willPassThrough = true;
-                break;
-            }
-        }
 
-        if (!willPassThrough && pattern.matcher(requestContext.getResourcePath()).matches()) {
+        if (pattern.matcher(requestContext.getResourcePath()).matches()) {
             WebContent content = new WebContent();
             if (requestContext.getResourcePath().startsWith("/WEB-INF/admin/")) {
                 encoding = "UTF-8";
@@ -84,7 +77,6 @@ public class JikaFilter implements Filter {
 
     FilterConfig config;
     Pattern pattern = null;
-    String[] passThroughDirectories = null;
 
     public void init(FilterConfig config) throws ServletException {
         this.config = config;
@@ -94,11 +86,5 @@ public class JikaFilter implements Filter {
         this.decorators = DecoratorRepository.initialize(list, config.getServletContext());
         String matchPattern = config.getInitParameter("match-pattern");
         pattern = Pattern.compile(matchPattern);
-
-        String passThroughDirectoriesParam = config.getServletContext().getInitParameter("pass-through-directories");
-        if (null == passThroughDirectoriesParam) {
-            throw new ServletException("pass-through-directories not set");
-        }
-        passThroughDirectories = passThroughDirectoriesParam.split(",");
     }
 }

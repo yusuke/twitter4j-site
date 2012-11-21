@@ -18,7 +18,7 @@ import java.util.List;
  * @author yusukey
  */
 public class DecoratorRepository {
-    private static List<Decorator> decorators = new ArrayList();
+    private static List<Decorator> decorators = new ArrayList<>();
     private static boolean initialized = false;
 
     public static synchronized List getDecorators() {

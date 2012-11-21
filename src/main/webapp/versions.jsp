@@ -3,7 +3,7 @@
     <a name="versions"><h1>$[ja:バージョン]$[en:Versions]</h1></a>
 
 <tag:h2 name="latst" title="$[ja:開発中のバージョン]$[en:In development]">
-･<a href="http://jira.twitter4j.org/secure/IssueNavigator.jspa?requestId=10030">$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include></a><br>
+･<a href="http://jira.twitter4j.org/issues/?filter=10030">$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include></a><br>
 ･<a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">$[ja:バージョン <include>latest-version.fragment</include> からの JavaDoc diff]$[en:JavaDoc diff from Version <include>latest-version.fragment</include>]</a>
 </tag:h2>
 <tag:h2 name="migration21x-22x" title="$[ja:バージョン 2.1.x から 2.2.x への移行]$[en:Migrating from 2.1.x to 2.2.x]">
@@ -19,8 +19,8 @@ $[en:classes in twitter4j.http.* has been migrated to twitter4j.auth.*.<br>]
 <br>
 $[ja:- Basic認証の廃止]
 $[en:- retirement of Basic authentication] (<a href="http://jira.twitter4j.org/browse/TFJ-560">TFJ-560</a>)<br>
-$[ja:Basic認証の廃止に伴いTwitterFactory.getInstance(screenName,password)は廃止されました。xAuthでアクセストークンを取得するには<a href="http://twitter4j.org/en/javadoc/core/twitter4j/auth/OAuthSupport.html#getOAuthAccessToken(java.lang.String,%20java.lang.String)">Twitter.getOAuthAccessToken(screenName, password)</a>を使います。getOAuthAuthorizedInstance(Authorization) は廃止され、getInstance(Authorization)になりました。<br>]
-$[en:TwitterFactory.getInstance(screenName,password) was retired. To get an access token using xAuth flow, use <a href="http://twitter4j.org/en/javadoc/core/twitter4j/auth/OAuthSupport.html#getOAuthAccessToken(java.lang.String,%20java.lang.String)">Twitter.getOAuthAccessToken(screenName, password)</a>. getOAuthAuthorizedInstance(Authorization) was retired, use getInstance(Authorization) instead.<br>]
+$[ja:Basic認証の廃止に伴いTwitterFactory.getInstance(screenName,password)は廃止されました。xAuthでアクセストークンを取得するには<a href="http://twitter4j.org/javadoc/core/twitter4j/auth/OAuthSupport.html#getOAuthAccessToken(java.lang.String,%20java.lang.String)">Twitter.getOAuthAccessToken(screenName, password)</a>を使います。getOAuthAuthorizedInstance(Authorization) は廃止され、getInstance(Authorization)になりました。<br>]
+$[en:TwitterFactory.getInstance(screenName,password) was retired. To get an access token using xAuth flow, use <a href="http://twitter4j.org/javadoc/core/twitter4j/auth/OAuthSupport.html#getOAuthAccessToken(java.lang.String,%20java.lang.String)">Twitter.getOAuthAccessToken(screenName, password)</a>. getOAuthAuthorizedInstance(Authorization) was retired, use getInstance(Authorization) instead.<br>]
 <br>
 $[ja:- 非同期APIとストリーミングAPI専用artifactの導入]
 $[en:- introduction of new artifacts for async API and streaming API] (<a href="http://jira.twitter4j.org/browse/TFJ-345">TFJ-345</a>)<br>
@@ -29,8 +29,8 @@ $[en:Async API has been migrated to twitter4j-async artifact (depending on twitt
 <br>
 $[ja:- JSONストアの無効化]
 $[en:- JSON store is disabled by defalt] (<a href="http://jira.twitter4j.org/browse/TFJ-562">TFJ-562</a>)<br>
-$[ja:Twitterからのレスポンスの生JSONは<a href="http://twitter4j.org/en/javadoc/twitter4j/json/DataObjectFactory.html#getRawJSON(java.lang.Object)">DataObjectFactory#getRawJSON()</a>で取得できますが、デフォルトでこの機能は無効になりました。生のJSONへアクセスが必要なアプリケーションではtwitte4j.proeperties内でjsonStoreEnabledオプションをtrueに設定してください。<br>]
-$[en:You can get the raw json form of response from the API using<a href="http://twitter4j.org/en/javadoc/twitter4j/json/DataObjectFactory.html#getRawJSON(java.lang.Object)">DataObjectFactory#getRawJSON()</a>. But as of version 2.2.0, the feature is disabled by default. You can enable the feature by setting jsonStoreEnabled configuration parameter to true in twitter4j.properties.<br>]
+$[ja:Twitterからのレスポンスの生JSONは<a href="http://twitter4j.org/javadoc/twitter4j/json/DataObjectFactory.html#getRawJSON(java.lang.Object)">DataObjectFactory#getRawJSON()</a>で取得できますが、デフォルトでこの機能は無効になりました。生のJSONへアクセスが必要なアプリケーションではtwitte4j.proeperties内でjsonStoreEnabledオプションをtrueに設定してください。<br>]
+$[en:You can get the raw json form of response from the API using<a href="http://twitter4j.org/javadoc/twitter4j/json/DataObjectFactory.html#getRawJSON(java.lang.Object)">DataObjectFactory#getRawJSON()</a>. But as of version 2.2.0, the feature is disabled by default. You can enable the feature by setting jsonStoreEnabled configuration parameter to true in twitter4j.properties.<br>]
 <br>
 $[ja:- ライセンスの変更]
 $[en:- licensing] (<a href="http://jira.twitter4j.org/browse/TFJ-446">TFJ-446</a>)<br>
@@ -147,11 +147,11 @@ $[en:- Introduction of GeoLoction class] (<a href="http://jira.twitter4j.org/bro
 <br>
 $[ja:削除されたクラス、メソッド:]
 $[en:Removed with this change:]<br>
-Status.<a href="http://twitter4j.org/en/javadoc/twitter4j/Status.html#getLongitude()">getLongitude()</a><br>
-Status.<a href="http://twitter4j.org/en/javadoc/twitter4j/Status.html#getLatitude()">getLatitude()</a><br>
-Query.<a href="http://twitter4j.org/en/javadoc/twitter4j/Query.html#setGeoCode(double,%20double,%20double,%20java.lang.String)">setGeoCode(double latitude, double longitude, double radius, String unit)</a><br>
-Twitter.<a href="http://twitter4j.org/en/javadoc/twitter4j/Twitter.html#updateStatus(java.lang.String,%20double,%20double)">updateStatus(String status, double latitude, double longitude)</a><br>
-Twitter.<a href="http://twitter4j.org/en/javadoc/twitter4j/Twitter.html#updateStatus(java.lang.String,%20long,%20double,%20double)">updateStatus(String status, long inReplyToStatusId, double latitude, double longitude)</a><br>
+Status.<a href="http://twitter4j.org/javadoc/twitter4j/Status.html#getLongitude()">getLongitude()</a><br>
+Status.<a href="http://twitter4j.org/javadoc/twitter4j/Status.html#getLatitude()">getLatitude()</a><br>
+Query.<a href="http://twitter4j.org/javadoc/twitter4j/Query.html#setGeoCode(double,%20double,%20double,%20java.lang.String)">setGeoCode(double latitude, double longitude, double radius, String unit)</a><br>
+Twitter.<a href="http://twitter4j.org/javadoc/twitter4j/Twitter.html#updateStatus(java.lang.String,%20double,%20double)">updateStatus(String status, double latitude, double longitude)</a><br>
+Twitter.<a href="http://twitter4j.org/javadoc/twitter4j/Twitter.html#updateStatus(java.lang.String,%20long,%20double,%20double)">updateStatus(String status, long inReplyToStatusId, double latitude, double longitude)</a><br>
 <br>
 $[ja:導入されたクラス、メソッド:]
 $[en:Introduced with this change:]<br>

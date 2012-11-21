@@ -2,7 +2,7 @@
 <div class="javadoc">
     <a name="javaDoc"><h1>JavaDoc</h1></a>
 <tag:h2 name="latest" title="$[ja:最新バージョン]$[en:Latest version]">
-<a href="./javadoc/index.html">･twitter4j-<include>latest-version.fragment</include> JavaDoc</a><br>
+<a href="/javadoc/index.html">･twitter4j-<include>latest-version.fragment</include> JavaDoc</a><br>
 </tag:h2>
 
 <tag:h2 name="latest-snapshot" title="$[ja:最新安定ビルド]$[en:Latest stable build]">
