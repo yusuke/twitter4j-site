@@ -1,10 +1,29 @@
 package jika;
 
+import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class LanguageHelper {
     private static Map codeMap = new HashMap();
+    private String[] languages;
+
+    public LanguageHelper(String[] languages){
+        this.languages = languages;
+    }
+    public String getPreferredLanguage(Enumeration requestLocales){
+        while (requestLocales.hasMoreElements()) {
+            Locale locale = (Locale) requestLocales.nextElement();
+            String requestLanguage = locale.getLanguage();
+            for (String language : languages) {
+                if (language.equals(requestLanguage)) {
+                    return requestLanguage;
+                }
+            }
+        }
+        return "en";
+    }
 
     static {
 
@@ -182,7 +201,7 @@ public class LanguageHelper {
         return codeMap;
     }
 
-    public static String getLanguageFromCode(String code) {
+    public String getLanguageFromCode(String code) {
         return (String) codeMap.get(code);
     }
 }

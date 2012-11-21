@@ -25,7 +25,7 @@ $[ja:こちらのページもご覧ください]$[en:See also]:<br>
     <a href="http://code.google.com/p/twitter-api/issues/list">Issues -  twitter-api - Google Code</a>
   </li>
   <li class="numberedlist">
-    <a href="http://twitter4j.org/jira/browse/TFJ?report=com.atlassian.jira.plugin.system.project:roadmap-panel">Twitter4J $[ja:ロードマップ]$[en: Road Map]</a>
+    <a href="http://jira.twitter4j.org/browse/TFJ?report=com.atlassian.jira.plugin.system.project:roadmap-panel">Twitter4J $[ja:ロードマップ]$[en: Road Map]</a>
   </li>
 </ul>
 </tag:h3-num>

@@ -9,7 +9,7 @@
 <li><h3>$[ja:メーリングリストに報告する]$[en:Report to the mailing list]</h3></li>
 $[ja:バグや機能追加要求について<a href="http://twitter4j.org/ja/index.html#mailingList">メーングリスト</a>に報告します。もし報告する現象が既知の問題でなく、確実にバグと考えられる場合このステップは省略しても構いません。]$[en:Report the bug, or the feature request to <a href="http://twitter4j.org/en/index.html#mailingList">the mailing list.</a> If you are sure that the issue is not a known or a duplicated one, you can skip this step and go to step 2.]
 <li><h3>$[ja:課題を登録]$[en:Submit the issue]</h3></li>
-$[ja:課題を <a href="http://twitter4j.org/jira/browse/TFJ">JIRA</a> に登録します。]$[en:Submit the issue to <a href="http://twitter4j.org/jira/browse/TFJ">JIRA</a>. Set the fixed version to the latest snapshot (<include>latest-SNAPSHOT-version.fragment</include>)]
+$[ja:課題を <a href="http://jira.twitter4j.org/browse/TFJ">JIRA</a> に登録します。]$[en:Submit the issue to <a href="http://jira.twitter4j.org/browse/TFJ">JIRA</a>. Set the fixed version to the latest snapshot (<include>latest-SNAPSHOT-version.fragment</include>)]
 <li><h3>$[ja:ソースコードを修正する]$[en:Fix it]</h3></li>
 $[ja:必要なソースファイルを修正します。以下の点を気をつけてください:
 ]$[en:Fix the source code accordingly. Make sure that:]
@@ -40,7 +40,7 @@ $[ja:マージが完了し、テストケースが通ると issue はクロー�
     </p>
     </tag:h2>
     <tag:h2 name="issuemanagement" title="$[ja:課題管理]$[en:Issue management]">
-    <p>$[ja:Twitter4J はアトラシアン社の提供する課題管理ツール、<a href="http://twitter4j.org/jira/browse/TFJ">JIRA</a> を使ってバグ管理を行っています。]$[en:Atlassian supports our efforts by contributing their bug tracking and issue tracking application, <a href="http://twitter4j.org/jira/browse/TFJ">JIRA</a>, to our project.<br>
+    <p>$[ja:Twitter4J はアトラシアン社の提供する課題管理ツール、<a href="http://jira.twitter4j.org/browse/TFJ">JIRA</a> を使ってバグ管理を行っています。]$[en:Atlassian supports our efforts by contributing their bug tracking and issue tracking application, <a href="http://jira.twitter4j.org/browse/TFJ">JIRA</a>, to our project.<br>
 <br>
 Atlassian is an innovative Australian software company providing enterprise software solutions to the world's leading organisations. Atlassian's leading software product, JIRA is a bug tracking and issue tracking application developed to track and manage the issues and bugs that emerge during a project. JIRA customers include departments from NASA, Boeing, Cisco, JP Morgan, 3M, BP, Sony and more. <a href="http://www.atlassian.com/c/NPOS/10160">Try it</a> for yourself today.<br>
 ]

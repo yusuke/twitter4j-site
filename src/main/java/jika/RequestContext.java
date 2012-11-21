@@ -23,10 +23,19 @@ public class RequestContext {
         this.encoding = context.getInitParameter("encoding");
     }
 
+    public RequestContext(String resourcePath) {
+        this.resourcePath = resourcePath;
+        this.encoding = "UTF-8";
+    }
+
     public void setProperty(String name, String value) {
         if (req != null) {
             req.setAttribute(name, value);
         } else {
+            if(props == null){
+                // test purpose
+                props = new Properties();
+            }
             props.setProperty(name, value);
         }
     }
@@ -35,6 +44,10 @@ public class RequestContext {
         if (req != null) {
             return (String) req.getAttribute(name);
         } else {
+            if(props == null){
+                // test purpose
+                props = new Properties();
+            }
             return props.getProperty(name);
         }
     }

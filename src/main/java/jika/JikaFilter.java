@@ -15,13 +15,15 @@ public class JikaFilter implements Filter {
     public void destroy() {
     }
 
-    Object flag = new Object();
+    private static final Object FLAG = new Object();
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        if (null != request.getAttribute("flag")) {
+        if (null != request.getAttribute("FLAG")) {
             chain.doFilter(request, response);
             return;
         }
+        request.setAttribute("FLAG", FLAG);
+
         String encoding = this.encoding;
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
@@ -45,8 +47,15 @@ public class JikaFilter implements Filter {
                     //do nothing
             }
         }
+        boolean willPassThrough = false;
+        for(String passThrough : passThroughDirectories){
+            if(requestContext.getResourcePath().startsWith(passThrough)){
+                willPassThrough = true;
+                break;
+            }
+        }
 
-        if (pattern.matcher(requestContext.getResourcePath()).matches()) {
+        if (!willPassThrough && pattern.matcher(requestContext.getResourcePath()).matches()) {
             WebContent content = new WebContent();
             if (requestContext.getResourcePath().startsWith("/WEB-INF/admin/")) {
                 encoding = "UTF-8";
@@ -65,14 +74,14 @@ public class JikaFilter implements Filter {
             byte[] theContent = content.toString().getBytes(encoding);
             response.setContentLength(theContent.length);
             response.getOutputStream().write(theContent);
-        } else {
-            request.setAttribute("flag", flag);
-            request.getRequestDispatcher(requestContext.getResourcePath()).forward(req, res);
+            return;
         }
+        request.getRequestDispatcher(requestContext.getResourcePath()).forward(req, res);
     }
 
     FilterConfig config;
     Pattern pattern = null;
+    String[] passThroughDirectories = null;
 
     public void init(FilterConfig config) throws ServletException {
         this.config = config;
@@ -81,9 +90,12 @@ public class JikaFilter implements Filter {
         String[] list = config.getServletContext().getInitParameter("decorators").split(",");
         this.decorators = DecoratorRepository.initialize(list, config.getServletContext());
         String matchPattern = config.getInitParameter("match-pattern");
-        if (null == matchPattern) {
-            throw new ServletException("match-pattern not set");
-        }
         pattern = Pattern.compile(matchPattern);
+
+        String passThroughDirectoriesParam = config.getInitParameter("pass-through-directories");
+        if (null == passThroughDirectoriesParam) {
+            throw new ServletException("pass-through-directories not set");
+        }
+        passThroughDirectories = passThroughDirectoriesParam.split(",");
     }
 }

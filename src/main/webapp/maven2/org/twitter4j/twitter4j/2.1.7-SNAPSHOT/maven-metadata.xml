@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.twitter4j</groupId>
+  <artifactId>twitter4j</artifactId>
+  <version>2.1.7-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <buildNumber>32</buildNumber>
+    </snapshot>
+    <lastUpdated>20101123154624</lastUpdated>
+  </versioning>
+</metadata>

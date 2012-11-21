@@ -89,39 +89,22 @@ public class MultilingualDecorator implements Decorator {
         return true;
     }
 
-    String[] languages;
+    LanguageHelper languageHelper;
 
     public int parseRequest(HttpServletRequest req, HttpServletResponse res, RequestContext context) {
         int index;
         String resourcePath = toCanonicalPath(context.getResourcePath());
         if (-1 != (index = resourcePath.indexOf("/", 1))) {
             String language = resourcePath.substring(1, index);
-            for(String lang : languages){
-                if (lang.equals(language)) {
-                    resourcePath = resourcePath.substring(3);
-                    context.setProperty("language", language);
-                    context.setResourcePath(resourcePath);
-                    return OK;
-                }
-            }
             if (LanguageHelper.isLanguageCode(language)) {
                 resourcePath = resourcePath.substring(3);
+                context.setProperty("language", language);
+                context.setResourcePath(resourcePath);
+                return OK;
             }
         }
-        Enumeration enu = req.getLocales();
-        while (enu.hasMoreElements()) {
-            Locale locale = (Locale) enu.nextElement();
-            String language = locale.getLanguage();
-            for (String language1 : languages) {
-                if (language1.equals(language)) {
-                    context.setResourcePath(req.getContextPath() + "/" + language + resourcePath);
-                    return REDIRECT;
-                }
-            }
-        }
-        context.setResourcePath(req.getContextPath() + "/en" + resourcePath);
+        context.setResourcePath("/");
         return REDIRECT;
-
     }
 
     static String toCanonicalPath(String resourcePath) {
@@ -146,9 +129,18 @@ public class MultilingualDecorator implements Decorator {
     }
 
     public void init(ServletContext context) throws ServletException {
-        languages = context.getInitParameter("languages").split(",");
-        if (null == languages || languages.length == 0) {
-            throw new ServletException("languages not set.");
+        init("languages", context.getInitParameter("languages"));
+    }
+
+    public void init(String name, String value) throws ServletException{
+        if (null == name) {
+            throw new ServletException(name + " not set.");
+        }
+        switch(name){
+            case "languages":
+                languageHelper = new LanguageHelper(value.split(","));
+                break;
+            default:
         }
     }
 }
