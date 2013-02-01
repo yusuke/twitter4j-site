@@ -16,13 +16,13 @@ $[ja:<head xml:lang="ja" lang="ja">]$[en:<head xml:lang="en" lang="en">]
     <script type="text/javascript" src="/lightbox/lightbox_plus.js"></script>
     <script type="text/javascript" src="/js/gracefulscroll.js"></script>
 
-   <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@yusuke">
     <meta name="twitter:creator" content="@t4j_news">
-    <meta name="twitter:url" content="http://twitter4j.org/$[ja:ja]$[en:en]/">
-    <meta name="twitter:title" content="<%=title%>">
-    <meta name="twitter:description" content="<%=description%>">
-    <meta name="twitter:image" content="http://twitter4j.org/images/twitter4j.png">
+    <meta name="og:url" content="http://twitter4j.org/$[ja:ja]$[en:en]/">
+    <meta name="og:title" content="<%=title%>">
+    <meta name="og:description" content="<%=description%>">
+    <meta name="og:image" content="http://twitter4j.org/images/twitter4j.png">
 </head>
 <body>
 <script>
