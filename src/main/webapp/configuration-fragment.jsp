@@ -2,8 +2,10 @@
 <tr><td>debug</td><td>$[ja:デバッグ有効化フラグ。内蔵 Logger 使用時のみ有効。]$[en:Enables deubg output. Effective only with the embedded logger.]</td><td>false</td></tr>
 <tr><td>includeRTs</td><td>$[ja:タイムイン取得メソッドの返り値にRwteetsを含めるかどうかのフラグ。]$[en:If set to true, retweets will be included in the timeline methods' resopnse.]</td><td>true</td></tr>
 <tr><td>includeEntities</td><td>$[ja:タイムイン取得メソッドの返り値に追加情報を含めるかどうかのフラグ。]$[en:If set to true, entities will be included in the timeline methods' resopnse.]</td><td>true</td></tr>
+<tr><td>includeMyRetweet</td><td>$[ja:trueにセットすると列イートしたステータスのIDをStatus#getCurrentUserRetweetId()で取得できる。]$[en:set to true, any statuses returned that have been retweeted by the authenticating user will include an additional field: Status#getCurrentUserRetweetId ()]</td><td>true</td></tr>
 <tr><td>jsonStoreEnabled</td><td>$[ja:DataObjectFactoryにJSONデータを保存するかどうかのフラグ。]$[en:If set to true, raw JSON forms will be stored in DataObjectFactory.]</td><td>false</td></tr>
 <tr><td>mbeanEnabled</td><td>$[ja:MBeanを有効化するかどうかのフラグ。]$[en:If set to true, mbean will be registerd.]</td><td>false</td></tr>
+<tr><td>loggerFactory</td><td>$[ja:ログ出力実装]$[en:Logger implimentation]<br>$[ja:サポートされる実装]$[en:Supported implimentations]:<br>&nbsp;twitter4j.internal.logging.SLF4JLoggerFactory<br>&nbsp;twitter4j.internal.logging.CommonsLoggingLoggerFactory<br>&nbsp;twitter4j.internal.logging.Log4JLoggerFactory<br>&nbsp;twitter4j.internal.logging.JULLoggerFactory<br>&nbsp;twitter4j.internal.logging.NullLoggerFactory<br>&nbsp;twitter4j.internal.logging.StdNullLoggerFactory</td><td>null</td></tr>
 <tr><td>contributingTo</td><td>$[ja:contributingtoのユーザーIDを指定する。]$[en:sets the user id contributing to.]</td><td>-1L</td></tr>
 </table></tag:h3><tag:h3 name="OAuth" title="OAuth"><table class="api-matrix"><tr><th class="method-path">$[ja:プロパティ名]$[en:Property name]</th><th class="t4jmethod">$[ja:説明]$[en:Description]</th><th class="credential-rate">$[ja:デフォルト値]$[en:Default value]</th></tr>
 <tr><td>oauth.consumerKey</td><td>$[ja:デフォルト]$[en:Default] OAuth consumer key</td><td>null</td></tr>
@@ -30,14 +32,13 @@
 <tr><td>http.proxyUser</td><td>$[ja:HTTPプロキシサーバユーザ名]$[en:HTTP proxy server user name]</td><td>null</td></tr>
 <tr><td>http.proxyPassword</td><td>$[ja:HTTPプロキシサーバパスワード]$[en:HTTP proxy server password]</td><td>null</td></tr>
 </table></tag:h3><tag:h3 name="$[ja:メディアサポート]$[en:Media support]" title="$[ja:メディアサポート]$[en:Media support]"><table class="api-matrix"><tr><th class="method-path">$[ja:プロパティ名]$[en:Property name]</th><th class="t4jmethod">$[ja:説明]$[en:Description]</th><th class="credential-rate">$[ja:デフォルト値]$[en:Default value]</th></tr>
-<tr><td>media.provider</td><td>$[ja:デフォルトメディアプロバイダ]$[en:default media provider]<br>$[ja:サポートされるプロバイダ]$[en:Supported providers]:<br>imgly, plixi, lockerz, twipple, twitgoo, twitpic, yfrog</td><td>yrfog</td></tr>
+<tr><td>media.provider</td><td>$[ja:デフォルトメディアプロバイダ]$[en:default media provider]<br>$[ja:サポートされるプロバイダ]$[en:Supported providers]:<br>twitter, imgly, plixi, lockerz, twipple, twitgoo, twitpic, yfrog</td><td>twitter</td></tr>
 <tr><td>media.providerAPIKey</td><td>$[ja:メディアプロバイダAPI Key]$[en: media provider API Key]</td><td>null</td></tr>
 </table></tag:h3><tag:h3 name="$[ja:ベースURL]$[en:Base URLs]" title="$[ja:ベースURL]$[en:Base URLs]"><table class="api-matrix"><tr><th class="method-path">$[ja:プロパティ名]$[en:Property name]</th><th class="t4jmethod">$[ja:説明]$[en:Description]</th><th class="credential-rate">$[ja:デフォルト値]$[en:Default value]</th></tr>
-<tr><td>restBaseURL</td><td>REST API $[ja:ベース]$[en:base] URL</td><td>http://api.twitter.com/1/</td></tr>
-<tr><td>searchBaseURL</td><td>Search API $[ja:ベース]$[en:base] URL</td><td>http://search.twitter.com/</td></tr>
-<tr><td>streamBaseURL</td><td>Streaming API $[ja:ベース]$[en:base] URL</td><td>http://stream.twitter.com/1/</td></tr>
-<tr><td>siteStreamBaseURL</td><td>Site Streams API $[ja:ベース]$[en:base] URL</td><td>http://sitestream.twitter.com/2b/</td></tr>
-<tr><td>userStreamBaseURL</td><td>User Stream API $[ja:ベース]$[en:base] URL</td><td>https://userstream.twitter.com/2/</td></tr>
+<tr><td>restBaseURL</td><td>REST API $[ja:ベース]$[en:base] URL</td><td>http://api.twitter.com/1.1/</td></tr>
+<tr><td>streamBaseURL</td><td>Streaming API $[ja:ベース]$[en:base] URL</td><td>http://stream.twitter.com/1.1/</td></tr>
+<tr><td>siteStreamBaseURL</td><td>Site Streams API $[ja:ベース]$[en:base] URL</td><td>https://sitestream.twitter.com/1.1/</td></tr>
+<tr><td>userStreamBaseURL</td><td>User Stream API $[ja:ベース]$[en:base] URL</td><td>https://userstream.twitter.com/1.1/</td></tr>
 <tr><td>oauth.requestTokenURL</td><td>OAuth request token URL</td><td>http://api.twitter.com/oauth/request_token</td></tr>
 <tr><td>oauth.accessTokenURL</td><td>OAuth access token URL</td><td>http://api.twitter.com/oauth/access_token</td></tr>
 <tr><td>oauth.authorizationURL</td><td>OAuth authorization URL</td><td>http://api.twitter.com/oauth/authorize</td></tr>

@@ -70,7 +70,7 @@
                     </webApp>
                     <stopKey>1</stopKey>
                     <stopPort>10000</stopPort>
-                    <scanIntervalSeconds>1</scanIntervalSeconds>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
                 </configuration>
             </plugin>
         </plugins>

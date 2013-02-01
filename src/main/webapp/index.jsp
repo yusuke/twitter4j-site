@@ -1,4 +1,11 @@
-<%@page pageEncoding="UTF-8" session="false"%><%@taglib prefix="tag" tagdir="/WEB-INF/tags" %><tag:skelton title="Twitter4J - A Java library for the Twitter API">
+<%@page pageEncoding="UTF-8" session="false"%><%@taglib prefix="tag" tagdir="/WEB-INF/tags" %><tag:skelton
+title="Twitter4J - A Java library for the Twitter API"
+description="$[ja:Twitter4J は <a href='https://dev.twitter.com/docs'>Twitter API</a> の Java ラッパです。<br>
+    Twitter4J を使うと JSON や HTTP に詳しくなくても容易に Twitter とインタラクトするアプリケーションを書くことが出来ます。Twitter4J は Twitter 非公式のライブラリです。]
+$[en:Twitter4J is an unofficial Java library for the <a href='https://dev.twitter.com/docs'>Twitter API</a>.<br>
+    With Twitter4J, you can easily integrate your Java application with the Twitter service. Twitter4J is an unofficial library.<br>
+    <br>Twitter4J is featuring:]"
+path="http://twitter4j/$[ja:ja]$[en:en]/index.html">
 
 <tag:h2 name="introduction" title="$[ja:Twitter4Jとは？]$[en:Introduction]">
 $[ja:Twitter4J は <a href="https://dev.twitter.com/docs">Twitter API</a> の Java ラッパです。<br>
@@ -7,17 +14,18 @@ $[en:Twitter4J is an unofficial Java library for the <a href="https://dev.twitte
     With Twitter4J, you can easily integrate your Java application with the Twitter service. Twitter4J is an unofficial library.<br>
     <br>Twitter4J is featuring:]
 <br>
-<font color="green">✔</font> 100% Pure Java - works on any Java Platform version 1.4.2 or later<br>
+<font color="green">✔</font> 100% Pure Java - works on any Java Platform version 5 or later<br>
 <font color="green">✔</font> $[en:<a href="http://code.google.com/android/">Android</a> platform and <a href="http://code.google.com/appengine/">Google App Engine</a> ready]$[ja:<a href="http://code.google.com/android/">Android</a> や<a href="http://code.google.com/appengine/">Google App Engine</a>上でも動作します]<br>
 <font color="green">✔</font> $[en:Zero dependency : No additional jars required]$[ja:依存なし : 追加の jar ファイルなどは必要ありません]<br>
 <font color="green">✔</font> $[en:Built-in OAuth support]$[ja:OAuth に対応]<br>
 <font color="green">✔</font> $[en:Out-of-the-box gzip support]$[ja:デフォルトで gzip をサポートするため高速]<br>
+<font color="green">✔</font> $[en:100% Twitter API 1.1 compatible]$[ja:Twitter API 1.1に完全対応]<br>
 </tag:h2>
 <tag:h2 name="systemRequirements" title="$[ja:システム要件]$[en:System Requirements]">
     $[ja:OS: Java をサポートする Windows または Unix 系 OS<br>
-JVM: Java 1.4.2 またはそれ以降]
+JVM: Java 5 またはそれ以降]
 $[en:OS: Windows or any flavor of Unix that supports Java.<br>
-JVM: Java 1.4.2 or later]
+JVM: Java 5 or later]
 </tag:h2>
 <tag:h2 name="howToUse" title="$[ja:使い方]$[en:How To Use]">
     $[ja:twitter4j-core-<include>latest-version.fragment</include>.jar をクラスパスに通して、好きなメソッドを呼び出してください。<br>
@@ -31,10 +39,10 @@ JVM: Java 1.4.2 or later]
 ･$[ja:最新安定バージョン]$[en:Latest stable version]<br>
 <a href="http://twitter4j.org/archive/twitter4j-<include>latest-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
     <a href="http://twitter4j.org/archive/twitter4j-<include>latest-version.fragment</include>.zip">twitter4j-<include>latest-version.fragment</include>.zip</a> (<a href="/javadoc/index.html">JavaDoc</a> / <a href="http://twitter4j.org/$[ja:ja]$[en:en]/versions.html#migration21x-22x">$[ja:2.1.x から 2.2.x への移行ガイド]$[en:Migration guide from 2.1.x to 2.2.x]</a>)<br>
-    <a href="http://twitter4j.org/archive/twitter4j-android-<include>latest-version.fragment</include>.zip">twitter4j-android-<include>latest-version.fragment</include>.zip</a>($[ja:Android向けのスリムバージョン]$[en:slimmed version for Android platform])<br>
+    <strike>twitter4j-android-<include>latest-version.fragment</include>.zip</strike>($[ja:バージョン3.0.3で通常バージョンが十分にスリム化されたためAndroid向けビルドは廃止されました。通常バージョンをお使いください。]$[en:Regular version got slimmed down from version 3.0.3. Thus build for Android platform was retired. Use regular version instead.])<br>
 <br><a name="snapshot"></a>･$[ja:最新スナップショットビルド]$[en:Latest snapshot build]<br><a href="http://twitter4j.org/archive/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]" title="$[ja:ダウンロード]$[en:Download]" class="download" src="./images/download.jpg"></a><br>
     <a href="http://twitter4j.org/archive/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip</a> (<a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">JavaDoc</a>)<br>
-    <a href="http://twitter4j.org/archive/twitter4j-android-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-android-<include>latest-SNAPSHOT-version.fragment</include>.zip</a>($[ja:Android向けのスリムバージョン]$[en:slimmed version for Android platform])<br>
+    <strike>twitter4j-android-<include>latest-SNAPSHOT-version.fragment</include>.zip</strike>($[ja:バージョン3.0.3で通常バージョンが十分にスリム化されたためAndroid向けビルドは廃止されました。通常バージョンをお使いください。]$[en:Regular version got slimmed down from version 3.0.3. Thus build for Android platform was retired. Use regular version instead.])<br>
 
 <%--    <a href="http://twitter4j.org/en/twitter4j-android-<include>latest-version.fragment</include>.zip">twitter4j-android-<include>latest-version.fragment</include>.zip</a> (slimmed version for Android platform)<br>--%>
 </tag:h2>
@@ -77,7 +85,7 @@ $[en:You can integrate the latest Twitter4J build easily by just including the f
 
 $[ja:Maven Central Repository を使いたい場合、pom.xml に以下のように記載してください。]
 $[en:If you prefer the Maven central repository, include the following lines to your pom.xml.]
-<pre class="codeSample">   &lt;dependencies&gt;<br/>      &lt;dependency&gt;<br/>           &lt;groupId&gt;org.twitter4j&lt;/groupId&gt;<br/>           &lt;artifactId&gt;twitter4j-core&lt;/artifactId&gt;<br/>           &lt;version&gt;[2.2,)&lt;/version&gt;<br/>       &lt;/dependency&gt;<br/>       ...<br/>   &lt;/dependencies&gt;<br/></pre>
+<pre class="codeSample">   &lt;dependencies&gt;<br/>      &lt;dependency&gt;<br/>           &lt;groupId&gt;org.twitter4j&lt;/groupId&gt;<br/>           &lt;artifactId&gt;twitter4j-core&lt;/artifactId&gt;<br/>           &lt;version&gt;[3.0,)&lt;/version&gt;<br/>       &lt;/dependency&gt;<br/>       ...<br/>   &lt;/dependencies&gt;<br/></pre>
 </tag:h2>
 <tag:h2 name="mailingList" title="$[ja:メーリングリスト]$[en:Mailing list]">
     $[ja:Twitter4J に関する質問、バグレポート、リクエストなどありましたら以下のメーリングリストにお気軽にどうぞ。<br>

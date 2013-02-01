@@ -15,7 +15,7 @@
     </context-param>
     <context-param>
         <param-name>pass-through-directories</param-name>
-        <param-value>/javadoc/,/oldjavadocs/,/archive/</param-value>
+        <param-value>/javadoc/,/oldjavadocs/,/archive/,/lightbox/,/js/,/css/</param-value>
     </context-param>
 
     <context-param>

@@ -1,4 +1,8 @@
-<%@page language="java" pageEncoding="UTF-8" session="false"%><%@taglib prefix="tag" tagdir="/WEB-INF/tags" %><tag:skelton title="Twitter4J - $[ja:バージョン]$[en:Versions]">
+<%@page language="java" pageEncoding="UTF-8" session="false"%><%@taglib prefix="tag" tagdir="/WEB-INF/tags" %><tag:skelton title="Twitter4J - $[ja:バージョン]$[en:Versions]"
+ description="$[ja:TwitterAPの変遷をお伝えします。]
+$[en:Twitter4J versions at a glance]"
+path="http://twitter4j/$[ja:ja]$[en:en]/versions.html">
+
 <div class="javadoc">
     <a name="versions"><h1>$[ja:バージョン]$[en:Versions]</h1></a>
 
@@ -6,11 +10,66 @@
 ･<a href="http://jira.twitter4j.org/issues/?filter=10030">$[ja:バージョン]$[en:Version] <include>latest-SNAPSHOT-version.fragment</include></a><br>
 ･<a href="./oldjavadocs/<include>latest-version.fragment</include>-<include>latest-SNAPSHOT-version.fragment</include>/changes.html">$[ja:バージョン <include>latest-version.fragment</include> からの JavaDoc diff]$[en:JavaDoc diff from Version <include>latest-version.fragment</include>]</a>
 </tag:h2>
+<tag:h2 name="migration22x-30x" title="$[ja:バージョン 2.2.x から 3.0.x への移行]$[en:Migrating from 2.2.x to 3.0.x]">
+$[ja:- まずプロジェクトの再ビルドを！<br>
+Twitter API1.1の対応に伴いバージョン3.0.x は旧バージョンから若干の非互換箇所があります。旧バージョンを利用していたプロジェクトでバージョン3.0.xを利用する場合は必ずプロジェクトの再ビルドを行ってください。]
+$[en:- Rebuild your project first!<br>
+Version 3.0.x is compatible with Twitter API1.1, but slightly incompatible with previous versions of Twitter4J. Projects that have been using previous versions are required to be rebuilt to migrate to Version 3.0.x.]<br>
+<br>
+$[ja:- 変更・廃止になったメソッド]$[en:- method migration]<br>
+$[ja:以下のメソッドは廃止になっています。同等の機能を持つ新しいメソッドに移行するか、当該機能の利用を停止する必要があります。<br>]
+$[en:Following methods were retired and application need to use equivalent method (if exists).<br>]
+<table class="api-matrix" width="300px">
+<tr><th>$[ja:廃止メソッド]$[en:Retired method]</th><th>$[ja:移行先]$[en:migrate to]</th></tr>
+<tr><td>disableNotification()</td><td><a href="http://twitter4j.org/javadoc/twitter4j/api/FriendsFollowersResources.html#updateFriendship(long,%20boolean,%20boolean)">updateFriendship()</a></td></tr>
+<tr><td>enableNotification()</td><td><a href="">updateFriendship()</td></tr>
+<tr><td>getProfileImage()</td><td>User#get<a href="http://twitter4j.org/javadoc/twitter4j/User.html#getBiggerProfileImageURL()">Bigger</a>|<a href="http://twitter4j.org/javadoc/twitter4j/User.html#getMiniProfileImageURL()">Mini</a>|<a href="http://twitter4j.org/javadoc/twitter4j/User.html#getOriginalProfileImageURL()">Original</a>ProfileImageURL()</td></tr>
+<tr><td>getBlockingUsersIDs()</td><td><a href="http://twitter4j.org/javadoc/twitter4j/api/UsersResources.html#getBlocksIDs()">getBlocksIDs()</td></tr>
+<tr><td>getLocationTrends()</td><td><a href="http://twitter4j.org/javadoc/twitter4j/api/TrendsResources.html#getPlaceTrends(int)">getPlaceTrends()</td></tr>
+<tr><td>getAllUserLists()</td><td><a href="http://twitter4j.org/javadoc/twitter4j/api/ListsResources.html#getUserLists(long)">getUserLists()</td></tr>
+<tr><td>getAvailableTrends(GeoLocation)</td><td><a href="http://twitter4j.org/javadoc/twitter4j/api/TrendsResources.html#getClosestTrends(twitter4j.GeoLocation)">getClosestTrends(GeoLocation)</td></tr>
+<tr><td>getFavorites(int)</td><td><a href="http://twitter4j.org/javadoc/twitter4j/api/FavoritesResources.html#getFavorites(long,%20twitter4j.Paging)">getFavorites(Paging paging)</td></tr>
+<tr><td>getBlockingUsers()</td><td><a href="http://twitter4j.org/javadoc/twitter4j/api/UsersResources.html#getBlocksList(long)">getBlocksList(cursor)</td></tr>
+<tr><td>getPublicTimeline()</td><td>N/A</td></tr>
+<tr><td>AccountTotals getAccountTotals()</td><td>N/A</td></tr>
+<tr><td>IDs getNoRetweetIds()</td><td>N/A</td></tr>
+<tr><td>IDs getRetweetedByIDs(long)</td><td>N/A</td></tr>
+<tr><td>IDs getRetweetedByIDs(long, Paging)</td><td>N/A</td></tr>
+<tr><td>getRetweetedByMe()</td><td>N/A</td></tr>
+<tr><td>getRetweetedByUser()</td><td>N/A</td></tr>
+<tr><td>getRetweetedToMe()</td><td>N/A</td></tr>
+<tr><td>getRetweetedToUser()</td><td>N/A</td></tr>
+<tr><td>getRetweetsOfMe()</td><td>N/A</td></tr>
+<tr><td>getDailyTrends()</td><td>N/A</td></tr>
+<tr><td>getWeeklyTrends()</td><td>N/A</td></tr>
+<tr><td>getRetweetedBy()</td><td>N/A</td></tr>
+<tr><td>boolean existsBlock()</td><td>N/A</td></tr>
+<tr><td>boolean existsFriendship()</td><td>N/A</td></tr>
+<tr><td>boolean test()</td><td>N/A</td></tr>
+</table>
+<br>
+$[ja:- OAuth必須化]$[en:- OAuth requirement]<br>
+$[ja:Twitter4J 3.0.xは<a href="https://dev.twitter.com/docs/api/1.1">Twitter API 1.1</a>を使います。以前のバージョンと異なり全てのメソッドコールはOAuth認可が必須になります。]
+$[en:Twitter4J 3.0.x hits <a href="https://dev.twitter.com/docs/api/1.1">Twitter API 1.1</a>. And all Twitter API 1.1 endpoints including the Search API require OAuth authorization unlike Twitter API 1.0 / previous versions of Twitter4J.]<br>
+<br>
+$[ja:- 検索APIとREST APIの統合]$[en:- Search API is finally part of REST API]<br>
+$[ja:歴史的な理由から検索APIとREST APIは分けられており、search()メソッドの返すQueryResultはTweetインスタンスを返しており他のメソッドの返すStatusインスタンスとは若干ことなるフィールドを持っていました。<a href="https://dev.twitter.com/docs/api/1.1">Twitter API 1.1</a>でようやく検索APIとREST APIは統合され、QueryResultはStatusインスタンスを返すようになり、Tweetインターフェースは廃止されました。]
+$[en:For the historical reasons, the Search API had been differ from the REST API and response schema was slightly different. Finally the Search API is part of the REST API and QueryResult returns Status instance. Tweet interface is removed from version 3.0.0.]<br>
+<br>
+$[ja:- Androidビルドの廃止]$[en:- Retirement of Android build]<br>
+$[ja:これまで若干コンパクトなAndroid用ビルドを提供していましたが、バージョン3.0.3で本体をコンパクト化し、Android用ビルドは廃止しました。Androidプラットフォームは引き続きサポートします。通常版のビルドをお使いください。]
+$[en:As of version 3.0.3, Twitter4J for Android will be no longer provided. This is because the regular version got slimmed down and there is no reason to release separate binaries. You can use the regular version on the Android platform.]<br>
+<br>
+$[ja:- Java 1.4.xサポートの廃止]$[en:- Java 1.4.x no longer supported]<br>
+$[ja:Twitter4J 3.0.xはJava 5以降をサポートします。Java 1.4.xとTwitter API 1.1両方に対応したバージョンのTwitter4Jの提供は個別対応になります。何らかの理由でJava 1.4.xでTwitter4Jを引き続き使う必要がある場合はyusuke@mac.comへお問い合わせください。]
+$[en:Twitter4J 3.0.x is compatible with Java 5+. Twitter4J compatible with Java 1.4.x &amp; Twitter API 1.1 could be provide on a request basis. If you need to stick with Java 1.4.x for some reasons, contact yusuke@mac.com.]<br>
+
+</tag:h2>
 <tag:h2 name="migration21x-22x" title="$[ja:バージョン 2.1.x から 2.2.x への移行]$[en:Migrating from 2.1.x to 2.2.x]">
 $[ja:- まずプロジェクトの再ビルドを！<br>
 バージョン2.2.0 は旧バージョンから若干の非互換箇所があります。旧バージョンを利用していたプロジェクトでバージョン2.2.0を利用する場合は必ずプロジェクトの再ビルドを行ってください。]
 $[en:- Rebuild your project first!<br>
-Version 2.2.0 is slightly incompatible with older versions. Projects that have been using older versions are required to be rebuilt before using Version 2.2.0.]<br>
+Version 2.2.0 is slightly incompatible with previous versions. Projects that have been using previous versions are required to be rebuilt before using Version 2.2.0.]<br>
 <br>
 $[ja:- twitter4j.http.*パッケージの移行]
 $[en:- migration of twitter4j.http.* package] (<a href="http://jira.twitter4j.org/browse/TFJ-559">TFJ-559</a>)<br>

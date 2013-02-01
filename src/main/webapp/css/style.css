@@ -4,7 +4,7 @@ body {
     font-family: Verdana, Arial, sans-serif;
     margin: 3px;
     padding: 5px;
-    background-image: url(../images/background.gif);
+    background-image: url(/images/background.gif);
     background-attachment: fixed;
 }
 
@@ -30,10 +30,16 @@ h3 {
     text-align: center;
     background-color: #ddd;
 }
-
+.api-matrix{
+    border-collapse:separate;
+    border-spacing: 2px;
+}
+.api-matrix tr td{
+    border-collapse:separate;
+    padding: 2px;
+}
 .api-support table {
     font-size: 70%;
-    width: 100%;
 }
 
 .api-support table th {
@@ -44,9 +50,6 @@ h3 {
     background-color: #ddd;
 }
 
-.api-support .pagination {
-    text-align: center;
-}
 
 .api-support .pagination a {
     color: #1c1;
@@ -61,6 +64,7 @@ h3 {
 }
 
 .credential-rate-check {
+    width: 80px;
     text-align: center;
     color: #1c1;
 }
@@ -78,7 +82,7 @@ h3 {
 }
 
 .api-support .paging-support {
-    width: 80px;
+    width: 120px;
 }
 
 .faq h2 {
@@ -140,7 +144,7 @@ li {
 
 .numberedlist {
     padding-top: 10px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
 }
 
 .numberedlist a {

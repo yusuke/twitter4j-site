@@ -1,4 +1,6 @@
-<%@page pageEncoding="UTF-8" session="false"%><%@taglib prefix="tag" tagdir="/WEB-INF/tags" %><tag:skelton title="Twitter4J - $[ja:コード例]$[en:Code Examples]">
+<%@page pageEncoding="UTF-8" session="false"%><%@taglib prefix="tag" tagdir="/WEB-INF/tags" %><tag:skelton title="Twitter4J - $[ja:コード例]$[en:Code Examples]"
+      description="$[ja:Twitter4Jのコード例]$[en:Twitter4J code examples]"
+      path="http://twitter4j/$[ja:ja]$[en:en]/code-examples.html">
     <a name="codeExamples"><h2>$[ja:コードサンプル]$[en:Code Examples]</h2></a>
     <p>$[ja:サンプルコードは src/twitter4j/examples/ 以下に配置されています。<br>
     それぞれ bin/<i>className</i>.cmd|sh で実行できます。]
@@ -15,21 +17,21 @@ $[en:You can update &quot;What are you doing?&quot; via Twitter.<a href="javadoc
 See also <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/tweets/UpdateStatus.java">twitter4j.examples.tweets.UpdateStatus.java</a> for the detail.]
 <pre class="codeSample">
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
-    Twitter twitter = new TwitterFactory().getInstance();
+    Twitter twitter = TwitterFactory.getSingleton();
     Status status = twitter.updateStatus(latestStatus);
     System.out.println("Successfully updated the status to [" + status.getText() + "].");
 </pre>
 </tag:h3-num>
 <tag:h3-num name="gettingTimeline" title="$[ja:タイムラインの取得]$[en:Getting Timeline]">
-$[ja:Twitter.<a href="javadoc/twitter4j/Twitter.html#getHomeTimeline()">get****Timeline()</a> メソッドで友達、または指定ユーザのホームタイムラインを返します。<br>
+$[ja:Twitter.<a href="javadoc/twitter4j/Twitter.html#getHomeTimeline()">get****Timeline()</a> メソッドでホームタイムラインを返します。<br>
 詳しくは <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/timeline/GetHomeTimeline.java">twitter4j.examples.timeline.GetHomeTimeline.java</a> をご覧ください。]
-$[en:Twitter.<a href="javadoc/twitter4j/Twitter.html#getHomeTimeline()">get****Timeline()</a> returns a List of friends or specified user's home timeline.<br>
+$[en:Twitter.<a href="javadoc/twitter4j/Twitter.html#getHomeTimeline()">get****Timeline()</a> returns a List of latest tweets from user's home timeline.<br>
 See also <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/timeline/GetHomeTimeline.java">twitter4j.examples.timeline.GetHomeTimeline.java</a> for the detail.]
 <pre class="codeSample">
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
-    Twitter twitter = new TwitterFactory().getInstance();
-    List&lt;Status&gt; statuses = twitter.getFriendsTimeline();
-    System.out.println("Showing friends timeline.");
+    Twitter twitter = TwitterFactory.getSingleton();
+    List&lt;Status&gt; statuses = twitter.getHomeTimeline();
+    System.out.println("Showing home timeline.");
     for (Status status : statuses) {
         System.out.println(status.getUser().getName() + ":" +
                            status.getText());
@@ -45,7 +47,7 @@ $[en:You can send and receive direct messages via Twitter.<a href="javadoc/twitt
 See also <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/directmessage/SendDirectMessage.java">twitter4j.examples.directmessage.SendDirectMessage.java</a> for the detail.]
 <pre class="codeSample">
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
-    Twitter sender = new TwitterFactory().getInstance();
+    Twitter sender = TwitterFactory.getSingleton();
     DirectMessage message = sender.sendDirectMessage(recipientId, message);
     System.out.println("Sent: " message.getText() + " to @" + message.getRecipientScreenName());
 </pre>
@@ -59,11 +61,11 @@ $[en:You can search for Tweets using <a href="javadoc/twitter4j/Query.html">Quer
 See <a href="https://github.com/yusuke/twitter4j/blob/master/twitter4j-examples/src/main/java/twitter4j/examples/search/SearchTweets.java">twitter4j.examples.search.SearchTweets.java</a> for the detail.]
 <pre class="codeSample">
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
-    Twitter twitter = new TwitterFactory().getInstance();
+    Twitter twitter = TwitterFactory.getSingleton();
     Query query = new Query("source:twitter4j yusukey");
     QueryResult result = twitter.search(query);
-    for (Tweet tweet : result.getTweets()) {
-        System.out.println(tweet.getFromUser() + ":" + tweet.getText());
+    for (Status status : result.getStatuses()) {
+        System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
     }
 </pre>
 $[ja:Java1.4 や <a href="http://processing.org/">Processing</a> でコンパイルできませんか？ <a href="faq.html#generics">FAQ</a> をご覧ください]$[en:Doesn't work on Java1.4, or <a href="http://processing.org/">Processing</a>? Check the <a href="faq.html#generics">FAQ</a>!]
@@ -114,7 +116,7 @@ You can use <a href="javadoc/twitter4j/Paging.html">Paging</a> class to specify 
 Note that some of above parameters are not accepted by those APIs. Please refer the <a href="./api-support.html">Support API Matrix</a> to see which parameters are accepted by which methods.]
 <pre class="codeSample">
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
-    Twitter twitter = new TwitterFactory().getInstance();
+    Twitter twitter = TwitterFactory.getSingleton();
     // $[ja:２ページ目をリクエスト, １ページあたりの件数は 40件]$[en:requesting page 2, number of elements per page is 40]
     Paging paging = new Paging(2, 40);
     List<Status> statuses = twitter.getFriendsTimeline(paging);
@@ -138,7 +140,7 @@ $[ja:最初はユーザアカウントへのアクセス権がありません。
 <pre class="codeSample">
   public static void main(String args[]) throws Exception{
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]
-    Twitter twitter = new TwitterFactory().getInstance();
+    Twitter twitter = TwitterFactory.getSingleton();
     twitter.setOAuthConsumer("[consumer key]", "[consumer secret]");
     RequestToken requestToken = twitter.getOAuthRequestToken();
     AccessToken accessToken = null;

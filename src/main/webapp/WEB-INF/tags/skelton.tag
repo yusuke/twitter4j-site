@@ -1,5 +1,7 @@
 ﻿<%@taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <%@attribute name="title" required="true" %>
+<%@attribute name="description" required="true" %>
+<%@attribute name="path" required="true" %>
 <html>
 $[ja:<head xml:lang="ja" lang="ja">]$[en:<head xml:lang="en" lang="en">]
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -7,12 +9,20 @@ $[ja:<head xml:lang="ja" lang="ja">]$[en:<head xml:lang="en" lang="en">]
     <meta name="verify-v1" content="YFpQGqxuw7kZYOQ2M/HWLOJEjRhLTyoH4sIP2sQf1wA="/>
     <link rel="shortcut icon" href="http://twitter4j.org/$[ja:ja]$[en:en]/favicon.ico" type="image/x-icon">
     <title><%=title%></title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/css/bootstrap-combined.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="lightbox/lightbox.css" type="text/css">
-    <script type="text/javascript" src="lightbox/spica.js"></script>
-    <script type="text/javascript" src="lightbox/lightbox_plus.js"></script>
-    <script type="text/javascript" src="js/gracefulscroll.js"></script>
+    <link rel="stylesheet" href="/lightbox/lightbox.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script type="text/javascript" src="/lightbox/spica.js"></script>
+    <script type="text/javascript" src="/lightbox/lightbox_plus.js"></script>
+    <script type="text/javascript" src="/js/gracefulscroll.js"></script>
+
+   <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yusuke">
+    <meta name="twitter:creator" content="@t4j_news">
+    <meta name="twitter:url" content="http://twitter4j.org/$[ja:ja]$[en:en]/">
+    <meta name="twitter:title" content="<%=title%>">
+    <meta name="twitter:description" content="<%=description%>">
+    <meta name="twitter:image" content="http://twitter4j.org/images/twitter4j.png">
 </head>
 <body>
 <script>
