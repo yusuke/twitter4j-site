@@ -2,7 +2,7 @@
 <%@taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <tag:skelton title="Twitter4J - $[ja:設定]$[en:Configuration]"
              description="$[ja:Twitter4Jの設定方法]$[en:Twitter4J configuration at glance]"
-             path="http://twitter4j/$[ja:ja]$[en:en/configuration.html">
+             path="http://twitter4j.org/$[ja:ja]$[en:en/configuration.html">
 
     <div class="api-support">
         <tag:h2 name="configuration" title="$[ja:一般設定]$[en:Generic properties]">
@@ -40,7 +40,7 @@ Twitter twitter = tf.getInstance();</pre>
     -cp twitter4j-core-<include>latest-version.fragment</include>.jar:yourApp.jar yourpackage.Main</pre>
                 </tag:h3-num>
                 <tag:h3-num name="environmentvariableconfiguration"
-                            title="$[ja:環境偏す数から]$[en:via environment variables]">
+                            title="$[ja:環境変数から]$[en:via environment variables]">
                     $[ja:OSの環境変数から設定をすることもできます。環境変数から設定する場合はプロパティ名の先頭に &quot;twitter4j.&quot; をつける必要があることに注意してください。]$[en:You can configure Twitter4J via environment variables as well. Note that you need &quot;twitter4j.&quot; prefix. This makes it easier to test, stage and deploy apps running on Heroku.]
 <pre class="codeSample">$ export twitter4j.debug=true
 $ export twitter4j.oauth.consumerKey=*********************

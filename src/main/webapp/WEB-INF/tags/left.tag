@@ -14,8 +14,10 @@ function setVisibility(id,page){
 }
 </script>
 <ul>
-<li><a href="index.html#introduction" onclick="return scrollGracefully(this.href)">$[ja:トップ]$[en:Main]</a></li>
+<li><a href="index.html" onclick="return scrollGracefully(this.href)">$[ja:トップ]$[en:Main]</a></li>
  <ol style="display:none" id="index.html"></ol>
+<li><a href="http://blog.twitter4j.org/">Blog</a></li>
+ <ol style="display:none" id="blog"></ol>
 <li><a href="code-examples.html">$[ja:コード例]$[en:Code Examples]</a></li>
  <ol style="display:none" id="code-examples.html"></ol>
 <li><a href="configuration.html">$[ja:設定]$[en:Configuration]</a></li>

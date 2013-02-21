@@ -5,7 +5,7 @@ description="$[ja:Twitter4J は <a href='https://dev.twitter.com/docs'>Twitter A
 $[en:Twitter4J is an unofficial Java library for the <a href='https://dev.twitter.com/docs'>Twitter API</a>.<br>
     With Twitter4J, you can easily integrate your Java application with the Twitter service. Twitter4J is an unofficial library.<br>
     <br>Twitter4J is featuring:]"
-path="http://twitter4j/$[ja:ja]$[en:en]/index.html">
+path="http://twitter4j.org/$[ja:ja]$[en:en]/index.html">
 
 <tag:h2 name="introduction" title="$[ja:Twitter4Jとは？]$[en:Introduction]">
 $[ja:Twitter4J は <a href="https://dev.twitter.com/docs">Twitter API</a> の Java ラッパです。<br>

@@ -2,7 +2,7 @@
 <%@taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <tag:skelton title="Twitter4J - JavaDoc"
              description="Twitter4J JavaDoc"
-             path="http://twitter4j/$[ja:ja]$[en:en]/javadoc.html">
+             path="http://twitter4j.org/$[ja:ja]$[en:en]/javadoc.html">
     <div class="javadoc">
         <a name="javaDoc"><h1>JavaDoc</h1></a>
         <tag:h2 name="latest" title="$[ja:最新バージョン]$[en:Latest version]">

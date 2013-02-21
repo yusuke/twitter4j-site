@@ -1,6 +1,6 @@
 <%@page pageEncoding="UTF-8" session="false"%><%@taglib prefix="tag" tagdir="/WEB-INF/tags" %><tag:skelton title="Twitter4J - $[ja:コード例]$[en:Code Examples]"
       description="$[ja:Twitter4Jのコード例]$[en:Twitter4J code examples]"
-      path="http://twitter4j/$[ja:ja]$[en:en]/code-examples.html">
+      path="http://twitter4j.org/$[ja:ja]$[en:en]/code-examples.html">
     <a name="codeExamples"><h2>$[ja:コードサンプル]$[en:Code Examples]</h2></a>
     <p>$[ja:サンプルコードは src/twitter4j/examples/ 以下に配置されています。<br>
     それぞれ bin/<i>className</i>.cmd|sh で実行できます。]

@@ -2,7 +2,7 @@
 <%@taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <tag:skelton title="Twitter4J - $[ja:よくある質問]$[en:FAQ]"
              description="$[ja:Twitter4Jのよくある質問]$[en:FAQs]"
-             path="http://twitter4j/$[ja:ja]$[en:en:/faq.html">
+             path="http://twitter4j.org/$[ja:ja]$[en:en:/faq.html">
     >
     <div class="faq">
         <ol class="main">

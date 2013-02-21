@@ -1,7 +1,7 @@
 <%@page language="java" pageEncoding="UTF-8" session="false"%><%@taglib prefix="tag" tagdir="/WEB-INF/tags" %><tag:skelton title="Twitter4J - $[ja:バージョン]$[en:Versions]"
  description="$[ja:TwitterAPの変遷をお伝えします。]
 $[en:Twitter4J versions at a glance]"
-path="http://twitter4j/$[ja:ja]$[en:en]/versions.html">
+path="http://twitter4j.org/$[ja:ja]$[en:en]/versions.html">
 
 <div class="javadoc">
     <a name="versions"><h1>$[ja:バージョン]$[en:Versions]</h1></a>

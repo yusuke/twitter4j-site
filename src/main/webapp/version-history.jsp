@@ -2,7 +2,7 @@
 <%@taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <tag:skelton title="Twitter4J - $[ja:変更履歴]$[en:Vesion History]"
              description="Twitter4J $[ja:バージョンヒストリー]$[en:Vresion history]"
-             path="http://twitter4j/$[ja:ja]$[en:en]version-history.html">
+             path="http://twitter4j.org/$[ja:ja]$[en:en]version-history.html">
 <div class="history">
 <a name="versionHistory"><h1>$[ja:変更履歴]$[en:Vesion History]</h1></a>
 <ul>

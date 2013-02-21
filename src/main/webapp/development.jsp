@@ -2,7 +2,7 @@
 <%@taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <tag:skelton title="Twitter4J - $[ja:開発]$[en:Development]"
              description="$[ja:Twitter4Jの開発を行う、コントリビュートをする上でのルールなど]$[en:Start contributing to Twitter4J today!]"
-             path="http://twitter4j/$[ja:ja]$[en:en]/development.html">
+             path="http://twitter4j.org/$[ja:ja]$[en:en]/development.html">
 
 ≈    <tag:h2 name="whodevelop" title="$[ja:開発者について]$[en:Who develop Twitter4J?]">
         <p>$[ja:Twitter4J はコミュニティメンバにより開発されています。 プロジェクトのネットワークは <a href="http://github.com/yusuke/twitter4j/network">github.com</a>

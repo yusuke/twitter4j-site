@@ -2,7 +2,7 @@
 <%@taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <tag:skelton title="Twitter4J - Powered By"
              description="Twitter4J Web埋め込みバッジなど"
-             path="http://twitter4j/$[ja:ja]$[en:en]/powered-by.html">
+             path="http://twitter4j.org/$[ja:ja]$[en:en]/powered-by.html">
     <div class="javadoc">
         <a name="versions"><h1>Powered By</h1></a>
         <tag:h2 name="badge" title="$[ja:バッジ]$[en:Badge]">
