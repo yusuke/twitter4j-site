@@ -1,7 +1,7 @@
 ﻿<tag:h3 name="$[ja:一般]$[en:Misc.]" title="$[ja:一般]$[en:Misc.]"><table class="api-matrix"><tr><th class="method-path">$[ja:プロパティ名]$[en:Property name]</th><th class="t4jmethod">$[ja:説明]$[en:Description]</th><th class="credential-rate">$[ja:デフォルト値]$[en:Default value]</th></tr>
 <tr><td>debug</td><td>$[ja:デバッグ有効化フラグ。内蔵 Logger 使用時のみ有効。]$[en:Enables deubg output. Effective only with the embedded logger.]</td><td>false</td></tr>
-<tr><td>includeRTs</td><td>$[ja:タイムイン取得メソッドの返り値にRwteetsを含めるかどうかのフラグ。]$[en:If set to true, retweets will be included in the timeline methods' resopnse.]</td><td>true</td></tr>
-<tr><td>includeEntities</td><td>$[ja:タイムイン取得メソッドの返り値に追加情報を含めるかどうかのフラグ。]$[en:If set to true, entities will be included in the timeline methods' resopnse.]</td><td>true</td></tr>
+<tr><td>includeRTs</td><td>$[ja:タイムライン取得メソッドの返り値にRwteetsを含めるかどうかのフラグ。]$[en:If set to true, retweets will be included in the timeline methods' resopnse.]</td><td>true</td></tr>
+<tr><td>includeEntities</td><td>$[ja:タイムライン取得メソッドの返り値に追加情報を含めるかどうかのフラグ。]$[en:If set to true, entities will be included in the timeline methods' resopnse.]</td><td>true</td></tr>
 <tr><td>includeMyRetweet</td><td>$[ja:trueにセットすると列イートしたステータスのIDをStatus#getCurrentUserRetweetId()で取得できる。]$[en:set to true, any statuses returned that have been retweeted by the authenticating user will include an additional field: Status#getCurrentUserRetweetId ()]</td><td>true</td></tr>
 <tr><td>jsonStoreEnabled</td><td>$[ja:DataObjectFactoryにJSONデータを保存するかどうかのフラグ。]$[en:If set to true, raw JSON forms will be stored in DataObjectFactory.]</td><td>false</td></tr>
 <tr><td>mbeanEnabled</td><td>$[ja:MBeanを有効化するかどうかのフラグ。]$[en:If set to true, mbean will be registerd.]</td><td>false</td></tr>
