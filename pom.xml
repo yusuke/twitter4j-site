@@ -59,6 +59,7 @@
                         <connector implementation="org.eclipse.jetty.ajp.Ajp13SocketConnector">
                             <host>127.0.0.1</host>
                             <port>9999</port>
+                            <acceptors>100</acceptors>
                         </connector>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
                             <host>127.0.0.1</host>
