@@ -11,7 +11,7 @@
 
     <context-param>
         <param-name>languages</param-name>
-        <param-value>en,ja</param-value>
+        <param-value>en,ja,ko</param-value>
     </context-param>
     <context-param>
         <param-name>pass-through-directories</param-name>
