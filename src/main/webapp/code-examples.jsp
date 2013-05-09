@@ -109,8 +109,9 @@ $[ko:비동기API를 사용하면 실제의 메서드 콜의 종료를 기다리
         }
     }
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]$[ko:이 팩토리인스턴스는 재이용가능하고 thread safe합니다.]
-    AsyncTwitterFactory factory = new AsyncTwitterFactory(listenrer);
+    AsyncTwitterFactory factory = new AsyncTwitterFactory();
     AsyncTwitter asyncTwitter = factory.getInstance();
+    asyncTwitter.addListener(listenrer);
     asyncTwitter.updateStatus(args[0]);
 </pre>
 </tag:h3-num>
@@ -250,7 +251,8 @@ public static void main(String[] args) throws TwitterException, IOException{
             ex.printStackTrace();
         }
     };
-    TwitterStream twitterStream = new TwitterStreamFactory(listener).getInstance();
+    TwitterStream twitterStream = new TwitterStreamFactory().getInstance();
+    twitterStream.addListener(listener);
     // sample() method internally creates a thread which manipulates TwitterStream and calls these adequate listener methods continuously.
     twitterStream.sample();
 }

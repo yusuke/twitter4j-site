@@ -46,6 +46,7 @@
         <filter-name>jikafilter</filter-name>
         <url-pattern>/en/*</url-pattern>
         <url-pattern>/ja/*</url-pattern>
+        <url-pattern>/ko/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
