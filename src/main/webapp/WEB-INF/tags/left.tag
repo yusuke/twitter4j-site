@@ -1,3 +1,4 @@
+﻿<%@tag pageEncoding="UTF-8"%>
 <div style="text-align:center">$[ja:<a id="lang-link" href="../en/index.html">English</a> | Japanese | <a id="lang-link" href="../ko/index.html">Korean</a>]$[en:English | <a id="lang-link" href="../ja/index.html">Japanese</a> | <a id="lang-link" href="../ko/index.html">Korean</a>]$[ko:<a id="lang-link" href="../en/index.html">English</a> | <a id="lang-link" href="../ja/index.html">Japanese</a> | Korean]
 </div><br>
 <script>
