@@ -1,3 +1,4 @@
+﻿<%@page pageEncoding="UTF-8" %>
 <tag:h3 name="$[ja:一般]$[en:Misc.]$[ko:일반]" title="$[ja:一般]$[en:Misc.]$[ko:일반]"><table class="api-matrix"><tr><th class="method-path">$[ja:プロパティ名]$[en:Property name]$[ko:프로퍼티 명]</th><th class="t4jmethod">$[ja:説明]$[en:Description]$[ko:설명]</th><th class="credential-rate">$[ja:デフォルト値]$[en:Default value]$[ko:디폴트값]</th></tr>
 <tr><td>debug</td><td>$[ja:デバッグ有効化フラグ。内蔵 Logger 使用時のみ有効。]$[en:Enables deubg output. Effective only with the embedded logger.]$[ko:디버그 유효화 플래그. 내장 Logger 사용시만 유효]</td><td>false</td></tr>
 <tr><td>includeRTs</td><td>$[ja:タイムイン取得メソッドの返り値にRwteetsを含めるかどうかのフラグ。]$[en:If set to true, retweets will be included in the timeline methods' resopnse.]$[ko:타임인 취득 메서드의 반환값에 Rwteets 를 포함할지 여부의 플래그]</td><td>true</td></tr>

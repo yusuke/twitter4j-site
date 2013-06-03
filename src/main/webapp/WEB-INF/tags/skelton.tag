@@ -1,3 +1,4 @@
+﻿<%@tag pageEncoding="UTF-8"%>
 <%@taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <%@attribute name="title" required="true" %>
 <%@attribute name="description" required="true" %>
