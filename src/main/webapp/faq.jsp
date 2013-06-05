@@ -26,7 +26,7 @@
             <tag:h3-num name="threadsafety" title="$[ja:Twitter4J はスレッドセーフですか？]$[en:Is Twitter4J tread-safe?]$[ko:Twitter4J 는 thread safe 합니까?]">
             $[ja:はい。Twitter の API はスレッドセーフですのでメソッドコールは並列に行うことができます。]
             $[en:Yes. Twitter4J is thread-safe and you can make method calls concurrently.]
-            $[ja:네, Twitter 의 API 는 thread safe 하므로 메서드 콜은 병렬처리가 가능합니다.]
+            $[ko:네, Twitter 의 API 는 thread safe 하므로 메서드 콜은 병렬처리가 가능합니다.]
             </tag:h3-num>
             <tag:h3-num name="bureport" title="$[ja:バグはどこにレポートすれば良いですか？]$[en:Where to report bugs?]$[ko:버그는 어디에 보고하면 되나요?]">
             $[ja:バグレポートは<a href="index.html#mailingList">メーリングリスト</a>へどうぞ。Twitter4J のバグではなく、Twitter API
@@ -34,7 +34,7 @@
             $[en:Please feel free to post any reports to the <a href="index.html#mailingList">Twitter4J list</a>. If you
             are sure that the nature of the problem is in the Twitter API itself, you may want to report to the <a
                 href="http://groups.google.com/group/twitter-development-talk">Twitter Deveopment Talk</a>.]
-            $[ja:버그레포트는<a href="index.html#mailingList">메일링리스트</a>에 부탁드립니다. Twitter4J 의 버그가 아닌 Twitter API
+            $[ko:버그레포트는<a href="index.html#mailingList">메일링리스트</a>에 부탁드립니다. Twitter4J 의 버그가 아닌 Twitter API
             의 문제라고 확신할 경우는 <a href="http://groups.google.com/group/twitter-development-talk">Twitter Deveopment Talk</a>에 보고하는 것도 추천합니다.]
             $[ja:こちらのページもご覧ください]$[en:See also]$[ko:이 페이지도 참고해 주십시오.]:<br>
             <ul>
@@ -43,7 +43,7 @@
                 </li>
                 <li class="numberedlist">
                     <a href="http://jira.twitter4j.org/browse/TFJ?report=com.atlassian.jira.plugin.system.project:roadmap-panel">Twitter4J
-                        $[ja:ロードマップ]$[en: Road Map]$[ja: Road Map]</a>
+                        $[ja:ロードマップ]$[en: Road Map]$[ko: Road Map]</a>
                 </li>
             </ul>
             </tag:h3-num>
