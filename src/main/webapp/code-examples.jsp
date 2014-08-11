@@ -207,7 +207,7 @@ $[ko:AccessToken 을 취득한 이후는 RequestToken 는 필요치 않습니다
     // $[ja:このファクトリインスタンスは再利用可能でスレッドセーフです]$[en:The factory instance is re-useable and thread safe.]$[ko:이 팩토리인스턴스는 재이용가능하고 thread safe합니다.]
     TwitterFactory factory = new TwitterFactory();
 <font color="red">    AccessToken accessToken = loadAccessToken(Integer.parseInt(args[0]));
-    Twitter twitter = factory.getInstance);
+    Twitter twitter = factory.getInstance();
     twitter.setOAuthConsumerKey("[consumer key]", "[consumer secret]");
     twitter.setOAuthAccessToken(accessToken);</font>
     Status status = twitter.updateStatus(args[1]);
