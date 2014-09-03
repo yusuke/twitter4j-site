@@ -1,6 +1,6 @@
 <table class="api-matrix">
 <% 
-String[] versios30x = {"","3.0.0","3.0.1","3.0.2","3.0.3"};
+String[] versios30x = {"","3.0.0","3.0.1","3.0.2","3.0.3","3.0.4","3.0.5","3.0.6"};
 for(int i=0;i<versios30x.length;i++){%>
 <tr>
 <%for(int j=0;j<versios30x.length;j++){

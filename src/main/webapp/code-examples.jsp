@@ -75,7 +75,7 @@ $[ko:<a href="javadoc/twitter4j/Query.html">Query</a> 클래스와 Twitter.<a hr
     Twitter twitter = TwitterFactory.getSingleton();
     Query query = new Query("source:twitter4j yusukey");
     QueryResult result = twitter.search(query);
-    for (Status status : result.getStatuses()) {
+    for (Status status : result.getTweets()) {
         System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
     }
 </pre>

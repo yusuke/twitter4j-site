@@ -47,11 +47,11 @@ JVM: Java 5 또는 그 이후 버전]
 <tag:h2 name="download" title="$[ja:ダウンロード]$[en:Download]$[ko:다운로드]">
 ･$[ja:最新安定バージョン]$[en:Latest stable version]$[ko:최신 안정 버전]<br>
 <a href="http://twitter4j.org/archive/twitter4j-<include>latest-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]$[ko:다운로드]" title="$[ja:ダウンロード]$[en:Download]$[ko:다운로드]" class="download" src="./images/download.jpg"></a><br>
-    <a href="http://twitter4j.org/archive/twitter4j-<include>latest-version.fragment</include>.zip">twitter4j-<include>latest-version.fragment</include>.zip</a> (<a href="/javadoc/index.html">JavaDoc</a> / <a href="http://twitter4j.org/$[ja:ja]$[en:en]$[ko:ko]/versions.html#migration21x-22x">$[ja:2.1.x から 2.2.x への移行ガイド]$[en:Migration guide from 2.1.x to 2.2.x]$[ko:2.1.x 에서 2.2.x 으로의 마이그래이션가이드]</a>)<br>
-    <strike>twitter4j-android-<include>latest-version.fragment</include>.zip</strike>($[ja:バージョン3.0.3で通常バージョンが十分にスリム化されたためAndroid向けビルドは廃止されました。通常バージョンをお使いください。]$[en:Regular version got slimmed down from version 3.0.3. Thus build for Android platform was retired. Use regular version instead.]$[ko:버전 3.0.3에서 보통 버전이 충분히 슬림화 되었기 때문에 Android 대상 빌드는 폐지되었습니다. 보통버전을 사용하여 주십시오.])<br>
+    <a href="http://twitter4j.org/archive/twitter4j-<include>latest-version.fragment</include>.zip">twitter4j-<include>latest-version.fragment</include>.zip</a> / <a href="/javadoc/index.html">JavaDoc</a><br>
+    <%--strike>twitter4j-android-<include>latest-version.fragment</include>.zip</strike>($[ja:バージョン3.0.3で通常バージョンが十分にスリム化されたためAndroid向けビルドは廃止されました。通常バージョンをお使いください。]$[en:Regular version got slimmed down from version 3.0.3. Thus build for Android platform was retired. Use regular version instead.]$[ko:버전 3.0.3에서 보통 버전이 충분히 슬림화 되었기 때문에 Android 대상 빌드는 폐지되었습니다. 보통버전을 사용하여 주십시오.])<br--%>
 <br><a name="snapshot"></a>･$[ja:最新スナップショットビルド]$[en:Latest snapshot build]$[ko:최신 스냅 샷 빌드]<br><a href="http://twitter4j.org/archive/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip"><img alt="$[ja:ダウンロード]$[en:Download]$[ko:다운로드]" title="$[ja:ダウンロード]$[en:Download]$[ko:다운로드]" class="download" src="./images/download.jpg"></a><br>
-    <a href="http://twitter4j.org/archive/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip</a> (<a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">JavaDoc</a>)<br>
-    <strike>twitter4j-android-<include>latest-SNAPSHOT-version.fragment</include>.zip</strike>($[ja:バージョン3.0.3で通常バージョンが十分にスリム化されたためAndroid向けビルドは廃止されました。通常バージョンをお使いください。]$[en:Regular version got slimmed down from version 3.0.3. Thus build for Android platform was retired. Use regular version instead.]$[ko:버전3.0.3에서 보통 버전이 충분히 슬림화 되었기 때문에 Android 대상 빌드는 폐지되었습니다. 보통버전을 사용하여 주십시오.])<br>
+    <a href="http://twitter4j.org/archive/twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip">twitter4j-<include>latest-SNAPSHOT-version.fragment</include>.zip</a> / <a href="./oldjavadocs/<include>latest-SNAPSHOT-version.fragment</include>/index.html">JavaDoc</a><br>
+    <%--strike>twitter4j-android-<include>latest-SNAPSHOT-version.fragment</include>.zip</strike>($[ja:バージョン3.0.3で通常バージョンが十分にスリム化されたためAndroid向けビルドは廃止されました。通常バージョンをお使いください。]$[en:Regular version got slimmed down from version 3.0.3. Thus build for Android platform was retired. Use regular version instead.]$[ko:버전3.0.3에서 보통 버전이 충분히 슬림화 되었기 때문에 Android 대상 빌드는 폐지되었습니다. 보통버전을 사용하여 주십시오.])<br--%>
 
 <%--    <a href="http://twitter4j.org/en/twitter4j-android-<include>latest-version.fragment</include>.zip">twitter4j-android-<include>latest-version.fragment</include>.zip</a> (slimmed version for Android platform)<br>--%>
 </tag:h2>
@@ -75,6 +75,11 @@ JVM: Java 5 또는 그 이후 버전]
 $[ja:Maven を使っている場合、pom.xml に以下のように記載すればご自身のプロジェクトに twitter4j の最新安定ビルドを簡単に統合できます。]
 $[en:You can integrate the latest Twitter4J build easily by just including the following lines in your pom.xml.]
 $[ko:Maven 을 사용하는 경우, pom.xml 에 아래처럼 기술하면 자신의 프로젝트에 twitter4j 의 최신안정빌드를 간단하게 통합 가능합니다.]
+<pre class="codeSample">   &lt;dependencies&gt;<br/>      &lt;dependency&gt;<br/>           &lt;groupId&gt;org.twitter4j&lt;/groupId&gt;<br/>           &lt;artifactId&gt;twitter4j-core&lt;/artifactId&gt;<br/>           &lt;version&gt;[4.0,)&lt;/version&gt;<br/>       &lt;/dependency&gt;<br/>       ...<br/>   &lt;/dependencies&gt;<br/></pre>
+
+$[ja:最新Snapshot build を使いたい場合、pom.xml に以下のように記載してください。]
+$[en:If you prefer using the latest snapshot build, include the following lines to your pom.xml.]
+$[ko:Snapshot buildSnapshot build 를 사용하고 싶은 경우, pom.xml 에 아래처럼 기술해 주십시오.]
 <pre class="codeSample">   &lt;repositories&gt;
       &lt;repository&gt;
          &lt;id&gt;twitter4j.org&lt;/id&gt;
@@ -92,14 +97,9 @@ $[ko:Maven 을 사용하는 경우, pom.xml 에 아래처럼 기술하면 자신
       &lt;dependency&gt;
          &lt;groupId&gt;org.twitter4j&lt;/groupId&gt;
          &lt;artifactId&gt;twitter4j-core&lt;/artifactId&gt;
-         &lt;version&gt;[3.0,)&lt;/version&gt;
+         &lt;version&gt;[4.0,)&lt;/version&gt;
       &lt;/dependency&gt;
    &lt;/dependencies&gt;</pre>
-
-$[ja:Maven Central Repository を使いたい場合、pom.xml に以下のように記載してください。]
-$[en:If you prefer the Maven central repository, include the following lines to your pom.xml.]
-$[ko:Maven Central Repository 를 사용하고 싶은 경우, pom.xml 에 아래처럼 기술해 주십시오.]
-<pre class="codeSample">   &lt;dependencies&gt;<br/>      &lt;dependency&gt;<br/>           &lt;groupId&gt;org.twitter4j&lt;/groupId&gt;<br/>           &lt;artifactId&gt;twitter4j-core&lt;/artifactId&gt;<br/>           &lt;version&gt;[3.0,)&lt;/version&gt;<br/>       &lt;/dependency&gt;<br/>       ...<br/>   &lt;/dependencies&gt;<br/></pre>
 </tag:h2>
 <tag:h2 name="mailingList" title="$[ja:メーリングリスト]$[en:Mailing list]$[ko:메일링리스트]">
     $[ja:Twitter4J に関する質問、バグレポート、リクエストなどありましたら以下のメーリングリストにお気軽にどうぞ。<br>

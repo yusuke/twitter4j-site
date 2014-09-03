@@ -62,9 +62,9 @@ $ git push heroku master</pre>
             <%@include file="configuration-fragment.jsp" %>
         </tag:h2>
         <tag:h2 name="logger" title="$[ja:ログ設定]$[en:Logger Configuration]$[ko:로그설정]">
-            $[ja:デフォルト Twitter4J は標準出力にログを記録します。SLF4J, Commons-Logging, Log4J のいずれかがクラスパスに存在する場合はそのログライブラリを使ってメッセージが出力されます。-Dtwitter4j.loggerFactory=twitter4j.internal.logging.NullLoggerFactory をシステムプロパティに指定することでログ出力を止めることも出来ます。]
-            $[en:By default, Twitter4J prints log messages to standard output. If any of SLF4J, Commons-Logging, Log4J is in the classpath, log messages will be printed via the available logging library. You can disable logging by specifying -Dtwitter4j.loggerFactory=twitter4j.internal.logging.NullLoggerFactory to the system properties.]
-            $[ko:Twitter4J 의 디폴트는 표준출력에 로그를 기록합니다. SLF4J, Commons-Logging, Log4J 중의 하나가 클래스 패스에 존재하는 경우에는 해당 로그 라이브러리를 사용해 메세지가 출력됩니다.-Dtwitter4j.loggerFactory=twitter4j.internal.logging.NullLoggerFactory 를 시스템 프로퍼티에 지정하는것으로 로그출력을 멈추는 것도 가능합니다.]
+            $[ja:デフォルト Twitter4J は標準出力にログを記録します。SLF4J, Commons-Logging, Log4J のいずれかがクラスパスに存在する場合はそのログライブラリを使ってメッセージが出力されます。-Dtwitter4j.loggerFactory=twitter4j.NullLoggerFactory をシステムプロパティに指定することでログ出力を止めることも出来ます。]
+            $[en:By default, Twitter4J prints log messages to standard output. If any of SLF4J, Commons-Logging, Log4J is in the classpath, log messages will be printed via the available logging library. You can disable logging by specifying -Dtwitter4j.loggerFactory=twitter4j.NullLoggerFactory to the system properties.]
+            $[ko:Twitter4J 의 디폴트는 표준출력에 로그를 기록합니다. SLF4J, Commons-Logging, Log4J 중의 하나가 클래스 패스에 존재하는 경우에는 해당 로그 라이브러리를 사용해 메세지가 출력됩니다.-Dtwitter4j.loggerFactory=twitter4j.NullLoggerFactory 를 시스템 프로퍼티에 지정하는것으로 로그출력을 멈추는 것도 가능합니다.]
         </tag:h2>
     </div>
     <br>

@@ -20,10 +20,9 @@
             list.</a> If you are sure that the issue is not a known or a duplicated one, you can skip this step and go
             to step 2.]$[ko:버그나 기능추가요구에 대해서<a href="http://twitter4j.org/ja/index.html#mailingList">메일링리스트</a>에 보고합니다. 만약 보고하는 현상이 알려진 문제가 아니라, 확실히 버그라고 생각되는 경우에 이 스텝을 생략해도 상관없습니다.]
             <li><h3>$[ja:課題を登録]$[en:Submit the issue]$[ko:이슈를 등록]</h3></li>
-            $[ja:課題を <a href="http://jira.twitter4j.org/browse/TFJ">JIRA</a> に登録します。]$[en:Submit the issue to <a
-                href="http://jira.twitter4j.org/browse/TFJ">JIRA</a>. Set the fixed version to the latest snapshot (
+            $[ja:課題を <a href="http://issue.twitter4j.org/youtrack/issues/TFJ">YouTrack</a> に登録します。]$[en:Submit the issue to <a href="http://issue.twitter4j.org/youtrack/issues/TFJ">YouTrack</a>. Set the fixed version to the latest snapshot (
             <include>latest-SNAPSHOT-version.fragment</include>
-            )]$[ko:이슈를 <a href="http://jira.twitter4j.org/browse/TFJ">JIRA</a> 에 등록합니다.]
+            )]$[ko:이슈를 <a href="http://issue.twitter4j.org/youtrack/issues/TFJ">YouTrack</a> 에 등록합니다.]
             <li><h3>$[ja:ソースコードを修正する]$[en:Fix it]$[ko:소스코드를 수정한다.]</h3></li>
             $[ja:必要なソースファイルを TFJ-XXX という名前のブランチで修正します。以下の点を気をつけてください:
             ]$[en:Fix the source code accordingly in a branch named TFJ-XXX. Make sure that:]$[ko:필요한 소스파일을 TFJ-XXX 라고 하는 이름의 브런치에서 수정합니다. 이하의 점에 주의하여 주십시오.:
@@ -49,7 +48,7 @@
             $[ja:pull request を <a href="https://github.com/yusuke">yusuke</a> に送ります。]$[en:Send a pull request to <a
                 href="https://github.com/yusuke">the upstream repository</a>]$[ko:pull request 를 <a href="https://github.com/yusuke">yusuke</a> 에 보냅니다.]
             <li><h3>$[ja:マージとクローズ]$[en:Merge and close]$[ko:Merge and close]</h3></li>
-            $[ja:マージが完了し、テストケースが通ると issue はクローズされます。]$[en:The Jira issue will be closed once the pull request was merged
+            $[ja:マージが完了し、テストケースが通ると issue はクローズされます。]$[en:The YouTrack issue will be closed once the pull request was merged
             and all test cases were passed.]$[ko:Merge 가 완료, test case가 통과하면 issue 는 클로즈 됩니다.]
 
         </ol>
@@ -65,20 +64,13 @@
         </p>
     </tag:h2>
     <tag:h2 name="issuemanagement" title="$[ja:課題管理]$[en:Issue management]$[ko:이슈관리]">
-        <p>$[ja:Twitter4J はアトラシアン社の提供する課題管理ツール、<a href="http://jira.twitter4j.org/browse/TFJ">JIRA</a>
+        <p>$[ja:Twitter4J はJetBrains社の提供する課題管理ツール、<a href="http://issue.twitter4j.org/youtrack/issues/TFJ">YouTrack</a>
             を使ってバグ管理を行っています。]$[en:Atlassian supports our efforts by contributing their bug tracking and issue tracking
-            application, <a href="http://jira.twitter4j.org/browse/TFJ">JIRA</a>, to our project.<br>
+            application, <a href="http://issue.twitter4j.org/youtrack/issues/TFJ">YouTrack</a>, to our project.<br>
             <br>
-            Atlassian is an innovative Australian software company providing enterprise software solutions to the
-            world's leading organisations. Atlassian's leading software product, JIRA is a bug tracking and issue
-            tracking application developed to track and manage the issues and bugs that emerge during a project. JIRA
-            customers include departments from NASA, Boeing, Cisco, JP Morgan, 3M, BP, Sony and more. <a
-                    href="http://www.atlassian.com/c/NPOS/10160">Try it</a> for yourself today.<br>
-            ]$[ko:Twitter4J 는 Atlassian사가 제공하는 이슈관리툴, <a href="http://jira.twitter4j.org/browse/TFJ">JIRA</a>
+            ]$[ko:Twitter4J 는 JetBrains사가 제공하는 이슈관리툴, <a href="http://issue.twitter4j.org/youtrack/issues/TFJ">YouTrack</a>
             를 사용해 버그관리를 하고 있습니다.]
         </p>
-        <br><a href="http://www.atlassian.com/c/NPOS/10160"><img src="./images/jira_button_120wx60h.gif" width="120"
-                                                                 height="60"/></a>
     </tag:h2>
     <tag:h2 name="continuousintegration" title="$[ja:継続ビルド]$[en:Continuous Integration]$[ko:Continuous Integration]">
         <p>$[ja:Twitter4Jは継続ビルドに <a href="http://jenkins.twitter4j.org/job/T4J/">Jenkins</a> を使っています。]$[en:Twitter4J is
